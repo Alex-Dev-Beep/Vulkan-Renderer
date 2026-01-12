@@ -1,0 +1,1559 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versi├│n de MSBuild 18.0.5+e22287bf1 para .NET Framework
+      Compilaci├│n iniciada a las 12/01/2026 02:38:14 p. m..
+      
+      Proyecto "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
+      PrepareForBuild:
+        Creando directorio "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creando directorio "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Se crear├í "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Se eliminar├í el archivo "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" (destinos predeterminados).
+      
+      Compilaci├│n correcta.
+          0 Advertencia(s)
+          0 Errores
+      
+      Tiempo transcurrido 00:00:00.73
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/4.2.0-rc3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link.com"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link.exe"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link"
+      - "C:/nodejs/lld-link.com"
+      - "C:/nodejs/lld-link.exe"
+      - "C:/nodejs/lld-link"
+      - "C:/Program Files/Neovim/bin/lld-link.com"
+      - "C:/Program Files/Neovim/bin/lld-link.exe"
+      - "C:/Program Files/Neovim/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/Gource/cmd/lld-link.com"
+      - "C:/Program Files/Gource/cmd/lld-link.exe"
+      - "C:/Program Files/Gource/cmd/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/alexd/.cargo/bin/lld-link.com"
+      - "C:/Users/alexd/.cargo/bin/lld-link.exe"
+      - "C:/Users/alexd/.cargo/bin/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/alexd/.dotnet/tools/lld-link.com"
+      - "C:/Users/alexd/.dotnet/tools/lld-link.exe"
+      - "C:/Users/alexd/.dotnet/tools/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link.com"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link.exe"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link"
+      - "C:/Program Files/LOVE/lld-link.com"
+      - "C:/Program Files/LOVE/lld-link.exe"
+      - "C:/Program Files/LOVE/lld-link"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link.com"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link.exe"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
+      - "C:/VulkanSDK/1.4.328.1/Bin/mt.com"
+      - "C:/VulkanSDK/1.4.328.1/Bin/mt.exe"
+      - "C:/VulkanSDK/1.4.328.1/Bin/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt"
+      - "C:/nodejs/mt.com"
+      - "C:/nodejs/mt.exe"
+      - "C:/nodejs/mt"
+      - "C:/Program Files/Neovim/bin/mt.com"
+      - "C:/Program Files/Neovim/bin/mt.exe"
+      - "C:/Program Files/Neovim/bin/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/mt.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/mt.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/Gource/cmd/mt.com"
+      - "C:/Program Files/Gource/cmd/mt.exe"
+      - "C:/Program Files/Gource/cmd/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Users/alexd/.cargo/bin/mt.com"
+      - "C:/Users/alexd/.cargo/bin/mt.exe"
+      - "C:/Users/alexd/.cargo/bin/mt"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/mt.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/mt.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/mt"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/mt.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/mt.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/mt"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/mt.com"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/mt.exe"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/mt"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/alexd/.dotnet/tools/mt.com"
+      - "C:/Users/alexd/.dotnet/tools/mt.exe"
+      - "C:/Users/alexd/.dotnet/tools/mt"
+      - "C:/msys64/mingw64/bin/mt.com"
+      - "C:/msys64/mingw64/bin/mt.exe"
+      - "C:/msys64/mingw64/bin/mt"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/mt.com"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/mt.exe"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/mt"
+      - "C:/Users/alexd/AppData/Roaming/npm/mt.com"
+      - "C:/Users/alexd/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/alexd/AppData/Roaming/npm/mt"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/mt.com"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/mt.exe"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/mt"
+      - "C:/Program Files/LOVE/mt.com"
+      - "C:/Program Files/LOVE/mt.exe"
+      - "C:/Program Files/LOVE/mt"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/mt.com"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/mt.exe"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/mt"
+      - "C:/Qt/6.10.1/mingw_64/bin/mt.com"
+      - "C:/Qt/6.10.1/mingw_64/bin/mt.exe"
+      - "C:/Qt/6.10.1/mingw_64/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versi├│n de MSBuild 18.0.5+e22287bf1 para .NET Framework
+      Compilaci├│n iniciada a las 12/01/2026 02:38:15 p. m..
+      
+      Proyecto "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
+      PrepareForBuild:
+        Creando directorio "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creando directorio "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Se crear├í "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+        Aplicando tarea Touch a "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Se eliminar├í el archivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Aplicando tarea Touch a "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Compilaci├│n del proyecto terminada "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\4.2.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos predeterminados).
+      
+      Compilaci├│n correcta.
+          0 Advertencia(s)
+          0 Errores
+      
+      Tiempo transcurrido 00:00:00.74
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/4.2.0-rc3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link.com"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link.exe"
+      - "C:/VulkanSDK/1.4.328.1/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lld-link"
+      - "C:/nodejs/lld-link.com"
+      - "C:/nodejs/lld-link.exe"
+      - "C:/nodejs/lld-link"
+      - "C:/Program Files/Neovim/bin/lld-link.com"
+      - "C:/Program Files/Neovim/bin/lld-link.exe"
+      - "C:/Program Files/Neovim/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/Gource/cmd/lld-link.com"
+      - "C:/Program Files/Gource/cmd/lld-link.exe"
+      - "C:/Program Files/Gource/cmd/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/alexd/.cargo/bin/lld-link.com"
+      - "C:/Users/alexd/.cargo/bin/lld-link.exe"
+      - "C:/Users/alexd/.cargo/bin/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/lld-link"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/alexd/.dotnet/tools/lld-link.com"
+      - "C:/Users/alexd/.dotnet/tools/lld-link.exe"
+      - "C:/Users/alexd/.dotnet/tools/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link.com"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link.exe"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/lld-link"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/alexd/AppData/Roaming/npm/lld-link"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/lld-link"
+      - "C:/Program Files/LOVE/lld-link.com"
+      - "C:/Program Files/LOVE/lld-link.exe"
+      - "C:/Program Files/LOVE/lld-link"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link.com"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link.exe"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/lld-link"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link.com"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link.exe"
+      - "C:/Qt/6.10.1/mingw_64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:580 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:553 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:18 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/LveEngine/bin/"
+      - "C:/Program Files (x86)/LveEngine/sbin/"
+      - "C:/Program Files (x86)/LveEngine/"
+    searched_directories:
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
+      - "C:/VulkanSDK/1.4.328.1/Bin/rc.com"
+      - "C:/VulkanSDK/1.4.328.1/Bin/rc.exe"
+      - "C:/VulkanSDK/1.4.328.1/Bin/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc"
+      - "C:/nodejs/rc.com"
+      - "C:/nodejs/rc.exe"
+      - "C:/nodejs/rc"
+      - "C:/Program Files/Neovim/bin/rc.com"
+      - "C:/Program Files/Neovim/bin/rc.exe"
+      - "C:/Program Files/Neovim/bin/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/rc.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/rc.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/Gource/cmd/rc.com"
+      - "C:/Program Files/Gource/cmd/rc.exe"
+      - "C:/Program Files/Gource/cmd/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Users/alexd/.cargo/bin/rc.com"
+      - "C:/Users/alexd/.cargo/bin/rc.exe"
+      - "C:/Users/alexd/.cargo/bin/rc"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/rc.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/rc.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/rc"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/rc.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/rc.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/rc"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/rc.com"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/rc.exe"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/rc"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/alexd/.dotnet/tools/rc.com"
+      - "C:/Users/alexd/.dotnet/tools/rc.exe"
+      - "C:/Users/alexd/.dotnet/tools/rc"
+      - "C:/msys64/mingw64/bin/rc.com"
+      - "C:/msys64/mingw64/bin/rc.exe"
+      - "C:/msys64/mingw64/bin/rc"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/rc.com"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/rc.exe"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/rc"
+      - "C:/Users/alexd/AppData/Roaming/npm/rc.com"
+      - "C:/Users/alexd/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/alexd/AppData/Roaming/npm/rc"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/rc.com"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/rc.exe"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/rc"
+      - "C:/Program Files/LOVE/rc.com"
+      - "C:/Program Files/LOVE/rc.exe"
+      - "C:/Program Files/LOVE/rc"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/rc.com"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/rc.exe"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/rc"
+      - "C:/Qt/6.10.1/mingw_64/bin/rc.com"
+      - "C:/Qt/6.10.1/mingw_64/bin/rc.exe"
+      - "C:/Qt/6.10.1/mingw_64/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/LveEngine/bin/rc.com"
+      - "C:/Program Files (x86)/LveEngine/bin/rc.exe"
+      - "C:/Program Files (x86)/LveEngine/bin/rc"
+      - "C:/Program Files (x86)/LveEngine/sbin/rc.com"
+      - "C:/Program Files (x86)/LveEngine/sbin/rc.exe"
+      - "C:/Program Files (x86)/LveEngine/sbin/rc"
+      - "C:/Program Files (x86)/LveEngine/rc.com"
+      - "C:/Program Files (x86)/LveEngine/rc.exe"
+      - "C:/Program Files (x86)/LveEngine/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/LveEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/LveEngine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-pvhpl1"
+      binary: "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-pvhpl1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-pvhpl1'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4ed94.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.0.5+e22287bf1 para .NET Framework
+        Compilaci├│n iniciada a las 12/01/2026 02:38:16 p. m..
+        
+        Proyecto "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pvhpl1\\cmTC_4ed94.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creando directorio "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pvhpl1\\Debug\\".
+          Creando directorio "cmTC_4ed94.dir\\Debug\\cmTC_4ed94.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_4ed94.dir\\Debug\\cmTC_4ed94.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_4ed94.dir\\Debug\\cmTC_4ed94.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4ed94.dir\\Debug\\\\" /Fd"cmTC_4ed94.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.50.35721 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4ed94.dir\\Debug\\\\" /Fd"cmTC_4ed94.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pvhpl1\\Debug\\cmTC_4ed94.exe" /INCREMENTAL /ILK:"cmTC_4ed94.dir\\Debug\\cmTC_4ed94.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-pvhpl1/Debug/cmTC_4ed94.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-pvhpl1/Debug/cmTC_4ed94.lib" /MACHINE:X64  /machine:x64 cmTC_4ed94.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_4ed94.vcxproj -> C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pvhpl1\\Debug\\cmTC_4ed94.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_4ed94.dir\\Debug\\cmTC_4ed94.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_4ed94.dir\\Debug\\cmTC_4ed94.tlog\\cmTC_4ed94.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pvhpl1\\cmTC_4ed94.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35721.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-kk19l4"
+      binary: "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-kk19l4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-kk19l4'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1f88e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Versi├│n de MSBuild 18.0.5+e22287bf1 para .NET Framework
+        Compilaci├│n iniciada a las 12/01/2026 02:38:17 p. m..
+        
+        Proyecto "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk19l4\\cmTC_1f88e.vcxproj" en nodo 1 (destinos predeterminados).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creando directorio "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk19l4\\Debug\\".
+          Creando directorio "cmTC_1f88e.dir\\Debug\\cmTC_1f88e.tlog\\".
+        InitializeBuildStatus:
+          Se crear├í "cmTC_1f88e.dir\\Debug\\cmTC_1f88e.tlog\\unsuccessfulbuild" porque se especific├│ "AlwaysCreate".
+          Aplicando tarea Touch a "cmTC_1f88e.dir\\Debug\\cmTC_1f88e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_1f88e.dir\\Debug\\\\" /Fd"cmTC_1f88e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          Compilador de optimizaci├│n de C/C++ de Microsoft (R) versi├│n 19.50.35721 para x64
+          (C) Microsoft Corporation. Todos los derechos reservados.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_1f88e.dir\\Debug\\\\" /Fd"cmTC_1f88e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk19l4\\Debug\\cmTC_1f88e.exe" /INCREMENTAL /ILK:"cmTC_1f88e.dir\\Debug\\cmTC_1f88e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-kk19l4/Debug/cmTC_1f88e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/CMakeScratch/TryCompile-kk19l4/Debug/cmTC_1f88e.lib" /MACHINE:X64  /machine:x64 cmTC_1f88e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_1f88e.vcxproj -> C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk19l4\\Debug\\cmTC_1f88e.exe
+        FinalizeBuildStatus:
+          Se eliminar├í el archivo "cmTC_1f88e.dir\\Debug\\cmTC_1f88e.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_1f88e.dir\\Debug\\cmTC_1f88e.tlog\\cmTC_1f88e.lastbuildstate".
+        Compilaci├│n del proyecto terminada "C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk19l4\\cmTC_1f88e.vcxproj" (destinos predeterminados).
+        
+        Compilaci├│n correcta.
+            0 Advertencia(s)
+            0 Errores
+        
+        Tiempo transcurrido 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:18 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35721.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:114 (find_program)"
+    mode: "program"
+    variable: "GLSL_VALIDATOR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslangValidator"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/usr/local/bin/"
+      - "C:/VulkanSDK/1.4.328.1/Bin/"
+      - "C:/VulkanSDK/1.4.328.1/Bin32/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/nodejs/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Muse Hub/lib/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Gource/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/alexd/.cargo/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/alexd/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/alexd/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/alexd/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/alexd/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/alexd/.dotnet/tools/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Users/alexd/Downloads/cmake-4.2.0-rc2-windows-x86_64/cmake-4.2.0-rc2-windows-x86_64/bin/"
+      - "C:/Users/alexd/AppData/Roaming/npm/"
+      - "C:/Users/alexd/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/LOVE/"
+      - "C:/Users/alexd/AppData/Local/PowerToys/DSCModules/"
+      - "C:/Qt/6.10.1/mingw_64/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/LveEngine/bin/"
+      - "C:/Program Files (x86)/LveEngine/sbin/"
+      - "C:/Program Files (x86)/LveEngine/"
+    searched_directories:
+      - "/usr/bin/glslangValidator.com"
+      - "/usr/bin/glslangValidator.exe"
+      - "/usr/bin/glslangValidator"
+      - "/usr/local/bin/glslangValidator.com"
+      - "/usr/local/bin/glslangValidator.exe"
+      - "/usr/local/bin/glslangValidator"
+      - "C:/VulkanSDK/1.4.328.1/Bin/glslangValidator.com"
+    found: "C:/VulkanSDK/1.4.328.1/Bin/glslangValidator.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\VulkanSDK\\1.4.328.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\nodejs\\"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Gource\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\alexd\\.cargo\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\alexd\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\alexd\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\alexd\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Users\\alexd\\Downloads\\cmake-4.2.0-rc2-windows-x86_64\\cmake-4.2.0-rc2-windows-x86_64\\bin"
+        - "C:\\Users\\alexd\\AppData\\Roaming\\npm"
+        - "C:\\Users\\alexd\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+        - "C:\\Program Files\\LOVE"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+        - "C:\\Users\\alexd\\AppData\\Local\\PowerToys\\DSCModules\\"
+        - "C:\\Qt\\6.10.1\\mingw_64\\bin"
+        - "C:\\Users\\alexd\\.dotnet\\tools"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/LveEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/LveEngine"
+...

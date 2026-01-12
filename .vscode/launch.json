@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run GalaxyEngine",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "c:/C++ Projects/Learning-Vulkan/littleVulkanEngine/build/LveEngine.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "preLaunchTask": "Compile"
+        }
+    ]
+}
