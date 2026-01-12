@@ -1,0 +1,1 @@
+  -LC:/VulkanSDK/1.4.328.1/Lib  -LC:/C++  -L"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/lib-mingw-w64"  -lglfw3 -lvulkan-1 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

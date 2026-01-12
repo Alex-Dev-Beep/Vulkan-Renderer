@@ -5,7 +5,7 @@
             "name": "Run GalaxyEngine",
             "type": "cppdbg",
             "request": "launch",
-            "program": "c:/C++ Projects/Learning-Vulkan/littleVulkanEngine/build/LveEngine.exe",
+            "program": "c:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/Renderer-Vulkan.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
