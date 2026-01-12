@@ -1,8 +1,6 @@
-rmdir /s /q build
 mkdir build
-cd build
-cmake -S .. -B . -G "MinGW Makefiles"
-mingw32-make
+cmake -S . -B build -G "MinGW Makefiles"
+cmake --build build
 cd ..
 echo Commands for compiling shaders:
 echo glslc "shaders\simple_shader.frag" -o "shaders\simple_shader.frag.spv"
