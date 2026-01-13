@@ -543,7 +543,8 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsaveintrin.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsaveoptintrin.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsavesintrin.h \
-  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xtestintrin.h
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xtestintrin.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp
 
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3.hpp:
@@ -1621,3 +1622,5 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsaveintrin.h:
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsaveoptintrin.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsavesintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp:

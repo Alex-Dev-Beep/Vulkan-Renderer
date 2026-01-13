@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/cmake_install.cmake",
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/cmake_install.cmake",
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src/cmake_install.cmake",
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/docs/cmake_install.cmake",
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/glm/cmake_install.cmake",
+		"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/glm/glm/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

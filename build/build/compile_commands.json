@@ -1,0 +1,146 @@
+[
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\main.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\main.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/main.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\window.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\window.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\context.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/context.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/context.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\init.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\init.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/init.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/init.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\input.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\input.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/input.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/input.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\monitor.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\monitor.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/monitor.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\platform.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\platform.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/platform.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/platform.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\vulkan.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/vulkan.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\window.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\window.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/window.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/window.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\egl_context.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/egl_context.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\osmesa_context.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/osmesa_context.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\null_init.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\null_init.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/null_init.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/null_init.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\null_monitor.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\null_monitor.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/null_monitor.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\null_window.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\null_window.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/null_window.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/null_window.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\null_joystick.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\null_joystick.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/null_joystick.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_module.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_module.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_module.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_module.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_time.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_time.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_thread.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_thread.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_init.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_init.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_joystick.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_joystick.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_monitor.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_monitor.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\win32_window.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/win32_window.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/GLFW/src",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\GLFW\\src\\wgl_context.c\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/src/wgl_context.c",
+  "output": "external/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/external/glm/glm",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE  @CMakeFiles/glm.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-switch-default -o CMakeFiles\\glm.dir\\detail\\glm.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\external\\glm\\glm\\detail\\glm.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/glm.cpp",
+  "output": "external/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
+}
+]
