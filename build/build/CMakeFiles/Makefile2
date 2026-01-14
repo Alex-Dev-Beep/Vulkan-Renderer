@@ -190,8 +190,8 @@ external/glm/glm/clean: external/glm/glm/CMakeFiles/glm.dir/clean
 # Target rules for target CMakeFiles/VulkanRenderer.dir
 
 # All Build rule for target.
-CMakeFiles/VulkanRenderer.dir/all: CMakeFiles/Shaders.dir/all
 CMakeFiles/VulkanRenderer.dir/all: external/GLFW/src/CMakeFiles/glfw.dir/all
+CMakeFiles/VulkanRenderer.dir/all: CMakeFiles/Shaders.dir/all
 CMakeFiles/VulkanRenderer.dir/all: external/glm/glm/CMakeFiles/glm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/build

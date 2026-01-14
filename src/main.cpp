@@ -2,23 +2,39 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+#include <stdexcept>
+#include <iostream>
+
 #include "window.hpp"
 #include "instance.hpp"
 
 int main() {
-    VkInstance instance;
-    GLFWwindow* window;
+    try {
+        if (!glfwInit()) {
+            throw std::runtime_error("Failed to init GLFW!");
+        } else {
+            std::cout << "Initialized GLFW correctly!" << std::endl;
+        }
 
-    createWindow(800, 600, "Vulkan Window", window);
-    createInstance(instance);
+        GLFWwindow* window;
+        createWindow(800, 600, "Vulkan Window", window);
 
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
+        VkInstance instance;
+        createInstance(instance);
+        setupDebugMessenger(instance);
+
+        while (!glfwWindowShouldClose(window)) {
+            glfwPollEvents();
+        }
+
+        cleanupInstance(instance);
+        glfwDestroyWindow(window);
+        glfwTerminate();
+    }
+    catch (const std::exception& e) {
+        std::cerr << "FATAL ERROR: " << e.what() << std::endl;
+        return EXIT_FAILURE;
     }
 
-    vkDestroyInstance(instance, nullptr);
-    glfwDestroyWindow(window);
-    glfwTerminate();
-    
-    return 0;
+    return EXIT_SUCCESS;
 }
