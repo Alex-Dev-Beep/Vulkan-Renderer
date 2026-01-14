@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.cpp" "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj" "gcc" "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj.d"
   "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/main.cpp" "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj" "gcc" "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj.d"
   "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.cpp" "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj" "gcc" "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj.d"
   )

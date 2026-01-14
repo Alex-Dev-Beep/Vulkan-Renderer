@@ -3,13 +3,22 @@
 #include <glm/glm.hpp>
 
 #include "window.hpp"
+#include "instance.hpp"
 
 int main() {
-    Window window(800, 600, "Vulkan Window");
+    VkInstance instance;
+    GLFWwindow* window;
 
-    while (!window.shouldClose()) {
-        window.pollEvents();
+    createWindow(800, 600, "Vulkan Window", window);
+    createInstance(instance);
+
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
     }
 
+    vkDestroyInstance(instance, nullptr);
+    glfwDestroyWindow(window);
+    glfwTerminate();
+    
     return 0;
 }

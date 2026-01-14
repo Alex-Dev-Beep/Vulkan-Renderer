@@ -587,4 +587,5 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\vector_relational.hpp \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\integer.hpp \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\detail\func_integer.inl \
-  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.hpp
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.hpp \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\instance.hpp

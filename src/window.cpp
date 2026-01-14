@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <iostream>
 
-Window::Window(int width, int height, const char* title) {
+void createWindow(int width, int height, const char* title, GLFWwindow* window) {
     if (!glfwInit()) {
         throw std::runtime_error("Failed to init GLFW!");
     } else {
@@ -19,17 +19,4 @@ Window::Window(int width, int height, const char* title) {
     } else {
         std::cout << "Created GLFW window!" << std::endl;
     }
-}
-
-Window::~Window() {
-    glfwDestroyWindow(window);
-    glfwTerminate();
-}
-
-bool Window::shouldClose() {
-    return glfwWindowShouldClose(window);
-}
-
-void Window::pollEvents() {
-    glfwPollEvents();
 }
