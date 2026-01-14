@@ -286,6 +286,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/surface.obj: src/surface.cpp.obj
+.PHONY : src/surface.obj
+
+# target to build an object file
+src/surface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj
+.PHONY : src/surface.cpp.obj
+
+src/surface.i: src/surface.cpp.i
+.PHONY : src/surface.i
+
+# target to preprocess a source file
+src/surface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/surface.cpp.i
+.PHONY : src/surface.cpp.i
+
+src/surface.s: src/surface.cpp.s
+.PHONY : src/surface.s
+
+# target to generate assembly for a file
+src/surface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/surface.cpp.s
+.PHONY : src/surface.cpp.s
+
 src/window.obj: src/window.cpp.obj
 .PHONY : src/window.obj
 
@@ -334,6 +358,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/surface.obj
+	@echo ... src/surface.i
+	@echo ... src/surface.s
 	@echo ... src/window.obj
 	@echo ... src/window.i
 	@echo ... src/window.s

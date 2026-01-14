@@ -7,6 +7,7 @@
 
 #include "window.hpp"
 #include "instance.hpp"
+#include "surface.hpp"
 
 int main() {
     try {
@@ -17,11 +18,13 @@ int main() {
         }
 
         GLFWwindow* window;
-        createWindow(800, 600, "Vulkan Window", window);
-
+        VkSurfaceKHR surface;
         VkInstance instance;
+
+        createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
         setupDebugMessenger(instance);
+        createSurface(instance, surface, window);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();

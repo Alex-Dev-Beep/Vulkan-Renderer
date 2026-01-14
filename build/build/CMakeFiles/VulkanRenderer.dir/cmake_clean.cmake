@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj.d"
+  "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj.d"
   "VulkanRenderer.exe"

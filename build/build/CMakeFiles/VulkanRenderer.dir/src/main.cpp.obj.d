@@ -622,4 +622,6 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.26100.0\ucrt\locale.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ostream \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.hpp \
-  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\instance.hpp
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\instance.hpp \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\surface.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\glfw3native.h
