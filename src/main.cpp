@@ -4,11 +4,13 @@
 
 #include <stdexcept>
 #include <iostream>
+#include <vector>
 
 #include "window.hpp"
 #include "instance.hpp"
 #include "surface.hpp"
 #include "device.hpp"
+#include "swapchain.hpp"
 
 int main() {
     try {
@@ -25,6 +27,10 @@ int main() {
         VkQueue graphicsQueue;
         VkQueue presentQueue;
         VkDevice device = VK_NULL_HANDLE;
+        VkSwapchainKHR swapChain;
+        std::vector<VkImage> swapChainImages;
+        VkFormat swapChainImageFormat;
+        VkExtent2D swapChainExtent;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
@@ -32,11 +38,13 @@ int main() {
         createSurface(instance, surface, window);
         pickPhysicalDevice(instance, physicalDevice, surface);
         createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
+        createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
         }
 
+        vkDestroySwapchainKHR(device, swapChain, nullptr);
         vkDestroyDevice(device, nullptr);
         vkDestroySurfaceKHR(instance, surface, nullptr);
         cleanupInstance(instance);

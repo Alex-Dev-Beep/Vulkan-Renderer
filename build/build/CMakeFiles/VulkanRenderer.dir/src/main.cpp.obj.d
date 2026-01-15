@@ -627,4 +627,5 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\glfw3native.h \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\device.hpp \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\optional \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xsmf_control.h
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xsmf_control.h \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\swapchain.hpp
