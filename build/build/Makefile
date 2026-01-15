@@ -238,6 +238,30 @@ glm/fast:
 	$(MAKE) $(MAKESILENT) -f external\glm\glm\CMakeFiles\glm.dir\build.make external/glm/glm/CMakeFiles/glm.dir/build
 .PHONY : glm/fast
 
+src/device.obj: src/device.cpp.obj
+.PHONY : src/device.obj
+
+# target to build an object file
+src/device.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj
+.PHONY : src/device.cpp.obj
+
+src/device.i: src/device.cpp.i
+.PHONY : src/device.i
+
+# target to preprocess a source file
+src/device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/device.cpp.i
+.PHONY : src/device.cpp.i
+
+src/device.s: src/device.cpp.s
+.PHONY : src/device.s
+
+# target to generate assembly for a file
+src/device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/device.cpp.s
+.PHONY : src/device.cpp.s
+
 src/instance.obj: src/instance.cpp.obj
 .PHONY : src/instance.obj
 
@@ -352,6 +376,9 @@ help:
 	@echo ... VulkanRenderer
 	@echo ... glfw
 	@echo ... glm
+	@echo ... src/device.obj
+	@echo ... src/device.i
+	@echo ... src/device.s
 	@echo ... src/instance.obj
 	@echo ... src/instance.i
 	@echo ... src/instance.s

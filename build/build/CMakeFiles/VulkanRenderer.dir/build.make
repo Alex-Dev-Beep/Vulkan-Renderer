@@ -71,11 +71,26 @@ include CMakeFiles/VulkanRenderer.dir/flags.make
 CMakeFiles/VulkanRenderer.dir/codegen:
 .PHONY : CMakeFiles/VulkanRenderer.dir/codegen
 
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: CMakeFiles/VulkanRenderer.dir/flags.make
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj"
+	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\device.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\device.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\device.cpp"
+
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanRenderer.dir/src/device.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/VulkanRenderer.dir/src/device.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanRenderer.dir/src/device.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
 CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj: CMakeFiles/VulkanRenderer.dir/flags.make
 CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
 CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.cpp
 CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj"
 	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\instance.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\instance.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\instance.cpp"
 
 CMakeFiles/VulkanRenderer.dir/src/instance.cpp.i: cmake_force
@@ -90,7 +105,7 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: CMakeFiles/VulkanRenderer.dir/fl
 CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
 CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/main.cpp
 CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
 	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\main.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\main.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\main.cpp"
 
 CMakeFiles/VulkanRenderer.dir/src/main.cpp.i: cmake_force
@@ -105,7 +120,7 @@ CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: CMakeFiles/VulkanRenderer.dir
 CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
 CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.cpp
 CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj"
 	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\surface.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\surface.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\surface.cpp"
 
 CMakeFiles/VulkanRenderer.dir/src/surface.cpp.i: cmake_force
@@ -120,7 +135,7 @@ CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.cpp
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
 	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\window.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\window.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.cpp"
 
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.i: cmake_force
@@ -133,6 +148,7 @@ CMakeFiles/VulkanRenderer.dir/src/window.cpp.s: cmake_force
 
 # Object files for target VulkanRenderer
 VulkanRenderer_OBJECTS = \
+"CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj" \
@@ -141,6 +157,7 @@ VulkanRenderer_OBJECTS = \
 # External object files for target VulkanRenderer
 VulkanRenderer_EXTERNAL_OBJECTS =
 
+VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj
@@ -152,7 +169,7 @@ VulkanRenderer.exe: external/glm/glm/glm.lib
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/linkLibs.rsp
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/objects1.rsp
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable VulkanRenderer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable VulkanRenderer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\VulkanRenderer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

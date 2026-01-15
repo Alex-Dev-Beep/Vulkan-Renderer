@@ -624,4 +624,5 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.hpp \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\instance.hpp \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\surface.hpp \
-  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\glfw3native.h
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\glfw3native.h \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\device.hpp

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
