@@ -371,6 +371,7 @@ CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/new \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sal.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/setjmp.h \
@@ -404,6 +405,7 @@ CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocnum \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xmemory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xpolymorphic_allocator.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xsmf_control.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xstring \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xthreads.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtimec.h \
@@ -1422,6 +1424,7 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/new \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sal.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/setjmp.h \
@@ -1459,6 +1462,7 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xmemory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xpolymorphic_allocator.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xsmf_control.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xstring \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xthreads.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtimec.h \
@@ -2351,6 +2355,8 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/pshpack4.h
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winioctl.h:
 
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional:
+
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/basetsd.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/guiddef.h:
@@ -2765,6 +2771,8 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_co
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/propidl.h:
 
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xsmf_control.h:
+
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/propidlbase.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2_precision.hpp:
@@ -2877,9 +2885,9 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.h
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double4_precision.hpp:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winsock.h:
-
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winsock.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.inl:
 

@@ -22,17 +22,20 @@ int main() {
         VkSurfaceKHR surface;
         VkInstance instance;
         VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+        VkQueue graphicsQueue;
+        VkQueue presentQueue;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
         setupDebugMessenger(instance);
         createSurface(instance, surface, window);
-        pickPhysicalDevice(instance, physicalDevice);
+        pickPhysicalDevice(instance, physicalDevice, surface);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
         }
 
+        vkDestroySurfaceKHR(instance, surface, nullptr);
         cleanupInstance(instance);
         glfwDestroyWindow(window);
         glfwTerminate();

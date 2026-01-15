@@ -4,28 +4,66 @@
 #include <vector>
 #include <iostream>
 
-bool isDeviceSuitable(VkPhysicalDevice device) {
-    VkPhysicalDeviceProperties deviceProperties;
-    VkPhysicalDeviceFeatures deviceFeatures;
-    vkGetPhysicalDeviceProperties(device, &deviceProperties);
-    vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
+QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface) {
+    QueueFamilyIndices indices;
 
-    return deviceProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU || deviceProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU &&
-           deviceFeatures.geometryShader;
+    uint32_t queueFamilyCount = 0;
+    vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, nullptr);
+
+    std::vector<VkQueueFamilyProperties> queueFamilies(queueFamilyCount);
+    vkGetPhysicalDeviceQueueFamilyProperties(
+        device, &queueFamilyCount, queueFamilies.data()
+    );
+
+    int i = 0;
+    for (const auto& queueFamily : queueFamilies) {
+
+        // Graphics queue
+        if (queueFamily.queueCount > 0 &&
+            queueFamily.queueFlags & VK_QUEUE_GRAPHICS_BIT) {
+            indices.graphicsFamily = i;
+        }
+
+        VkBool32 presentSupport = false;
+        vkGetPhysicalDeviceSurfaceSupportKHR(
+            device,
+            i,
+            surface,
+            &presentSupport
+        );
+
+        if (queueFamily.queueCount > 0 && presentSupport) {
+            indices.presentFamily = i;
+        }
+
+        if (indices.isComplete()) {
+            break;
+        }
+
+        i++;
+    }
+
+    return indices;
 }
 
-void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice) {
+bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface) {
+    QueueFamilyIndices indices = findQueueFamilies(device, surface);
+
+    return indices.isComplete();
+}
+
+void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice, VkSurfaceKHR surface) {
     uint32_t deviceCount = 0;
     vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
 
     if (deviceCount == 0) {
-        throw std::runtime_error("failed to find GPUs with Vulkan support!");
+        throw std::runtime_error("Failed to find GPUs with Vulkan support!");
     }
 
     std::vector<VkPhysicalDevice> devices(deviceCount);
     vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
     for (const auto& device : devices) {
-        if (isDeviceSuitable(device)) {
+        if (isDeviceSuitable(device, surface)) {
             physicalDevice = device;
             break;
         }
@@ -35,5 +73,8 @@ void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice) {
         throw std::runtime_error("Failed to find a suitable GPU!");
     }
 
-    std::cout << physicalDevice << std::endl;
+    VkPhysicalDeviceProperties props;
+    vkGetPhysicalDeviceProperties(physicalDevice, &props);
+    std::cout << "Using GPU: " << props.deviceName << std::endl;
+
 }
