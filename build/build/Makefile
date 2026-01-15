@@ -334,6 +334,30 @@ src/surface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/surface.cpp.s
 .PHONY : src/surface.cpp.s
 
+src/validation_layers.obj: src/validation_layers.cpp.obj
+.PHONY : src/validation_layers.obj
+
+# target to build an object file
+src/validation_layers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj
+.PHONY : src/validation_layers.cpp.obj
+
+src/validation_layers.i: src/validation_layers.cpp.i
+.PHONY : src/validation_layers.i
+
+# target to preprocess a source file
+src/validation_layers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.i
+.PHONY : src/validation_layers.cpp.i
+
+src/validation_layers.s: src/validation_layers.cpp.s
+.PHONY : src/validation_layers.s
+
+# target to generate assembly for a file
+src/validation_layers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.s
+.PHONY : src/validation_layers.cpp.s
+
 src/window.obj: src/window.cpp.obj
 .PHONY : src/window.obj
 
@@ -388,6 +412,9 @@ help:
 	@echo ... src/surface.obj
 	@echo ... src/surface.i
 	@echo ... src/surface.s
+	@echo ... src/validation_layers.obj
+	@echo ... src/validation_layers.i
+	@echo ... src/validation_layers.s
 	@echo ... src/window.obj
 	@echo ... src/window.i
 	@echo ... src/window.s
