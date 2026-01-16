@@ -11,6 +11,7 @@
 #include "surface.hpp"
 #include "device.hpp"
 #include "swapchain.hpp"
+#include "pipeline.hpp"
 
 int main() {
     try {
@@ -32,6 +33,9 @@ int main() {
         VkFormat swapChainImageFormat;
         VkExtent2D swapChainExtent;
         std::vector<VkImageView> swapChainImageViews;
+        VkPipelineLayout pipelineLayout;
+        VkRenderPass renderPass;
+        VkPipeline graphicsPipeline;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
@@ -41,6 +45,8 @@ int main() {
         createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
         createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
         createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
+        createRenderPass(swapChainImageFormat, renderPass, device);
+        createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
@@ -49,6 +55,9 @@ int main() {
         for (auto imageView : swapChainImageViews) {
             vkDestroyImageView(device, imageView, nullptr);
         }
+
+        vkDestroyRenderPass(device, renderPass, nullptr);
+        vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
         vkDestroySwapchainKHR(device, swapChain, nullptr);
         vkDestroyDevice(device, nullptr);
         vkDestroySurfaceKHR(instance, surface, nullptr);

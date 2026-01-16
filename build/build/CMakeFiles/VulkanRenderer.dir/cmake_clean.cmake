@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj.d"
+  "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj"

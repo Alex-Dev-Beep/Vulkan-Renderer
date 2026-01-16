@@ -310,6 +310,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/pipeline.obj: src/pipeline.cpp.obj
+.PHONY : src/pipeline.obj
+
+# target to build an object file
+src/pipeline.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj
+.PHONY : src/pipeline.cpp.obj
+
+src/pipeline.i: src/pipeline.cpp.i
+.PHONY : src/pipeline.i
+
+# target to preprocess a source file
+src/pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.i
+.PHONY : src/pipeline.cpp.i
+
+src/pipeline.s: src/pipeline.cpp.s
+.PHONY : src/pipeline.s
+
+# target to generate assembly for a file
+src/pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.s
+.PHONY : src/pipeline.cpp.s
+
 src/surface.obj: src/surface.cpp.obj
 .PHONY : src/surface.obj
 
@@ -433,6 +457,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/pipeline.obj
+	@echo ... src/pipeline.i
+	@echo ... src/pipeline.s
 	@echo ... src/surface.obj
 	@echo ... src/surface.i
 	@echo ... src/surface.s

@@ -14,11 +14,13 @@ VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>
 VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities, GLFWwindow* window);
 
 void createSwapChain(VkPhysicalDevice physicalDevice, 
-    VkSurfaceKHR surface, GLFWwindow* window, 
-    VkSwapchainKHR& swapChain, VkDevice device, 
-    std::vector<VkImage> swapChainImages, 
-    VkFormat swapChainImageFormat, 
-    VkExtent2D swapChainExtent
+    VkSurfaceKHR surface, 
+    GLFWwindow* window, 
+    VkSwapchainKHR& swapChain, 
+    VkDevice device, 
+    std::vector<VkImage>& swapChainImages, 
+    VkFormat& swapChainImageFormat, 
+    VkExtent2D& swapChainExtent
 );
 
 void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector<VkImage>& swapChainImages, VkFormat swapChainImageFormat, VkDevice device);

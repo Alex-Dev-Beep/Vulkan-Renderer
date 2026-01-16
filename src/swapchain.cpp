@@ -69,7 +69,7 @@ VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& avai
     return VK_PRESENT_MODE_FIFO_KHR;
 }
 
-void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFWwindow* window, VkSwapchainKHR& swapChain, VkDevice device, std::vector<VkImage> swapChainImages, VkFormat swapChainImageFormat, VkExtent2D swapChainExtent) {
+void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFWwindow* window, VkSwapchainKHR& swapChain, VkDevice device, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, VkExtent2D& swapChainExtent) {
     SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice, surface);
 
     VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
@@ -114,6 +114,10 @@ void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFW
     createInfo.clipped = VK_TRUE;
 
     createInfo.oldSwapchain = VK_NULL_HANDLE;
+
+    swapChainImageFormat = surfaceFormat.format;
+    swapChainExtent = extent;
+
     if (vkCreateSwapchainKHR(device, &createInfo, nullptr, &swapChain) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create swapchain!");
     } else {
@@ -123,9 +127,6 @@ void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFW
     vkGetSwapchainImagesKHR(device, swapChain, &imageCount, nullptr);
     swapChainImages.resize(imageCount);
     vkGetSwapchainImagesKHR(device, swapChain, &imageCount, swapChainImages.data());
-
-    swapChainImageFormat = surfaceFormat.format;
-    swapChainExtent = extent;
 }
 
 VkSurfaceFormatKHR chooseSwapSurfaceFormat(

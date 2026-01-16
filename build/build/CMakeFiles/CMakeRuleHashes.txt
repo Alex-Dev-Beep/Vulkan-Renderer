@@ -1,3 +1,6 @@
 # Hashes of file build rules.
+276cb33fd1eeac07baf74c48937fe612 C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv
+605e196f96904d3bb5019834341c0a62 C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv
+908c935d060b85e5c7862c495a8be648 CMakeFiles/Shaders
 844cca1b8e6dac5e0e532644497d24dc external/GLFW/CMakeFiles/uninstall
 d5cec041079680838a9772dc2aae65e1 external/GLFW/src/CMakeFiles/update_mappings

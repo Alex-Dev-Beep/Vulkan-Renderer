@@ -65,9 +65,23 @@ include CMakeFiles/Shaders.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/Shaders.dir/progress.make
 
+CMakeFiles/Shaders: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv
+CMakeFiles/Shaders: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv"
+	C:\VulkanSDK\1.4.328.1\Bin\glslangValidator.exe -V "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag" -o "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv"
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Generating C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv"
+	C:\VulkanSDK\1.4.328.1\Bin\glslangValidator.exe -V "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert" -o "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv"
+
 CMakeFiles/Shaders.dir/codegen:
 .PHONY : CMakeFiles/Shaders.dir/codegen
 
+Shaders: CMakeFiles/Shaders
+Shaders: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.frag.spv
+Shaders: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/shaders/shader.vert.spv
 Shaders: CMakeFiles/Shaders.dir/build.make
 .PHONY : Shaders
 
