@@ -31,6 +31,7 @@ int main() {
         std::vector<VkImage> swapChainImages;
         VkFormat swapChainImageFormat;
         VkExtent2D swapChainExtent;
+        std::vector<VkImageView> swapChainImageViews;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
@@ -39,11 +40,15 @@ int main() {
         pickPhysicalDevice(instance, physicalDevice, surface);
         createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
         createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+        createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
         }
 
+        for (auto imageView : swapChainImageViews) {
+            vkDestroyImageView(device, imageView, nullptr);
+        }
         vkDestroySwapchainKHR(device, swapChain, nullptr);
         vkDestroyDevice(device, nullptr);
         vkDestroySurfaceKHR(instance, surface, nullptr);
