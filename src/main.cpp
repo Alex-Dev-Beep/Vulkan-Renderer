@@ -36,6 +36,7 @@ int main() {
         VkPipelineLayout pipelineLayout;
         VkRenderPass renderPass;
         VkPipeline graphicsPipeline;
+        std::vector<VkFramebuffer> swapChainFramebuffers;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
@@ -47,6 +48,7 @@ int main() {
         createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
         createRenderPass(swapChainImageFormat, renderPass, device);
         createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
+        createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
@@ -55,7 +57,9 @@ int main() {
         for (auto imageView : swapChainImageViews) {
             vkDestroyImageView(device, imageView, nullptr);
         }
-
+        for (auto framebuffer : swapChainFramebuffers) {
+            vkDestroyFramebuffer(device, framebuffer, nullptr);
+        }
         vkDestroyRenderPass(device, renderPass, nullptr);
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
         vkDestroySwapchainKHR(device, swapChain, nullptr);
