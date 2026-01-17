@@ -16,3 +16,4 @@ QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surfa
 void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice, VkSurfaceKHR surface);
 bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
 void createLogicalDevice(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkDevice& device, VkQueue& graphicsQueue, VkQueue& presentQueue);
+void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkCommandPool& commandPool, VkDevice device);

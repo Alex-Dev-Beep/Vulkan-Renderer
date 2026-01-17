@@ -37,6 +37,7 @@ int main() {
         VkRenderPass renderPass;
         VkPipeline graphicsPipeline;
         std::vector<VkFramebuffer> swapChainFramebuffers;
+        VkCommandPool commandPool;
 
         createWindow(800, 600, "Vulkan Window", window);
         createInstance(instance);
@@ -49,11 +50,13 @@ int main() {
         createRenderPass(swapChainImageFormat, renderPass, device);
         createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
         createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
+        createCommandPool(physicalDevice, surface, commandPool, device);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
         }
 
+        vkDestroyCommandPool(device, commandPool, nullptr);
         for (auto imageView : swapChainImageViews) {
             vkDestroyImageView(device, imageView, nullptr);
         }
