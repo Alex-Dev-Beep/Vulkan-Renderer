@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj.d"
+  "CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"

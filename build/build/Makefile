@@ -382,6 +382,30 @@ src/swapchain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.s
 .PHONY : src/swapchain.cpp.s
 
+src/sync.obj: src/sync.cpp.obj
+.PHONY : src/sync.obj
+
+# target to build an object file
+src/sync.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj
+.PHONY : src/sync.cpp.obj
+
+src/sync.i: src/sync.cpp.i
+.PHONY : src/sync.i
+
+# target to preprocess a source file
+src/sync.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/sync.cpp.i
+.PHONY : src/sync.cpp.i
+
+src/sync.s: src/sync.cpp.s
+.PHONY : src/sync.s
+
+# target to generate assembly for a file
+src/sync.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/sync.cpp.s
+.PHONY : src/sync.cpp.s
+
 src/validation_layers.obj: src/validation_layers.cpp.obj
 .PHONY : src/validation_layers.obj
 
@@ -466,6 +490,9 @@ help:
 	@echo ... src/swapchain.obj
 	@echo ... src/swapchain.i
 	@echo ... src/swapchain.s
+	@echo ... src/sync.obj
+	@echo ... src/sync.i
+	@echo ... src/sync.s
 	@echo ... src/validation_layers.obj
 	@echo ... src/validation_layers.i
 	@echo ... src/validation_layers.s

@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include <optional>
+#include <vector>
 
 struct QueueFamilyIndices {
     std::optional<uint32_t> graphicsFamily;
@@ -17,3 +18,5 @@ void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice, V
 bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
 void createLogicalDevice(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkDevice& device, VkQueue& graphicsQueue, VkQueue& presentQueue);
 void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkCommandPool& commandPool, VkDevice device);
+void createCommandBuffer(VkCommandPool commandPool, VkCommandBuffer& commandBuffer, VkDevice device, int MAX_FRAMES_IN_FLIGHT, std::vector<VkCommandBuffer> commandBuffers);
+void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline);
