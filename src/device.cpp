@@ -170,6 +170,7 @@ void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, Vk
     VkCommandPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
     poolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
+    
     poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
 
     if (vkCreateCommandPool(device, &poolInfo, nullptr, &commandPool) != VK_SUCCESS) {
@@ -179,22 +180,27 @@ void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, Vk
     std::cout << "Succesfully created command pool!" << std::endl;
 }
 
-void createCommandBuffer(VkCommandPool commandPool, VkCommandBuffer& commandBuffer, VkDevice device, int MAX_FRAMES_IN_FLIGHT, std::vector<VkCommandBuffer> commandBuffers) {
+void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRAMES_IN_FLIGHT, std::vector<VkCommandBuffer>& commandBuffers) {
     commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.commandPool = commandPool;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-    allocInfo.commandBufferCount = 1;
+    allocInfo.commandBufferCount =
+        static_cast<uint32_t>(commandBuffers.size());
 
-    allocInfo.commandBufferCount = (uint32_t) commandBuffers.size();
-
-    if (vkAllocateCommandBuffers(device, &allocInfo, &commandBuffer) != VK_SUCCESS) {
+    if (vkAllocateCommandBuffers(
+            device,
+            &allocInfo,
+            commandBuffers.data()
+        ) != VK_SUCCESS) {
         throw std::runtime_error("Failed to allocate command buffers!");
     }
 
     std::cout << "Succesfully allocated command buffers!" << std::endl;
 }
+
 
 void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline) {
     VkCommandBufferBeginInfo beginInfo{};

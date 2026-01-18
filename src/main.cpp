@@ -15,12 +15,12 @@
 #include "sync.hpp"
 
 uint32_t currentFrame = 0;
+uint32_t imageIndex;
 
-void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR swapChain, VkSemaphore imageAvailableSemaphore, VkCommandBuffer commandBuffer, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, VkQueue graphicsQueue, VkQueue presentQueue, VkSemaphore renderFinishedSemaphore, std::vector<VkFence> inFlightFences, std::vector<VkSemaphore> renderFinishedSemaphores, std::vector<VkSemaphore> imageAvailableSemaphores, std::vector<VkCommandBuffer> commandBuffers, int MAX_FRAMES_IN_FLIGHT) {
+void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR swapChain, VkSemaphore imageAvailableSemaphore, VkCommandBuffer commandBuffer, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, VkQueue graphicsQueue, VkQueue presentQueue, VkSemaphore renderFinishedSemaphore, std::vector<VkFence>& inFlightFences, std::vector<VkSemaphore>& renderFinishedSemaphores, std::vector<VkSemaphore>& imageAvailableSemaphores, std::vector<VkCommandBuffer>& commandBuffers, int MAX_FRAMES_IN_FLIGHT) {
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
     vkResetFences(device, 1, &inFlightFences[currentFrame]);
 
-    uint32_t imageIndex;
     vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &imageIndex);
 
     vkResetCommandBuffer(commandBuffers[currentFrame],  0);
@@ -115,8 +115,12 @@ int main() {
         createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
         createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
         createCommandPool(physicalDevice, surface, commandPool, device);
-        createCommandBuffer(commandPool, commandBuffer, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
-        createSyncObjects(device, inFlightFence, renderFinishedSemaphore, imageAvailableSemaphore, commandBuffers, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);
+                std::cout << "imageIndex: " << imageIndex << std::endl;
+        std::cout << "swapChainFramebuffers size: "
+                << swapChainFramebuffers.size() << std::endl;
+
+        createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
+        createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();

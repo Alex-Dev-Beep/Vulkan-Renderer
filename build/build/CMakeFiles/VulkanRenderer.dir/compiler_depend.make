@@ -3116,6 +3116,7 @@ CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/Program\ Files/LLVM/lib/clang/21/include/xsavesintrin.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/xtestintrin.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/yvals_core.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_bit_utils.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_iter_core.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ostream.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_sanitizer_annotate_container.hpp \
@@ -3174,6 +3175,7 @@ CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_new_debug.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_string.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_typeinfo.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vector \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xatomic.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xatomic_wait.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcall_once.h \
