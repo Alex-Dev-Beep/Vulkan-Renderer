@@ -14,24 +14,49 @@
 #include "pipeline.hpp"
 #include "sync.hpp"
 
+bool framebufferResized = false;
 uint32_t currentFrame = 0;
 uint32_t imageIndex;
 
-void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR swapChain, VkSemaphore imageAvailableSemaphore, VkCommandBuffer commandBuffer, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, VkQueue graphicsQueue, VkQueue presentQueue, VkSemaphore renderFinishedSemaphore, std::vector<VkFence>& inFlightFences, std::vector<VkSemaphore>& renderFinishedSemaphores, std::vector<VkSemaphore>& imageAvailableSemaphores, std::vector<VkCommandBuffer>& commandBuffers, int MAX_FRAMES_IN_FLIGHT) {
+void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
+    framebufferResized = true;
+}
+
+void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR& swapChain, VkSemaphore imageAvailableSemaphore, VkCommandBuffer commandBuffer, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, VkQueue graphicsQueue, VkQueue presentQueue, VkSemaphore renderFinishedSemaphore, std::vector<VkFence>& inFlightFences, std::vector<VkSemaphore>& renderFinishedSemaphores, std::vector<VkSemaphore>& imageAvailableSemaphores, std::vector<VkCommandBuffer>& commandBuffers, int MAX_FRAMES_IN_FLIGHT, VkSurfaceKHR surface, GLFWwindow* window, VkPhysicalDevice physicalDevice, VkCommandPool commandPool, VkFormat swapChainImageFormat, std::vector<VkImage> swapChainImages, std::vector<VkImageView> swapChainImageViews, VkPipelineLayout pipelineLayout) {
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
+    
+    uint32_t imageIndex;
+    VkResult result = vkAcquireNextImageKHR(
+        device,
+        swapChain,
+        UINT64_MAX,
+        imageAvailableSemaphores[currentFrame],
+        VK_NULL_HANDLE,
+        &imageIndex
+    );
+
+
+    if (result == VK_ERROR_OUT_OF_DATE_KHR) {
+        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout);
+        return;
+    }
+    if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
+        throw std::runtime_error("Failed to acquire swap chain image!");
+    }
+
     vkResetFences(device, 1, &inFlightFences[currentFrame]);
-
-    vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &imageIndex);
-
-    vkResetCommandBuffer(commandBuffers[currentFrame],  0);
+    vkResetCommandBuffer(commandBuffers[currentFrame], 0);
 
     recordCommandBuffer(commandBuffers[currentFrame], imageIndex, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-    VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
-    VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
+    VkSemaphore waitSemaphores[] = { imageAvailableSemaphores[currentFrame] };
+    VkPipelineStageFlags waitStages[] = {
+        VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT
+    };
+
     submitInfo.waitSemaphoreCount = 1;
     submitInfo.pWaitSemaphores = waitSemaphores;
     submitInfo.pWaitDstStageMask = waitStages;
@@ -39,33 +64,40 @@ void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR swapChain,
     submitInfo.commandBufferCount = 1;
     submitInfo.pCommandBuffers = &commandBuffers[currentFrame];
 
-    VkSemaphore signalSemaphores[] = {renderFinishedSemaphores[currentFrame]};
+    VkSemaphore signalSemaphores[] = { renderFinishedSemaphores[currentFrame] };
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphores;
 
-    if (vkQueueSubmit(graphicsQueue, 1, &submitInfo, inFlightFences[currentFrame]) != VK_SUCCESS) {
+    if (vkQueueSubmit(
+        graphicsQueue,
+        1,
+        &submitInfo,
+        inFlightFences[currentFrame]
+    ) != VK_SUCCESS) {
         throw std::runtime_error("Failed to submit draw command buffer!");
     }
 
-    std::cout << "Succesfully submitted drawed command buffer!" << std::endl;
-
     VkPresentInfoKHR presentInfo{};
     presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
-
     presentInfo.waitSemaphoreCount = 1;
     presentInfo.pWaitSemaphores = signalSemaphores;
 
-    VkSwapchainKHR swapChains[] = {swapChain};
     presentInfo.swapchainCount = 1;
-    presentInfo.pSwapchains = swapChains;
+    presentInfo.pSwapchains = &swapChain;
     presentInfo.pImageIndices = &imageIndex;
 
-    presentInfo.pResults = nullptr; // Optional
+    result = vkQueuePresentKHR(presentQueue, &presentInfo);
 
-    vkQueuePresentKHR(presentQueue, &presentInfo);
+    if (result == VK_ERROR_OUT_OF_DATE_KHR ||
+        result == VK_SUBOPTIMAL_KHR ||
+        framebufferResized) {
+
+        framebufferResized = false;
+        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout);
+        return;
+    }
 
     currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
-
 }
 
 int main() {
@@ -104,6 +136,7 @@ int main() {
         const int MAX_FRAMES_IN_FLIGHT = 2;
 
         createWindow(800, 600, "Vulkan Window", window);
+        glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
         createInstance(instance);
         setupDebugMessenger(instance);
         createSurface(instance, surface, window);
@@ -121,7 +154,7 @@ int main() {
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
-            drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT);
+            drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout);
         }
         
         vkDeviceWaitIdle(device);
@@ -140,7 +173,7 @@ int main() {
         }
         vkDestroyRenderPass(device, renderPass, nullptr);
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
-        vkDestroySwapchainKHR(device, swapChain, nullptr);
+        cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);
         vkDestroyDevice(device, nullptr);
         vkDestroySurfaceKHR(instance, surface, nullptr);
         cleanupInstance(instance);

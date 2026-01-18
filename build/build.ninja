@@ -109,6 +109,16 @@ build CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: CXX_COMPILER__VulkanR
   OBJECT_FILE_DIR = CMakeFiles\VulkanRenderer.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\VulkanRenderer.dir
 
+build CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: CXX_COMPILER__VulkanRenderer_unscanned_Debug C$:/C++$ Projects/Learning-Vulkan/Vulkan-Renderer/src/sync.cpp || cmake_object_order_depends_target_VulkanRenderer
+  CONFIG = Debug
+  DEFINES = -DVK_USE_PLATFORM_WIN32_KHR
+  DEP_FILE = CMakeFiles\VulkanRenderer.dir\src\sync.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src" -I"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include" -I"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm" -isystem C:/VulkanSDK/1.4.328.1/include
+  OBJECT_DIR = CMakeFiles\VulkanRenderer.dir
+  OBJECT_FILE_DIR = CMakeFiles\VulkanRenderer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\VulkanRenderer.dir
+
 build CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj: CXX_COMPILER__VulkanRenderer_unscanned_Debug C$:/C++$ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.cpp || cmake_object_order_depends_target_VulkanRenderer
   CONFIG = Debug
   DEFINES = -DVK_USE_PLATFORM_WIN32_KHR
@@ -137,7 +147,7 @@ build CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CXX_COMPILER__VulkanRend
 #############################################
 # Link the executable VulkanRenderer.exe
 
-build VulkanRenderer.exe: CXX_EXECUTABLE_LINKER__VulkanRenderer_Debug CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj | external/GLFW/src/libglfw3.a C$:/VulkanSDK/1.4.328.1/Lib/vulkan-1.lib external/glm/glm/libglm.a || Shaders external/GLFW/src/libglfw3.a external/glm/glm/libglm.a
+build VulkanRenderer.exe: CXX_EXECUTABLE_LINKER__VulkanRenderer_Debug CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj | external/GLFW/src/libglfw3.a C$:/VulkanSDK/1.4.328.1/Lib/vulkan-1.lib external/glm/glm/libglm.a || Shaders external/GLFW/src/libglfw3.a external/glm/glm/libglm.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = external/GLFW/src/libglfw3.a  C:/VulkanSDK/1.4.328.1/Lib/vulkan-1.lib  external/glm/glm/libglm.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

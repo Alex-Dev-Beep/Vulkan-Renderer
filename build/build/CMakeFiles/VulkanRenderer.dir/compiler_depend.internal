@@ -2360,6 +2360,7 @@ CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj
 CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj
  C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.cpp
  C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp
+ C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp
  C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp
  C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h
  C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/shared/apiset.h

@@ -37,6 +37,12 @@
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DVK_USE_PLATFORM_WIN32_KHR -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src\" -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include\" -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm\" -isystem C:/VulkanSDK/1.4.328.1/include -g -std=gnu++20 -o CMakeFiles\\VulkanRenderer.dir\\src\\sync.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\sync.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/sync.cpp",
+  "output": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DVK_USE_PLATFORM_WIN32_KHR -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src\" -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include\" -I\"C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm\" -isystem C:/VulkanSDK/1.4.328.1/include -g -std=gnu++20 -o CMakeFiles\\VulkanRenderer.dir\\src\\validation_layers.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\validation_layers.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.cpp",
   "output": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj"

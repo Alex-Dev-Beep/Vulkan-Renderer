@@ -2,6 +2,7 @@
 
 #include "swapchain.hpp"
 #include "device.hpp"
+#include "pipeline.hpp"
 
 #include <algorithm>
 #include <limits>
@@ -171,4 +172,49 @@ void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector
     
     std::cout << "Succesfully created image views!" << std::endl;
 
+}
+
+void recreateSwapChain(GLFWwindow* window, VkDevice device, VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass renderPass, VkCommandPool commandPool, std::vector<VkCommandBuffer> commandBuffers, VkExtent2D swapChainExtent, std::vector<VkImage> swapChainImages, VkFormat swapChainImageFormat, std::vector<VkImageView> swapChainImageViews, std::vector<VkFramebuffer> swapChainFramebuffers, VkPipeline graphicsPipeline, VkPipelineLayout pipelineLayout) {
+    int width = 0, height = 0;
+    glfwGetFramebufferSize(window, &width, &height);
+
+    while (width == 0 || height == 0) {
+        glfwGetFramebufferSize(window, &width, &height);
+        glfwWaitEvents();
+    }
+
+    vkDeviceWaitIdle(device);
+
+    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);
+
+    createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+    createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
+    createRenderPass(swapChainImageFormat, renderPass, device);
+    createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
+    createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
+    createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
+}
+
+void cleanupSwapChain(VkDevice device, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkCommandPool commandPool, std::vector<VkCommandBuffer> commandBuffers, std::vector<VkImageView> swapChainImageViews, VkSwapchainKHR swapChain) {
+    for (VkFramebuffer framebuffer : swapChainFramebuffers) {
+        vkDestroyFramebuffer(device, framebuffer, nullptr);
+    }
+    swapChainFramebuffers.clear();
+
+    vkFreeCommandBuffers(
+        device,
+        commandPool,
+        static_cast<uint32_t>(commandBuffers.size()),
+        commandBuffers.data()
+    );
+    commandBuffers.clear();
+
+    vkDestroyRenderPass(device, renderPass, nullptr);
+
+    for (VkImageView imageView : swapChainImageViews) {
+        vkDestroyImageView(device, imageView, nullptr);
+    }
+    swapChainImageViews.clear();
+
+    vkDestroySwapchainKHR(device, swapChain, nullptr);
 }
