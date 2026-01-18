@@ -115,9 +115,6 @@ int main() {
         createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
         createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
         createCommandPool(physicalDevice, surface, commandPool, device);
-                std::cout << "imageIndex: " << imageIndex << std::endl;
-        std::cout << "swapChainFramebuffers size: "
-                << swapChainFramebuffers.size() << std::endl;
 
         createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
         createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);
