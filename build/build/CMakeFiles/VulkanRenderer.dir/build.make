@@ -191,11 +191,26 @@ CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
 
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj: CMakeFiles/VulkanRenderer.dir/flags.make
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.cpp
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj"
+	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\vertex.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\vertex.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\vertex.cpp"
+
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/flags.make
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.cpp
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: CMakeFiles/VulkanRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
 	C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj -MF CMakeFiles\VulkanRenderer.dir\src\window.cpp.obj.d -o CMakeFiles\VulkanRenderer.dir\src\window.cpp.obj -c "C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\src\window.cpp"
 
 CMakeFiles/VulkanRenderer.dir/src/window.cpp.i: cmake_force
@@ -216,6 +231,7 @@ VulkanRenderer_OBJECTS = \
 "CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj" \
+"CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj" \
 "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
 
 # External object files for target VulkanRenderer
@@ -229,6 +245,7 @@ VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj
+VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/build.make
 VulkanRenderer.exe: external/GLFW/src/glfw3.lib
@@ -237,7 +254,7 @@ VulkanRenderer.exe: external/glm/glm/glm.lib
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/linkLibs.rsp
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/objects1.rsp
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable VulkanRenderer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\C++ Projects\Learning-Vulkan\Vulkan-Renderer\build\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable VulkanRenderer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\VulkanRenderer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

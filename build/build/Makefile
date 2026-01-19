@@ -430,6 +430,30 @@ src/validation_layers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.s
 .PHONY : src/validation_layers.cpp.s
 
+src/vertex.obj: src/vertex.cpp.obj
+.PHONY : src/vertex.obj
+
+# target to build an object file
+src/vertex.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj
+.PHONY : src/vertex.cpp.obj
+
+src/vertex.i: src/vertex.cpp.i
+.PHONY : src/vertex.i
+
+# target to preprocess a source file
+src/vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.i
+.PHONY : src/vertex.cpp.i
+
+src/vertex.s: src/vertex.cpp.s
+.PHONY : src/vertex.s
+
+# target to generate assembly for a file
+src/vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.s
+.PHONY : src/vertex.cpp.s
+
 src/window.obj: src/window.cpp.obj
 .PHONY : src/window.obj
 
@@ -496,6 +520,9 @@ help:
 	@echo ... src/validation_layers.obj
 	@echo ... src/validation_layers.i
 	@echo ... src/validation_layers.s
+	@echo ... src/vertex.obj
+	@echo ... src/vertex.i
+	@echo ... src/vertex.s
 	@echo ... src/window.obj
 	@echo ... src/window.i
 	@echo ... src/window.s

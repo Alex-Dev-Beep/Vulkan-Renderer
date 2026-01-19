@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj.d"
+  "CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj.d"
   "VulkanRenderer.exe"

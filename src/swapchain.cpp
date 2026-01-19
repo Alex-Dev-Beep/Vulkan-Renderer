@@ -3,6 +3,7 @@
 #include "swapchain.hpp"
 #include "device.hpp"
 #include "pipeline.hpp"
+#include "vertex.hpp"
 
 #include <algorithm>
 #include <limits>
@@ -174,7 +175,7 @@ void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector
 
 }
 
-void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout) {
+void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, std::vector<Vertex> vertices) {
     int width = 0, height = 0;
     glfwGetFramebufferSize(window, &width, &height);
 
@@ -203,7 +204,8 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
             renderPass,
             swapChainFramebuffers,
             swapChainExtent,
-            graphicsPipeline
+            graphicsPipeline,
+            vertices, vertexBuffer
         );
     }
 
