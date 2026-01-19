@@ -194,16 +194,19 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
     createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
     createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
 
-    for (size_t i = 0; i < commandBuffers.size(); i++) {
+    commandBuffers.resize(swapChainFramebuffers.size());
+
+    for (size_t i = 0; i < swapChainFramebuffers.size(); i++) {
         recordCommandBuffer(
             commandBuffers[i],
-            i,
+            static_cast<uint32_t>(i),
             renderPass,
             swapChainFramebuffers,
             swapChainExtent,
             graphicsPipeline
         );
     }
+
 
 }
 
