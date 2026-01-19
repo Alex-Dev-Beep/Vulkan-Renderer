@@ -22,7 +22,32 @@ void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
     framebufferResized = true;
 }
 
-void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR& swapChain, VkSemaphore imageAvailableSemaphore, VkCommandBuffer commandBuffer, VkRenderPass renderPass, std::vector<VkFramebuffer> swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, VkQueue graphicsQueue, VkQueue presentQueue, VkSemaphore renderFinishedSemaphore, std::vector<VkFence>& inFlightFences, std::vector<VkSemaphore>& renderFinishedSemaphores, std::vector<VkSemaphore>& imageAvailableSemaphores, std::vector<VkCommandBuffer>& commandBuffers, int MAX_FRAMES_IN_FLIGHT, VkSurfaceKHR surface, GLFWwindow* window, VkPhysicalDevice physicalDevice, VkCommandPool commandPool, VkFormat swapChainImageFormat, std::vector<VkImage> swapChainImages, std::vector<VkImageView> swapChainImageViews, VkPipelineLayout pipelineLayout) {
+void drawFrame(
+    VkDevice& device, 
+    VkFence& inFlightFence, 
+    VkSwapchainKHR& swapChain, 
+    VkSemaphore& imageAvailableSemaphore, 
+    VkCommandBuffer& commandBuffer, 
+    VkRenderPass& renderPass,
+    std::vector<VkFramebuffer>& swapChainFramebuffers, 
+    VkExtent2D& swapChainExtent, 
+    VkPipeline& graphicsPipeline, 
+    VkQueue& graphicsQueue, 
+    VkQueue& presentQueue, 
+    VkSemaphore& renderFinishedSemaphore, 
+    std::vector<VkFence>& inFlightFences, 
+    std::vector<VkSemaphore>& renderFinishedSemaphores, 
+    std::vector<VkSemaphore>& imageAvailableSemaphores, 
+    std::vector<VkCommandBuffer>& commandBuffers, 
+    int MAX_FRAMES_IN_FLIGHT, VkSurfaceKHR surface, 
+    GLFWwindow* window, 
+    VkPhysicalDevice& physicalDevice, 
+    VkCommandPool& commandPool, 
+    VkFormat& swapChainImageFormat, 
+    std::vector<VkImage>& swapChainImages, 
+    std::vector<VkImageView>& swapChainImageViews, 
+    VkPipelineLayout& pipelineLayout
+    ) {
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
     
     uint32_t imageIndex;
@@ -45,9 +70,6 @@ void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR& swapChain
     }
 
     vkResetFences(device, 1, &inFlightFences[currentFrame]);
-    vkResetCommandBuffer(commandBuffers[currentFrame], 0);
-
-    recordCommandBuffer(commandBuffers[currentFrame], imageIndex, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
@@ -62,7 +84,8 @@ void drawFrame(VkDevice device, VkFence inFlightFence, VkSwapchainKHR& swapChain
     submitInfo.pWaitDstStageMask = waitStages;
 
     submitInfo.commandBufferCount = 1;
-    submitInfo.pCommandBuffers = &commandBuffers[currentFrame];
+    submitInfo.pCommandBuffers = &commandBuffers[imageIndex];
+
 
     VkSemaphore signalSemaphores[] = { renderFinishedSemaphores[currentFrame] };
     submitInfo.signalSemaphoreCount = 1;
@@ -149,7 +172,18 @@ int main() {
         createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
         createCommandPool(physicalDevice, surface, commandPool, device);
 
-        createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
+        createCommandBuffer(commandPool, device, swapChainImages.size(), commandBuffers);
+
+        for (size_t i = 0; i < commandBuffers.size(); i++) {
+            recordCommandBuffer(
+                commandBuffers[i],
+                i,
+                renderPass,
+                swapChainFramebuffers,
+                swapChainExtent,
+                graphicsPipeline
+            );
+        }
         createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);
 
         while (!glfwWindowShouldClose(window)) {
