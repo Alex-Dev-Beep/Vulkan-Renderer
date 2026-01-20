@@ -176,20 +176,21 @@ int main() {
         createSurface(instance, surface, window);
         pickPhysicalDevice(instance, physicalDevice, surface);
         createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
-        createVertexBuffer(
-            physicalDevice,
-            device,
-            vertexBuffer,
-            vertexBufferMemory,
-            vertices
-        );
         createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
         createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
         createRenderPass(swapChainImageFormat, renderPass, device);
         createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
         createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
         createCommandPool(physicalDevice, surface, commandPool, device);
-
+        createVertexBuffer(
+            physicalDevice,
+            device,
+            commandPool,
+            graphicsQueue,
+            vertexBuffer,
+            vertexBufferMemory,
+            vertices
+        );
         createCommandBuffer(commandPool, device, swapChainImages.size(), commandBuffers);
 
         for (size_t i = 0; i < commandBuffers.size(); i++) {

@@ -72,7 +72,7 @@ void createVertexBuffer(
     const std::vector<Vertex>& vertices
 ) {
     VkDeviceSize bufferSize = sizeof(vertices[0]) * vertices.size();
-    
+
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
 
@@ -115,6 +115,7 @@ void createVertexBuffer(
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingBufferMemory, nullptr);
 }
+
 
 void createBuffer(
     VkPhysicalDevice physicalDevice,

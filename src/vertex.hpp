@@ -38,9 +38,11 @@ struct Vertex {
 void createVertexBuffer(
     VkPhysicalDevice physicalDevice,
     VkDevice device,
+    VkCommandPool commandPool,
+    VkQueue graphicsQueue,
     VkBuffer& vertexBuffer,
     VkDeviceMemory& vertexBufferMemory,
-    std::vector<Vertex> vertices
+    const std::vector<Vertex>& vertices
 );
 
 void createBuffer(
