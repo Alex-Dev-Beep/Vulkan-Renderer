@@ -60,3 +60,13 @@ uint32_t findMemoryType(
     uint32_t typeFilter,
     VkMemoryPropertyFlags properties
 );
+
+void createIndexBuffer(
+    VkPhysicalDevice physicalDevice,
+    VkDevice device,
+    VkCommandPool commandPool,
+    VkQueue graphicsQueue,
+    VkBuffer& indexBuffer,
+    VkDeviceMemory& indexBufferMemory,
+    const std::vector<uint16_t>& indices
+);
