@@ -406,6 +406,30 @@ src/sync.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/sync.cpp.s
 .PHONY : src/sync.cpp.s
 
+src/uniform.obj: src/uniform.cpp.obj
+.PHONY : src/uniform.obj
+
+# target to build an object file
+src/uniform.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj
+.PHONY : src/uniform.cpp.obj
+
+src/uniform.i: src/uniform.cpp.i
+.PHONY : src/uniform.i
+
+# target to preprocess a source file
+src/uniform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.i
+.PHONY : src/uniform.cpp.i
+
+src/uniform.s: src/uniform.cpp.s
+.PHONY : src/uniform.s
+
+# target to generate assembly for a file
+src/uniform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.s
+.PHONY : src/uniform.cpp.s
+
 src/validation_layers.obj: src/validation_layers.cpp.obj
 .PHONY : src/validation_layers.obj
 
@@ -517,6 +541,9 @@ help:
 	@echo ... src/sync.obj
 	@echo ... src/sync.i
 	@echo ... src/sync.s
+	@echo ... src/uniform.obj
+	@echo ... src/uniform.i
+	@echo ... src/uniform.s
 	@echo ... src/validation_layers.obj
 	@echo ... src/validation_layers.i
 	@echo ... src/validation_layers.s

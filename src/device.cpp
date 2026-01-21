@@ -203,7 +203,7 @@ void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRA
 }
 
 
-void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkRenderPass renderPass, const std::vector<VkFramebuffer>& swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, std::vector<Vertex> vertices, VkBuffer vertexBuffer, VkBuffer indexBuffer, const std::vector<uint16_t> indices) {
+void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkRenderPass renderPass, const std::vector<VkFramebuffer>& swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, std::vector<Vertex> vertices, VkBuffer vertexBuffer, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkPipelineLayout pipelineLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame) {
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 
@@ -255,6 +255,7 @@ void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkR
     scissor.extent = swapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
+    vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &descriptorSets[currentFrame], 0, nullptr);
     vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
 
     vkCmdEndRenderPass(commandBuffer);

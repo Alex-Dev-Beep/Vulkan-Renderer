@@ -43,6 +43,12 @@
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\uniform.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\uniform.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\validation_layers.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\validation_layers.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj"

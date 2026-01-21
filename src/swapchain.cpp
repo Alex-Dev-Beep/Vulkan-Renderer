@@ -175,7 +175,7 @@ void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector
 
 }
 
-void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, std::vector<Vertex> vertices, VkBuffer indexBuffer, const std::vector<uint16_t> indices) {
+void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, std::vector<Vertex> vertices, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkDescriptorSetLayout descriptorSetLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame) {
     int width = 0, height = 0;
     glfwGetFramebufferSize(window, &width, &height);
 
@@ -191,7 +191,7 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
     createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
     createRenderPass(swapChainImageFormat, renderPass, device);
-    createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline);
+    createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
     createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
     createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
 
@@ -208,7 +208,9 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
             vertices, 
             vertexBuffer,
             indexBuffer,
-            indices
+            indices,
+            pipelineLayout,
+            descriptorSets, currentFrame
         );
     }
 

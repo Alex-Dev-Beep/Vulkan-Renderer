@@ -633,4 +633,54 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\swapchain.hpp \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\pipeline.hpp \
   C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\sync.hpp \
-  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\\glfw3.h
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\GLFW\include\GLFW\\glfw3.h \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\uniform.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\matrix_transform.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\mat4x4.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\vec2.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\vec3.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\vec4.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_projection.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\gtc\constants.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\gtc\..\ext\scalar_constants.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\gtc\..\ext\..\detail\setup.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\gtc\..\ext\scalar_constants.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\gtc\constants.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\geometric.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\trigonometric.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\matrix.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_projection.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_clip_space.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\..\ext\scalar_constants.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_clip_space.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_transform.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\ext\matrix_transform.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\matrix_transform.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\geometric.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\trigonometric.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\gtc\..\matrix.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\chrono \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_chrono.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ratio \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfilesystem_abi.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_tzdb.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\format \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_format_ucd_tables.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_formatter.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_print.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_tuple_formatter.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\bit \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\charconv \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu_tables.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_tables.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\locale \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocbuf \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmes \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmon \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xloctime \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\forward_list \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iomanip \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sstream \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string
