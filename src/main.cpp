@@ -17,6 +17,8 @@
 #include "uniform.hpp"
 #include "image.hpp"
 
+// doccument everything
+
 bool framebufferResized = false;
 uint32_t currentFrame = 0;
 uint32_t imageIndex;
@@ -27,7 +29,6 @@ const std::vector<Vertex> vertices = {
     {{0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}, {0.0f, 1.0f}},
     {{-0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}, {1.0f, 1.0f}}
 };
-
 
 const std::vector<uint16_t> indices = {
     0, 1, 2, 2, 3, 0
@@ -246,6 +247,7 @@ int main() {
         drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets);
     }
     
+    // TODO: Fix cleanup
     vkDeviceWaitIdle(device);   
     for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
