@@ -42,5 +42,7 @@ void createDescriptorSets(
     VkDescriptorSetLayout descriptorSetLayout,
     std::vector<VkDescriptorSet>& descriptorSets,
     VkDevice device,
-    const std::vector<VkBuffer>& uniformBuffers
+    const std::vector<VkBuffer>& uniformBuffers,
+    VkSampler textureSampler,
+    VkImageView textureImageView
 );

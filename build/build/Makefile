@@ -262,6 +262,30 @@ src/device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/device.cpp.s
 .PHONY : src/device.cpp.s
 
+src/image.obj: src/image.cpp.obj
+.PHONY : src/image.obj
+
+# target to build an object file
+src/image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/image.cpp.obj
+.PHONY : src/image.cpp.obj
+
+src/image.i: src/image.cpp.i
+.PHONY : src/image.i
+
+# target to preprocess a source file
+src/image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/image.cpp.i
+.PHONY : src/image.cpp.i
+
+src/image.s: src/image.cpp.s
+.PHONY : src/image.s
+
+# target to generate assembly for a file
+src/image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/image.cpp.s
+.PHONY : src/image.cpp.s
+
 src/instance.obj: src/instance.cpp.obj
 .PHONY : src/instance.obj
 
@@ -333,6 +357,30 @@ src/pipeline.s: src/pipeline.cpp.s
 src/pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.s
 .PHONY : src/pipeline.cpp.s
+
+src/stb_implementation.obj: src/stb_implementation.cpp.obj
+.PHONY : src/stb_implementation.obj
+
+# target to build an object file
+src/stb_implementation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj
+.PHONY : src/stb_implementation.cpp.obj
+
+src/stb_implementation.i: src/stb_implementation.cpp.i
+.PHONY : src/stb_implementation.i
+
+# target to preprocess a source file
+src/stb_implementation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.i
+.PHONY : src/stb_implementation.cpp.i
+
+src/stb_implementation.s: src/stb_implementation.cpp.s
+.PHONY : src/stb_implementation.s
+
+# target to generate assembly for a file
+src/stb_implementation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.s
+.PHONY : src/stb_implementation.cpp.s
 
 src/surface.obj: src/surface.cpp.obj
 .PHONY : src/surface.obj
@@ -523,6 +571,9 @@ help:
 	@echo ... src/device.obj
 	@echo ... src/device.i
 	@echo ... src/device.s
+	@echo ... src/image.obj
+	@echo ... src/image.i
+	@echo ... src/image.s
 	@echo ... src/instance.obj
 	@echo ... src/instance.i
 	@echo ... src/instance.s
@@ -532,6 +583,9 @@ help:
 	@echo ... src/pipeline.obj
 	@echo ... src/pipeline.i
 	@echo ... src/pipeline.s
+	@echo ... src/stb_implementation.obj
+	@echo ... src/stb_implementation.i
+	@echo ... src/stb_implementation.s
 	@echo ... src/surface.obj
 	@echo ... src/surface.i
 	@echo ... src/surface.s

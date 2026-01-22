@@ -83,6 +83,7 @@ void createLogicalDevice(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, 
     queueCreateInfo.pQueuePriorities = &queuePriority;
 
     VkPhysicalDeviceFeatures deviceFeatures{};
+    deviceFeatures.samplerAnisotropy = VK_TRUE;
 
     VkDeviceCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
@@ -127,7 +128,10 @@ bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface) {
             !swapChainSupport.presentModes.empty();
     }
 
-    return indices.isComplete() && extensionsSupported && swapChainAdequate;
+    VkPhysicalDeviceFeatures supportedFeatures;
+    vkGetPhysicalDeviceFeatures(device, &supportedFeatures);
+
+    return indices.isComplete() && extensionsSupported && swapChainAdequate && supportedFeatures.samplerAnisotropy;
 }
 
 void pickPhysicalDevice(VkInstance instance, VkPhysicalDevice& physicalDevice, VkSurfaceKHR surface) {
@@ -202,12 +206,25 @@ void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRA
     std::cout << "Succesfully allocated command buffers!" << std::endl;
 }
 
-
-void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkRenderPass renderPass, const std::vector<VkFramebuffer>& swapChainFramebuffers, VkExtent2D swapChainExtent, VkPipeline graphicsPipeline, std::vector<Vertex> vertices, VkBuffer vertexBuffer, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkPipelineLayout pipelineLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame) {
+void recordCommandBuffer(
+    VkCommandBuffer commandBuffer,
+    uint32_t imageIndex,
+    VkRenderPass renderPass,
+    const std::vector<VkFramebuffer>& swapChainFramebuffers,
+    VkExtent2D swapChainExtent,
+    VkPipeline graphicsPipeline,
+    VkBuffer vertexBuffer,
+    VkBuffer indexBuffer,
+    const std::vector<uint16_t>& indices,
+    VkPipelineLayout pipelineLayout,
+    const std::vector<VkDescriptorSet>& descriptorSets
+) {
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 
-    vkBeginCommandBuffer(commandBuffer, &beginInfo);
+    if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) {
+        throw std::runtime_error("failed to begin command buffer");
+    }
 
     VkRenderPassBeginInfo renderPassInfo{};
     renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
@@ -226,25 +243,22 @@ void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkR
         VK_SUBPASS_CONTENTS_INLINE
     );
 
-    vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, graphicsPipeline);
+    vkCmdBindPipeline(
+        commandBuffer,
+        VK_PIPELINE_BIND_POINT_GRAPHICS,
+        graphicsPipeline
+    );
 
     VkBuffer vertexBuffers[] = { vertexBuffer };
     VkDeviceSize offsets[] = { 0 };
-
-    vkCmdBindVertexBuffers(
-        commandBuffer,
-        0,
-        1,
-        vertexBuffers,
-        offsets
-    );
+    vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
 
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
     VkViewport viewport{};
     viewport.x = 0.0f;
     viewport.y = 0.0f;
-    viewport.width = static_cast<float>(swapChainExtent.width);
+    viewport.width  = static_cast<float>(swapChainExtent.width);
     viewport.height = static_cast<float>(swapChainExtent.height);
     viewport.minDepth = 0.0f;
     viewport.maxDepth = 1.0f;
@@ -255,13 +269,30 @@ void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex, VkR
     scissor.extent = swapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &descriptorSets[currentFrame], 0, nullptr);
-    vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
+    vkCmdBindDescriptorSets(
+        commandBuffer,
+        VK_PIPELINE_BIND_POINT_GRAPHICS,
+        pipelineLayout,
+        0,
+        1,
+        &descriptorSets[imageIndex],
+        0,
+        nullptr
+    );
+
+    vkCmdDrawIndexed(
+        commandBuffer,
+        static_cast<uint32_t>(indices.size()),
+        1,
+        0,
+        0,
+        0
+    );
 
     vkCmdEndRenderPass(commandBuffer);
 
     if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
-        throw std::runtime_error("failed to record command buffer!");
+        throw std::runtime_error("Failed to record command buffer");
     }
 
     std::cout << "Sucesfully recorded command buffer!" << std::endl;

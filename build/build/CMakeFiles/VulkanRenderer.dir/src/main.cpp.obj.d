@@ -683,4 +683,6 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\forward_list \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iomanip \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sstream \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string
+  C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string \
+  C:\C++\ Projects\Learning-Vulkan\Vulkan-Renderer\src\image.hpp \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\stb\stb_image.h

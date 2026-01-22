@@ -15,17 +15,19 @@
 #include "sync.hpp"
 #include "vertex.hpp"
 #include "uniform.hpp"
+#include "image.hpp"
 
 bool framebufferResized = false;
 uint32_t currentFrame = 0;
 uint32_t imageIndex;
 
 const std::vector<Vertex> vertices = {
-    {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-    {{0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}},
-    {{0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}},
-    {{-0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}}
+    {{-0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f}},
+    {{0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}, {0.0f, 0.0f}},
+    {{0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}, {0.0f, 1.0f}},
+    {{-0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}, {1.0f, 1.0f}}
 };
+
 
 const std::vector<uint16_t> indices = {
     0, 1, 2, 2, 3, 0
@@ -144,147 +146,141 @@ void drawFrame(
 }
 
 int main() {
-    try {
-        if (!glfwInit()) {
-            throw std::runtime_error("Failed to init GLFW!");
-        } else {
-            std::cout << "Initialized GLFW correctly!" << std::endl;
-        }
-
-        GLFWwindow* window;
-        VkSurfaceKHR surface = VK_NULL_HANDLE;
-        VkInstance instance = VK_NULL_HANDLE;
-        VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
-        VkQueue graphicsQueue;
-        VkQueue presentQueue;
-        VkDevice device = VK_NULL_HANDLE;
-        VkSwapchainKHR swapChain;
-        std::vector<VkImage> swapChainImages;
-        VkFormat swapChainImageFormat;
-        VkExtent2D swapChainExtent;
-        std::vector<VkImageView> swapChainImageViews;
-        VkPipelineLayout pipelineLayout;
-        VkDescriptorSetLayout descriptorSetLayout;
-        VkRenderPass renderPass;
-        VkPipeline graphicsPipeline;
-        std::vector<VkFramebuffer> swapChainFramebuffers;
-        VkCommandPool commandPool;
-        VkCommandBuffer commandBuffer;
-        VkSemaphore imageAvailableSemaphore;
-        VkSemaphore renderFinishedSemaphore;
-        VkFence inFlightFence;
-
-        std::vector<VkCommandBuffer> commandBuffers;
-        std::vector<VkSemaphore> imageAvailableSemaphores;
-        std::vector<VkSemaphore> renderFinishedSemaphores;
-        std::vector<VkFence> inFlightFences;
-        
-        std::vector<VkBuffer> uniformBuffers;
-        std::vector<VkDeviceMemory> uniformBuffersMemory;
-        std::vector<void*> uniformBuffersMapped;
-
-        std::vector<VkDescriptorSet> descriptorSets;
-
-        const int MAX_FRAMES_IN_FLIGHT = 2;
-
-        VkBuffer vertexBuffer;
-        VkDeviceMemory vertexBufferMemory;
-        VkBuffer indexBuffer;
-        VkDeviceMemory indexBufferMemory;
-        VkDescriptorPool descriptorPool;
-        
-
-        createWindow(800, 600, "Vulkan Window", window);
-        glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
-        createInstance(instance);
-        setupDebugMessenger(instance);
-        createSurface(instance, surface, window);
-        pickPhysicalDevice(instance, physicalDevice, surface);
-        createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
-        createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
-        createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
-        createRenderPass(swapChainImageFormat, renderPass, device);
-        createDescriptorSetLayout(device, descriptorSetLayout);
-        createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
-        createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
-        createCommandPool(physicalDevice, surface, commandPool, device);
-        createVertexBuffer(
-            physicalDevice,
-            device,
-            commandPool,
-            graphicsQueue,
+    if (!glfwInit()) {
+        throw std::runtime_error("Failed to init GLFW!");
+    } else {
+        std::cout << "Initialized GLFW correctly!" << std::endl;
+    }   
+    GLFWwindow* window;
+    VkSurfaceKHR surface = VK_NULL_HANDLE;
+    VkInstance instance = VK_NULL_HANDLE;
+    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+    VkQueue graphicsQueue;
+    VkQueue presentQueue;
+    VkDevice device = VK_NULL_HANDLE;
+    VkSwapchainKHR swapChain;
+    std::vector<VkImage> swapChainImages;
+    VkFormat swapChainImageFormat;
+    VkExtent2D swapChainExtent;
+    std::vector<VkImageView> swapChainImageViews;
+    VkPipelineLayout pipelineLayout;
+    VkDescriptorSetLayout descriptorSetLayout;
+    VkRenderPass renderPass;
+    VkPipeline graphicsPipeline;
+    std::vector<VkFramebuffer> swapChainFramebuffers;
+    VkCommandPool commandPool;
+    VkCommandBuffer commandBuffer;
+    VkSemaphore imageAvailableSemaphore;
+    VkSemaphore renderFinishedSemaphore;
+    VkFence inFlightFence;  
+    std::vector<VkCommandBuffer> commandBuffers;
+    std::vector<VkSemaphore> imageAvailableSemaphores;
+    std::vector<VkSemaphore> renderFinishedSemaphores;
+    std::vector<VkFence> inFlightFences;
+    
+    std::vector<VkBuffer> uniformBuffers;
+    std::vector<VkDeviceMemory> uniformBuffersMemory;
+    std::vector<void*> uniformBuffersMapped;    
+    std::vector<VkDescriptorSet> descriptorSets;    
+    const int MAX_FRAMES_IN_FLIGHT = 2; 
+    VkBuffer vertexBuffer;
+    VkDeviceMemory vertexBufferMemory;
+    VkBuffer indexBuffer;
+    VkDeviceMemory indexBufferMemory;
+    VkDescriptorPool descriptorPool;    
+    VkImage textureImage;
+    VkDeviceMemory textureImageMemory;
+    VkImageView textureImageView;
+    VkSampler textureSampler;
+    
+    createWindow(800, 600, "Vulkan Window", window);
+    glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
+    createInstance(instance);
+    setupDebugMessenger(instance);
+    createSurface(instance, surface, window);
+    pickPhysicalDevice(instance, physicalDevice, surface);
+    createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
+    createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+    createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
+    createRenderPass(swapChainImageFormat, renderPass, device);
+    createDescriptorSetLayout(device, descriptorSetLayout);
+    createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
+    createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device);
+    createCommandPool(physicalDevice, surface, commandPool, device);
+    createTextureImage(physicalDevice, device, textureImage, textureImageMemory, graphicsQueue, commandPool);
+    createTextureImageView(device, textureImage, textureImageView);
+    createTextureSampler(physicalDevice, textureSampler, device);
+    createVertexBuffer(
+        physicalDevice,
+        device,
+        commandPool,
+        graphicsQueue,
+        vertexBuffer,
+        vertexBufferMemory,
+        vertices
+    );
+    createUniformBuffers(MAX_FRAMES_IN_FLIGHT, device, uniformBuffers, uniformBuffersMemory, uniformBuffersMapped, physicalDevice);
+    createDescriptorPool(MAX_FRAMES_IN_FLIGHT, descriptorPool, device);
+    createDescriptorSets(MAX_FRAMES_IN_FLIGHT, descriptorPool, descriptorSetLayout, descriptorSets, device, uniformBuffers, textureSampler, textureImageView);
+    createIndexBuffer(physicalDevice, device, commandPool, graphicsQueue, indexBuffer, indexBufferMemory, indices);
+    createCommandBuffer(commandPool, device, swapChainImages.size(), commandBuffers);   
+    for (size_t i = 0; i < commandBuffers.size(); i++) {
+        recordCommandBuffer(
+            commandBuffers[i],
+            static_cast<uint32_t>(i),
+            renderPass,
+            swapChainFramebuffers,
+            swapChainExtent,
+            graphicsPipeline,
             vertexBuffer,
-            vertexBufferMemory,
-            vertices
+            indexBuffer,
+            indices,
+            pipelineLayout,
+            descriptorSets
         );
-        createUniformBuffers(MAX_FRAMES_IN_FLIGHT, device, uniformBuffers, uniformBuffersMemory, uniformBuffersMapped, physicalDevice);
-        createDescriptorPool(MAX_FRAMES_IN_FLIGHT, descriptorPool, device);
-        createDescriptorSets(MAX_FRAMES_IN_FLIGHT, descriptorPool, descriptorSetLayout, descriptorSets, device, uniformBuffers);
-        createIndexBuffer(physicalDevice, device, commandPool, graphicsQueue, indexBuffer, indexBufferMemory, indices);
-        createCommandBuffer(commandPool, device, swapChainImages.size(), commandBuffers);
 
-        for (size_t i = 0; i < commandBuffers.size(); i++) {
-            recordCommandBuffer(
-                commandBuffers[i],
-                i,
-                renderPass,
-                swapChainFramebuffers,
-                swapChainExtent,
-                graphicsPipeline,
-                vertices,
-                vertexBuffer,
-                indexBuffer,
-                indices,
-                pipelineLayout,
-                descriptorSets, currentFrame
-            );
-        }
-
-        createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);
-
-        while (!glfwWindowShouldClose(window)) {
-            glfwPollEvents();
-            drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets);
-        }
-        
-        vkDeviceWaitIdle(device);
-
-        for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-            vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
-            vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
-            vkDestroyFence(device, inFlightFences[i], nullptr);
-        }
-        vkDestroyCommandPool(device, commandPool, nullptr);
-        for (auto imageView : swapChainImageViews) {
-            vkDestroyImageView(device, imageView, nullptr);
-        }
-        for (auto framebuffer : swapChainFramebuffers) {
-            vkDestroyFramebuffer(device, framebuffer, nullptr);
-        }
-        vkDestroyRenderPass(device, renderPass, nullptr);
-        vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
-        cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);            
-        for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-            vkDestroyBuffer(device, uniformBuffers[i], nullptr);
-            vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
-        }
-        vkDestroyDescriptorPool(device, descriptorPool, nullptr);
-        vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
-        vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
-        vkDestroyBuffer(device, vertexBuffer, nullptr);
-        vkFreeMemory(device, vertexBufferMemory, nullptr);
-        vkDestroyBuffer(device, indexBuffer, nullptr);
-        vkFreeMemory(device, indexBufferMemory, nullptr);
-        vkDestroyDevice(device, nullptr);
-        vkDestroySurfaceKHR(instance, surface, nullptr);
-        cleanupInstance(instance);
-        glfwDestroyWindow(window);
-        glfwTerminate();
     }
-    catch (const std::exception& e) {
-        std::cerr << "FATAL ERROR: " << e.what() << std::endl;
-        return EXIT_FAILURE;
+    createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);    
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets);
     }
-
-    return EXIT_SUCCESS;
+    
+    vkDeviceWaitIdle(device);   
+    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+        vkDestroyFence(device, inFlightFences[i], nullptr);
+    }
+    vkDestroyCommandPool(device, commandPool, nullptr);
+    for (auto imageView : swapChainImageViews) {
+        vkDestroyImageView(device, imageView, nullptr);
+    }
+    for (auto framebuffer : swapChainFramebuffers) {
+        vkDestroyFramebuffer(device, framebuffer, nullptr);
+    }
+    vkDestroyRenderPass(device, renderPass, nullptr);
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);
+    vkDestroySampler(device, textureSampler, nullptr);
+    vkDestroyImageView(device, textureImageView, nullptr);
+    vkDestroyImage(device, textureImage, nullptr);
+    vkFreeMemory(device, textureImageMemory, nullptr);         
+    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroyBuffer(device, uniformBuffers[i], nullptr);
+        vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
+    }
+    vkDestroyDescriptorPool(device, descriptorPool, nullptr);
+    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
+    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
+    vkDestroyBuffer(device, vertexBuffer, nullptr);
+    vkFreeMemory(device, vertexBufferMemory, nullptr);
+    vkDestroyBuffer(device, indexBuffer, nullptr);
+    vkFreeMemory(device, indexBufferMemory, nullptr);
+    vkDestroyDevice(device, nullptr);
+    vkDestroySurfaceKHR(instance, surface, nullptr);
+    cleanupInstance(instance);
+    glfwDestroyWindow(window);
+    glfwTerminate();
 }
+
