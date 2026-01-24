@@ -19,6 +19,5 @@ void createTextureImage(
     VkCommandPool commandPool
 );
 
-
-VkImageView createImageView(VkImage image, VkFormat format, VkDevice device);
+VkImageView createImageView(VkImage image, VkFormat format, VkDevice device, VkImageAspectFlags aspectFlags);
 VkCommandBuffer beginSingleTimeCommands(VkCommandPool commandPool, VkDevice device);

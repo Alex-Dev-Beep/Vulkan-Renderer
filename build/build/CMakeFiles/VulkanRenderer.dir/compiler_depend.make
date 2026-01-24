@@ -2430,6 +2430,7 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
 
 CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.cpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
@@ -2604,6 +2605,30 @@ CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/integer.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
@@ -2951,20 +2976,29 @@ CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/Program\ Files/LLVM/lib/clang/21/include/xtestintrin.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/yvals_core.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_bit_utils.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_chrono.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_filebuf.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_format_ucd_tables.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_formatter.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_iter_core.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ostream.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_print.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ranges_tuple_formatter.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_sanitizer_annotate_container.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_string_view.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_system_error_abi.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_threads_core.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_tzdb.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_xlocinfo_types.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/atomic \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/bit \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cassert \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cctype \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cerrno \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cfloat \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/charconv \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/chrono \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/climits \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/clocale \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cmath \
@@ -2982,9 +3016,12 @@ CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/eh.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/exception \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/excpt.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/format \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/forward_list \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/fstream \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/functional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/initializer_list \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iomanip \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ios \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iosfwd \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iostream \
@@ -2993,15 +3030,20 @@ CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/locale \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/new \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ratio \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sal.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/setjmp.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sstream \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdarg.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdexcept \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdint.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/streambuf \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/string \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/system_error \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/tuple \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/type_traits \
@@ -3021,17 +3063,27 @@ CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xatomic_wait.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xbit_ops.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcall_once.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_ryu.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_ryu_tables.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_tables.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xerrc.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfacet \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfilesystem_abi.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xhash \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xiosbase \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xkeycheck.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocale \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocbuf \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocinfo \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmes \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmon \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocnum \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xloctime \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xmemory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xpolymorphic_allocator.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xsmf_control.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xstring \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xthreads.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtimec.h \
@@ -3668,6 +3720,7 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
@@ -3842,6 +3895,30 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/integer.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
@@ -4190,22 +4267,31 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/Program\ Files/LLVM/lib/clang/21/include/xtestintrin.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/yvals_core.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_bit_utils.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_chrono.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_format_ucd_tables.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_formatter.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_heap_algorithms.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_iter_core.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_minmax.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ostream.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_print.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ranges_tuple_formatter.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_sanitizer_annotate_container.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_string_view.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_system_error_abi.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_threads_core.hpp \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_tzdb.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_xlocinfo_types.hpp \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/algorithm \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/atomic \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/bit \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cassert \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cctype \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cerrno \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cfloat \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/charconv \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/chrono \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/climits \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/clocale \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cmath \
@@ -4223,8 +4309,11 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/eh.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/exception \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/excpt.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/format \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/forward_list \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/functional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/initializer_list \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iomanip \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ios \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iosfwd \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iostream \
@@ -4233,16 +4322,20 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/locale \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/new \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ratio \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sal.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/setjmp.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sstream \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdarg.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdexcept \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdint.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/streambuf \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/string \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/system_error \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/tuple \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/type_traits \
@@ -4262,14 +4355,23 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xatomic_wait.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xbit_ops.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcall_once.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_ryu.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_ryu_tables.h \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xcharconv_tables.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xerrc.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfacet \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfilesystem_abi.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xhash \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xiosbase \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xkeycheck.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocale \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocbuf \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocinfo \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmes \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmon \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocnum \
+  C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xloctime \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xmemory \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h \
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xpolymorphic_allocator.h \
@@ -4726,6 +4828,7 @@ CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_win32.h
 
 CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.cpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
@@ -4942,6 +5045,7 @@ CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj: C:/C++\ Projects/Learning-Vul
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apisetcconv.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/basetsd.h \

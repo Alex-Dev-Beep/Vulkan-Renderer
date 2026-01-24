@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
@@ -46,3 +47,16 @@ void createDescriptorSets(
     VkSampler textureSampler,
     VkImageView textureImageView
 );
+
+void createDepthResources(VkExtent2D swapChainExtent, VkImageView& depthImageView, VkImage& depthImage, VkDeviceMemory& depthImageMemory, VkDevice device, VkPhysicalDevice physicalDevice, VkCommandPool commandPool, VkQueue graphicsQueue);
+
+VkFormat findSupportedFormat(
+    const std::vector<VkFormat>& candidates, 
+    VkImageTiling tiling, 
+    VkFormatFeatureFlags features,
+    VkPhysicalDevice physicalDevice
+);
+
+VkFormat findDepthFormat(VkPhysicalDevice physicalDevice);
+
+bool hasStencilComponent(VkFormat format);
