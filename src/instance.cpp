@@ -4,6 +4,8 @@
 #include <vector>
 #include <cstring>
 
+instance Instance;
+
 const std::vector<const char*> validationLayers = {
     "VK_LAYER_KHRONOS_validation"
 };
@@ -24,7 +26,7 @@ void cleanupInstance(VkInstance instance) {
     vkDestroyInstance(instance, nullptr);
 }
 
-void createInstance(VkInstance& instance) {
+void createInstance() {
     if (enableValidationLayers && !checkValidationLayerSupport()) {
         throw std::runtime_error("Validation layers requested but not available!");
     }
@@ -41,7 +43,6 @@ void createInstance(VkInstance& instance) {
     createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     createInfo.pApplicationInfo = &appInfo;
 
-    // ================= EXTENSIONS =================
     uint32_t glfwExtensionCount = 0;
     const char** glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
 
@@ -58,7 +59,6 @@ void createInstance(VkInstance& instance) {
         static_cast<uint32_t>(extensions.size());
     createInfo.ppEnabledExtensionNames = extensions.data();
 
-    // ================= VALIDATION LAYERS =================
     if (enableValidationLayers) {
         createInfo.enabledLayerCount =
             static_cast<uint32_t>(validationLayers.size());
@@ -67,7 +67,7 @@ void createInstance(VkInstance& instance) {
         createInfo.enabledLayerCount = 0;
     }
 
-    if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
+    if (vkCreateInstance(&createInfo, nullptr, &Instance.instance) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create VkInstance!");
     }
 
@@ -130,14 +130,14 @@ static void populateDebugMessengerCreateInfo(
 }
 
 
-void setupDebugMessenger(VkInstance instance) {
+void setupDebugMessenger() {
     if (!enableValidationLayers) return;
 
     VkDebugUtilsMessengerCreateInfoEXT createInfo{};
     populateDebugMessengerCreateInfo(createInfo);
 
     if (CreateDebugUtilsMessengerEXT(
-            instance, &createInfo, nullptr, &debugMessenger) != VK_SUCCESS) {
+            Instance.instance, &createInfo, nullptr, &debugMessenger) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create debug messenger");
     }
 }

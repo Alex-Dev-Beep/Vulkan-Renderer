@@ -171,7 +171,6 @@ int main() {
         std::cout << "Initialized GLFW correctly!" << std::endl;
     }
     VkSurfaceKHR surface = VK_NULL_HANDLE;
-    VkInstance instance = VK_NULL_HANDLE;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
     VkQueue graphicsQueue;
     VkQueue presentQueue;
@@ -216,10 +215,10 @@ int main() {
     
     createWindow();
     glfwSetFramebufferSizeCallback(Window.window, framebufferResizeCallback);
-    createInstance(instance);
-    setupDebugMessenger(instance);
-    createSurface(instance, surface, Window.window);
-    pickPhysicalDevice(instance, physicalDevice, surface);
+    createInstance();
+    setupDebugMessenger();
+    createSurface(Instance.instance, surface, Window.window);
+    pickPhysicalDevice(Instance.instance, physicalDevice, surface);
     createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
     createSwapChain(physicalDevice, surface, Window.window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
@@ -303,8 +302,8 @@ int main() {
     vkDestroyBuffer(device, indexBuffer, nullptr);
     vkFreeMemory(device, indexBufferMemory, nullptr);
     vkDestroyDevice(device, nullptr);
-    vkDestroySurfaceKHR(instance, surface, nullptr);
-    cleanupInstance(instance);
+    vkDestroySurfaceKHR(Instance.instance, surface, nullptr);
+    cleanupInstance(Instance.instance);
     glfwDestroyWindow(Window.window);
     glfwTerminate();
 }
