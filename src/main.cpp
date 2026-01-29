@@ -169,8 +169,7 @@ int main() {
         throw std::runtime_error("Failed to init GLFW!");
     } else {
         std::cout << "Initialized GLFW correctly!" << std::endl;
-    }   
-    GLFWwindow* window;
+    }
     VkSurfaceKHR surface = VK_NULL_HANDLE;
     VkInstance instance = VK_NULL_HANDLE;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -215,14 +214,14 @@ int main() {
 
     std::vector<VkFence> imagesInFlight;
     
-    createWindow(800, 600, "Vulkan Window", window);
-    glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
+    createWindow();
+    glfwSetFramebufferSizeCallback(Window.window, framebufferResizeCallback);
     createInstance(instance);
     setupDebugMessenger(instance);
-    createSurface(instance, surface, window);
+    createSurface(instance, surface, Window.window);
     pickPhysicalDevice(instance, physicalDevice, surface);
     createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
-    createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+    createSwapChain(physicalDevice, surface, Window.window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
     imagesInFlight.clear();
     imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
@@ -266,9 +265,9 @@ int main() {
         );
     }
     createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);    
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(Window.window)) {
         glfwPollEvents();
-        drawFrame(device, swapChain, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
+        drawFrame(device, swapChain, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, Window.window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
     }
     
     // TODO: Fix cleanup
@@ -306,7 +305,7 @@ int main() {
     vkDestroyDevice(device, nullptr);
     vkDestroySurfaceKHR(instance, surface, nullptr);
     cleanupInstance(instance);
-    glfwDestroyWindow(window);
+    glfwDestroyWindow(Window.window);
     glfwTerminate();
 }
 
