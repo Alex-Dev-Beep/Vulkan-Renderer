@@ -21,23 +21,16 @@
 
 bool framebufferResized = false;
 uint32_t currentFrame = 0;
-uint32_t imageIndex;
 
 const std::vector<Vertex> vertices = {
-    {{-0.5f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
-    {{0.5f, -0.5f, 0.0f}, {0.0f, 1.0f, 0.0f}, {1.0f, 0.0f}},
+    {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
+    {{0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {1.0f, 0.0f}},
     {{0.5f, 0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {1.0f, 1.0f}},
-    {{-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 1.0f}, {0.0f, 1.0f}},
-
-    {{-0.5f, -0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
-    {{0.5f, -0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}, {1.0f, 0.0f}},
-    {{0.5f, 0.5f, -0.5f}, {0.0f, 0.0f, 1.0f}, {1.0f, 1.0f}},
-    {{-0.5f, 0.5f, -0.5f}, {1.0f, 1.0f, 1.0f}, {0.0f, 1.0f}}
+    {{-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 1.0f}, {0.0f, 1.0f}}
 };
 
 const std::vector<uint16_t> indices = {
-    0, 1, 2, 2, 3, 0,
-    4, 5, 6, 6, 7, 4
+    0, 1, 2, 2, 3, 0
 };
 
 void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
@@ -45,23 +38,20 @@ void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
 }
 
 void drawFrame(
-    VkDevice& device, 
-    VkFence& inFlightFence, 
-    VkSwapchainKHR& swapChain, 
-    VkSemaphore& imageAvailableSemaphore, 
-    VkCommandBuffer& commandBuffer, 
+    VkDevice& device,
+    VkSwapchainKHR& swapChain,
     VkRenderPass& renderPass,
     std::vector<VkFramebuffer>& swapChainFramebuffers, 
     VkExtent2D& swapChainExtent, 
     VkPipeline& graphicsPipeline, 
     VkQueue& graphicsQueue, 
-    VkQueue& presentQueue, 
-    VkSemaphore& renderFinishedSemaphore, 
+    VkQueue& presentQueue,
     std::vector<VkFence>& inFlightFences, 
     std::vector<VkSemaphore>& renderFinishedSemaphores, 
     std::vector<VkSemaphore>& imageAvailableSemaphores, 
     std::vector<VkCommandBuffer>& commandBuffers, 
-    int MAX_FRAMES_IN_FLIGHT, VkSurfaceKHR surface, 
+    int MAX_FRAMES_IN_FLIGHT, 
+    VkSurfaceKHR surface, 
     GLFWwindow* window, 
     VkPhysicalDevice& physicalDevice, 
     VkCommandPool& commandPool, 
@@ -70,14 +60,15 @@ void drawFrame(
     std::vector<VkImageView>& swapChainImageViews, 
     VkPipelineLayout& pipelineLayout,
     VkBuffer vertexBuffer,
-    std::vector<Vertex> vertices, 
+    const std::vector<Vertex>& vertices, 
     VkBuffer indexBuffer,
     VkDescriptorSetLayout descriptorSetLayout,
-    std::vector<void*> uniformBuffersMapped,
-    std::vector<VkDescriptorSet> descriptorSets,
+    std::vector<void*>& uniformBuffersMapped,
+    std::vector<VkDescriptorSet>& descriptorSets,
     VkImage depthImage,
     VkDeviceMemory depthImageMemory,
-    VkImageView depthImageView
+    VkImageView depthImageView,
+    std::vector<VkFence>& imagesInFlight
     ) {
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
     
@@ -93,11 +84,25 @@ void drawFrame(
 
     if (result == VK_ERROR_OUT_OF_DATE_KHR) {
         recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, indices, descriptorSetLayout, descriptorSets, currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
+        imagesInFlight.clear();
+        imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
         return;
     }
     if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
         throw std::runtime_error("Failed to acquire swap chain image!");
     }
+
+    if (imagesInFlight[imageIndex] != VK_NULL_HANDLE) {
+        vkWaitForFences(
+            device,
+            1,
+            &imagesInFlight[imageIndex],
+            VK_TRUE,
+            UINT64_MAX
+        );
+    }
+
+    imagesInFlight[imageIndex] = inFlightFences[currentFrame];
 
     updateUniformBuffer(currentFrame, uniformBuffersMapped, swapChainExtent);
 
@@ -105,6 +110,8 @@ void drawFrame(
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+    submitInfo.pNext = nullptr;
+
 
     VkSemaphore waitSemaphores[] = { imageAvailableSemaphores[currentFrame] };
     VkPipelineStageFlags waitStages[] = {
@@ -149,6 +156,8 @@ void drawFrame(
 
         framebufferResized = false;
         recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, indices, descriptorSetLayout, descriptorSets, currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
+        imagesInFlight.clear();
+        imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
         return;
     }
 
@@ -179,10 +188,7 @@ int main() {
     VkPipeline graphicsPipeline;
     std::vector<VkFramebuffer> swapChainFramebuffers;
     VkCommandPool commandPool;
-    VkCommandBuffer commandBuffer;
-    VkSemaphore imageAvailableSemaphore;
-    VkSemaphore renderFinishedSemaphore;
-    VkFence inFlightFence;  
+
     std::vector<VkCommandBuffer> commandBuffers;
     std::vector<VkSemaphore> imageAvailableSemaphores;
     std::vector<VkSemaphore> renderFinishedSemaphores;
@@ -206,6 +212,8 @@ int main() {
     VkImage depthImage;
     VkDeviceMemory depthImageMemory;
     VkImageView depthImageView;
+
+    std::vector<VkFence> imagesInFlight;
     
     createWindow(800, 600, "Vulkan Window", window);
     glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
@@ -216,6 +224,9 @@ int main() {
     createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
     createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
+    imagesInFlight.clear();
+    imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
+
     createRenderPass(swapChainImageFormat, renderPass, device, physicalDevice);
     createDescriptorSetLayout(device, descriptorSetLayout);
     createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
@@ -253,12 +264,11 @@ int main() {
             pipelineLayout,
             descriptorSets
         );
-
     }
     createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);    
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
-        drawFrame(device, inFlightFence, swapChain, imageAvailableSemaphore, commandBuffer, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, renderFinishedSemaphore, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView);
+        drawFrame(device, swapChain, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
     }
     
     // TODO: Fix cleanup
@@ -275,9 +285,7 @@ int main() {
     for (auto framebuffer : swapChainFramebuffers) {
         vkDestroyFramebuffer(device, framebuffer, nullptr);
     }
-    vkDestroyRenderPass(device, renderPass, nullptr);
-    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
-    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);
+    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain, graphicsPipeline, pipelineLayout);
     vkDestroyImageView(device, depthImageView, nullptr);
     vkDestroyImage(device, depthImage, nullptr);
     vkFreeMemory(device, depthImageMemory, nullptr);
@@ -290,7 +298,6 @@ int main() {
         vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
     }
     vkDestroyDescriptorPool(device, descriptorPool, nullptr);
-    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
     vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
     vkDestroyBuffer(device, vertexBuffer, nullptr);
     vkFreeMemory(device, vertexBufferMemory, nullptr);

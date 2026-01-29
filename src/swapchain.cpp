@@ -154,7 +154,7 @@ void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector
     }
 }
 
-void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, std::vector<Vertex> vertices, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkDescriptorSetLayout descriptorSetLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame, VkQueue graphicsQueue, VkImageView depthImageView, VkDeviceMemory depthImageMemory, VkImage depthImage) {
+void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, const std::vector<Vertex>& vertices, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkDescriptorSetLayout descriptorSetLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame, VkQueue graphicsQueue, VkImageView depthImageView, VkDeviceMemory depthImageMemory, VkImage depthImage) {
     int width = 0, height = 0;
     glfwGetFramebufferSize(window, &width, &height);
 
@@ -165,7 +165,7 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
 
     vkDeviceWaitIdle(device);
 
-    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain);
+    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain, graphicsPipeline, pipelineLayout);
 
     createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
@@ -196,7 +196,7 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
 
 }
 
-void cleanupSwapChain(VkDevice& device, VkRenderPass& renderPass, std::vector<VkFramebuffer>& swapChainFramebuffers, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, std::vector<VkImageView>& swapChainImageViews, VkSwapchainKHR& swapChain) {
+void cleanupSwapChain(VkDevice& device, VkRenderPass& renderPass, std::vector<VkFramebuffer>& swapChainFramebuffers, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, std::vector<VkImageView>& swapChainImageViews, VkSwapchainKHR& swapChain, VkPipeline graphicsPipeline, VkPipelineLayout pipelineLayout) {
     for (VkFramebuffer framebuffer : swapChainFramebuffers) {
         vkDestroyFramebuffer(device, framebuffer, nullptr);
     }
@@ -216,6 +216,7 @@ void cleanupSwapChain(VkDevice& device, VkRenderPass& renderPass, std::vector<Vk
         vkDestroyImageView(device, imageView, nullptr);
     }
     swapChainImageViews.clear();
-
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    vkDestroyPipeline(device, graphicsPipeline, nullptr);
     vkDestroySwapchainKHR(device, swapChain, nullptr);
 }

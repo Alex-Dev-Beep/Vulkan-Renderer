@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run GalaxyEngine",
+            "name": "Run",
             "type": "cppdbg",
             "request": "launch",
-            "program": "c:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build/VulkanRenderer.exe",
+            "program": "${workspaceFolder}/build/build/VulkanRenderer.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
