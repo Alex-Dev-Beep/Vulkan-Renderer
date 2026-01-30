@@ -173,7 +173,7 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
 
     createSwapChain();
     createImageViews();
-    createDepthResources(swapChainExtent, depthImageView, depthImage, depthImageMemory, device, physicalDevice, commandPool, graphicsQueue);
+    createDepthResources();
     createRenderPass();
     createGraphicsPipeline();
     createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device, depthImageView);

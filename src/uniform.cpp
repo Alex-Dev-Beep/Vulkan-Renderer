@@ -3,12 +3,15 @@
 #include "image.hpp"
 #include "device.hpp"
 #include "pipeline.hpp"
+#include "swapchain.hpp"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
 #include <stdexcept>
 #include <iostream>
+
+depthResources DepthResources;
 
 void createDescriptorSetLayout() {
     VkDescriptorSetLayoutBinding uboLayoutBinding{};
@@ -161,13 +164,13 @@ void createDescriptorSets(
 }
 }
 
-void createDepthResources(VkExtent2D swapChainExtent, VkImageView& depthImageView, VkImage& depthImage, VkDeviceMemory& depthImageMemory, VkDevice device, VkPhysicalDevice physicalDevice, VkCommandPool commandPool, VkQueue graphicsQueue) {
-    VkFormat depthFormat = findDepthFormat(physicalDevice);
-    // createImage(swapChainExtent.width, swapChainExtent.height, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, depthImage, depthImageMemory);
-    createImage(swapChainExtent.width, swapChainExtent.height, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, depthImage, depthImageMemory, device, physicalDevice);
-    depthImageView = createImageView(depthImage, depthFormat, device, VK_IMAGE_ASPECT_DEPTH_BIT);
+void createDepthResources() {
+    VkFormat depthFormat = findDepthFormat(Device.physicalDevice);
 
-    transitionImageLayout(depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, device, commandPool, graphicsQueue);
+    createImage(SwapChain.swapChainExtent.width, SwapChain.swapChainExtent.height, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, DepthResources.depthImage, DepthResources.depthImageMemory, Device.device, Device.physicalDevice);
+    DepthResources.depthImageView = createImageView(DepthResources.depthImage, depthFormat, Device.device, VK_IMAGE_ASPECT_DEPTH_BIT);
+
+    transitionImageLayout(DepthResources.depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, Device.device, Device.commandPool, Queues.graphicsQueue);
 }
 
 VkFormat findSupportedFormat(

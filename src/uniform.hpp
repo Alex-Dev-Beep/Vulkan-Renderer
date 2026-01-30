@@ -14,6 +14,13 @@ struct UniformBufferObject {
     glm::mat4 proj;
 };
 
+struct depthResources {
+    public:
+    VkImage depthImage;
+    VkDeviceMemory depthImageMemory;
+    VkImageView depthImageView;
+};
+
 void createDescriptorSetLayout();
 
 void createUniformBuffers(
@@ -46,7 +53,7 @@ void createDescriptorSets(
     VkImageView textureImageView
 );
 
-void createDepthResources(VkExtent2D swapChainExtent, VkImageView& depthImageView, VkImage& depthImage, VkDeviceMemory& depthImageMemory, VkDevice device, VkPhysicalDevice physicalDevice, VkCommandPool commandPool, VkQueue graphicsQueue);
+void createDepthResources();
 
 VkFormat findSupportedFormat(
     const std::vector<VkFormat>& candidates, 
@@ -58,3 +65,5 @@ VkFormat findSupportedFormat(
 VkFormat findDepthFormat(VkPhysicalDevice physicalDevice);
 
 bool hasStencilComponent(VkFormat format);
+
+extern depthResources DepthResources;

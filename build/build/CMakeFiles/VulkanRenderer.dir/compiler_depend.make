@@ -4841,6 +4841,7 @@ CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj: C:/C++\ Projects/Learning-Vul
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
