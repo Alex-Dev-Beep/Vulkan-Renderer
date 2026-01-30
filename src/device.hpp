@@ -19,6 +19,7 @@ struct device {
     public:
     VkPhysicalDevice physicalDevice;
     VkDevice device;
+    VkCommandPool commandPool;
 };
 
 struct queues {
@@ -32,7 +33,7 @@ QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surfa
 void pickPhysicalDevice();
 bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
 void createLogicalDevice();
-void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkCommandPool& commandPool, VkDevice device);
+void createCommandPool();
 void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRAMES_IN_FLIGHT, std::vector<VkCommandBuffer>& commandBuffers);
 void recordCommandBuffer(
     VkCommandBuffer commandBuffer,

@@ -174,8 +174,8 @@ void pickPhysicalDevice() {
 
 }
 
-void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkCommandPool& commandPool, VkDevice device) {
-    QueueFamilyIndices queueFamilyIndices = findQueueFamilies(physicalDevice, surface);
+void createCommandPool() {
+    QueueFamilyIndices queueFamilyIndices = findQueueFamilies(Device.physicalDevice, Surface.surface);
 
     VkCommandPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
@@ -183,7 +183,7 @@ void createCommandPool(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, Vk
     
     poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
 
-    if (vkCreateCommandPool(device, &poolInfo, nullptr, &commandPool) != VK_SUCCESS) {
+    if (vkCreateCommandPool(Device.device, &poolInfo, nullptr, &Device.commandPool) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create command pool!");
     }
 
