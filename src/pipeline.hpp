@@ -5,9 +5,12 @@
 struct pipeline {
     public:
     VkRenderPass renderPass;
+    VkPipeline graphicsPipeline;
+    VkPipelineLayout pipelineLayout;
+    VkDescriptorSetLayout descriptorSetLayout;
 };
 
-void createGraphicsPipeline(VkDevice device, VkExtent2D swapChainExtent, VkPipelineLayout& pipelineLayout, VkRenderPass renderPass, VkPipeline& graphicsPipeline, VkDescriptorSetLayout descriptorSetLayout);
+void createGraphicsPipeline();
 void createRenderPass();
 void createFramebuffers(
     std::vector<VkFramebuffer>& swapChainFramebuffers,

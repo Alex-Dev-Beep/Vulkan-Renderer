@@ -4838,7 +4838,9 @@ CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_win32.h
 
 CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.cpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \

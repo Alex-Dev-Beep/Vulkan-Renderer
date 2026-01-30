@@ -1,6 +1,8 @@
 #include "uniform.hpp"
 #include "vertex.hpp"
 #include "image.hpp"
+#include "device.hpp"
+#include "pipeline.hpp"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -8,7 +10,7 @@
 #include <stdexcept>
 #include <iostream>
 
-void createDescriptorSetLayout(VkDevice device, VkDescriptorSetLayout& descriptorSetLayout) {
+void createDescriptorSetLayout() {
     VkDescriptorSetLayoutBinding uboLayoutBinding{};
     uboLayoutBinding.binding = 0;
     uboLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
@@ -31,7 +33,7 @@ void createDescriptorSetLayout(VkDevice device, VkDescriptorSetLayout& descripto
 
     
 
-    if (vkCreateDescriptorSetLayout(device, &layoutInfo, nullptr, &descriptorSetLayout) != VK_SUCCESS) {
+    if (vkCreateDescriptorSetLayout(Device.device, &layoutInfo, nullptr, &Pipeline.descriptorSetLayout) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create descriptor set layout!");
     } else {
         std::cout << "Succesfully created descriptor set layout!" << std::endl;

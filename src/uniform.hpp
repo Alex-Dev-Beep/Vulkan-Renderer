@@ -14,10 +14,8 @@ struct UniformBufferObject {
     glm::mat4 proj;
 };
 
-void createDescriptorSetLayout(
-    VkDevice device, 
-    VkDescriptorSetLayout& descriptorSetLayout
-);
+void createDescriptorSetLayout();
+
 void createUniformBuffers(
     int MAX_FRAMES_IN_FLIGHT, 
     VkDevice device, 
