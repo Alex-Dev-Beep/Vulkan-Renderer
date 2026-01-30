@@ -170,7 +170,6 @@ int main() {
     } else {
         std::cout << "Initialized GLFW correctly!" << std::endl;
     }
-    VkSurfaceKHR surface = VK_NULL_HANDLE;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
     VkQueue graphicsQueue;
     VkQueue presentQueue;
@@ -217,18 +216,17 @@ int main() {
     glfwSetFramebufferSizeCallback(Window.window, framebufferResizeCallback);
     createInstance();
     setupDebugMessenger();
-    createSurface(Instance.instance, surface, Window.window);
-    pickPhysicalDevice(Instance.instance, physicalDevice, surface);
-    createLogicalDevice(physicalDevice, surface, device, graphicsQueue, presentQueue);
-    createSwapChain(physicalDevice, surface, Window.window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+    createSurface();
+    pickPhysicalDevice(Instance.instance, physicalDevice, Surface.surface);
+    createLogicalDevice(physicalDevice, Surface.surface, device, graphicsQueue, presentQueue);
+    createSwapChain(physicalDevice, Surface.surface, Window.window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
     imagesInFlight.clear();
     imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
-
     createRenderPass(swapChainImageFormat, renderPass, device, physicalDevice);
     createDescriptorSetLayout(device, descriptorSetLayout);
     createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
-    createCommandPool(physicalDevice, surface, commandPool, device);
+    createCommandPool(physicalDevice, Surface.surface, commandPool, device);
     createDepthResources(swapChainExtent, depthImageView, depthImage, depthImageMemory, device, physicalDevice, commandPool, graphicsQueue);
     createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device, depthImageView);
     createTextureImage(physicalDevice, device, textureImage, textureImageMemory, graphicsQueue, commandPool);
@@ -266,7 +264,7 @@ int main() {
     createSyncObjects(device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);    
     while (!glfwWindowShouldClose(Window.window)) {
         glfwPollEvents();
-        drawFrame(device, swapChain, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, surface, Window.window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
+        drawFrame(device, swapChain, renderPass, swapChainFramebuffers, swapChainExtent, graphicsPipeline, graphicsQueue, presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, Surface.surface, Window.window, physicalDevice, commandPool, swapChainImageFormat, swapChainImages, swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
     }
     
     // TODO: Fix cleanup
@@ -302,7 +300,7 @@ int main() {
     vkDestroyBuffer(device, indexBuffer, nullptr);
     vkFreeMemory(device, indexBufferMemory, nullptr);
     vkDestroyDevice(device, nullptr);
-    vkDestroySurfaceKHR(Instance.instance, surface, nullptr);
+    vkDestroySurfaceKHR(Instance.instance, Surface.surface, nullptr);
     cleanupInstance(Instance.instance);
     glfwDestroyWindow(Window.window);
     glfwTerminate();

@@ -3290,7 +3290,9 @@ CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj: C:/C++\ Projects/L
   C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_string.h
 
 CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.cpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
