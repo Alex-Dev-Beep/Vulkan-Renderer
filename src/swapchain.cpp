@@ -150,11 +150,11 @@ VkSurfaceFormatKHR chooseSwapSurfaceFormat(
     return availableFormats[0];
 }
 
-void createImageViews(std::vector<VkImageView>& swapChainImageViews, std::vector<VkImage>& swapChainImages, VkFormat swapChainImageFormat, VkDevice device) {
-    swapChainImageViews.resize(swapChainImages.size());
+void createImageViews() {
+    SwapChain.swapChainImageViews.resize(SwapChain.swapChainImages.size());
 
-    for (uint32_t i = 0; i < swapChainImages.size(); i++) {
-        swapChainImageViews[i] = createImageView(swapChainImages[i], swapChainImageFormat, device, VK_IMAGE_ASPECT_COLOR_BIT);
+    for (uint32_t i = 0; i < SwapChain.swapChainImages.size(); i++) {
+        SwapChain.swapChainImageViews[i] = createImageView(SwapChain.swapChainImages[i], SwapChain.swapChainImageFormat, Device.device, VK_IMAGE_ASPECT_COLOR_BIT);
     }
 }
 
@@ -172,9 +172,9 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
     cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain, graphicsPipeline, pipelineLayout);
 
     createSwapChain();
-    createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
+    createImageViews();
     createDepthResources(swapChainExtent, depthImageView, depthImage, depthImageMemory, device, physicalDevice, commandPool, graphicsQueue);
-    createRenderPass(swapChainImageFormat, renderPass, device, physicalDevice);
+    createRenderPass();
     createGraphicsPipeline(device, swapChainExtent, pipelineLayout, renderPass, graphicsPipeline, descriptorSetLayout);
     createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device, depthImageView);
     createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);

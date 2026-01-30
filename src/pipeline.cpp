@@ -1,10 +1,14 @@
 #include "pipeline.hpp"
 #include "vertex.hpp"
-#include "uniform.hpp"  
+#include "uniform.hpp"
+#include "swapchain.hpp"
+#include "device.hpp"
 
 #include <fstream>
 #include <vector>
 #include <iostream>
+
+pipeline Pipeline;
 
 static std::vector<char> readFile(const std::string& filename) {
     std::ifstream file(filename, std::ios::ate | std::ios::binary);
@@ -174,14 +178,9 @@ void createGraphicsPipeline(VkDevice device, VkExtent2D swapChainExtent, VkPipel
     vkDestroyShaderModule(device, vertShaderModule, nullptr);
 }
 
-void createRenderPass(
-    VkFormat swapChainImageFormat,
-    VkRenderPass& renderPass,
-    VkDevice device,
-    VkPhysicalDevice physicalDevice
-) {
+void createRenderPass() {
     VkAttachmentDescription colorAttachment{};
-    colorAttachment.format = swapChainImageFormat;
+    colorAttachment.format = SwapChain.swapChainImageFormat;
     colorAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
     colorAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
     colorAttachment.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
@@ -191,7 +190,7 @@ void createRenderPass(
     colorAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
 
     VkAttachmentDescription depthAttachment{};
-    depthAttachment.format = findDepthFormat(physicalDevice);
+    depthAttachment.format = findDepthFormat(Device.physicalDevice);
     depthAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
     depthAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
     depthAttachment.storeOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
@@ -226,7 +225,7 @@ void createRenderPass(
     renderPassInfo.subpassCount = 1;
     renderPassInfo.pSubpasses = &subpass;
 
-    if (vkCreateRenderPass(device, &renderPassInfo, nullptr, &renderPass) != VK_SUCCESS) {
+    if (vkCreateRenderPass(Device.device, &renderPassInfo, nullptr, &Pipeline.renderPass) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create render pass!");
     }
 
