@@ -6,12 +6,16 @@
 #include "vertex.hpp"
 #include "image.hpp"
 #include "uniform.hpp"
+#include "surface.hpp"
+#include "window.hpp"
 
 #include <algorithm>
 #include <limits>
 #include <stdexcept>
 #include <iostream>
 #include <vector>
+
+swapChain SwapChain;
 
 SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device, VkSurfaceKHR surface) {
     SwapChainSupportDetails details;
@@ -73,12 +77,12 @@ VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& avai
     return VK_PRESENT_MODE_FIFO_KHR;
 }
 
-void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFWwindow* window, VkSwapchainKHR& swapChain, VkDevice device, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, VkExtent2D& swapChainExtent) {
-    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice, surface);
+void createSwapChain() {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(Device.physicalDevice, Surface.surface);
 
     VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
     VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
-    VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities, window);
+    VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities, Window.window);
 
     uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
 
@@ -88,7 +92,7 @@ void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFW
 
     VkSwapchainCreateInfoKHR createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
-    createInfo.surface = surface;
+    createInfo.surface = Surface.surface;
 
     createInfo.minImageCount = imageCount;
     createInfo.imageFormat = surfaceFormat.format;
@@ -97,7 +101,7 @@ void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFW
     createInfo.imageArrayLayers = 1;
     createInfo.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
 
-    QueueFamilyIndices indices = findQueueFamilies(physicalDevice, surface);
+    QueueFamilyIndices indices = findQueueFamilies(Device.physicalDevice, Surface.surface);
     uint32_t queueFamilyIndices[] = {indices.graphicsFamily.value(), indices.presentFamily.value()};
 
     if (indices.graphicsFamily != indices.presentFamily) {
@@ -119,18 +123,18 @@ void createSwapChain(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, GLFW
 
     createInfo.oldSwapchain = VK_NULL_HANDLE;
 
-    swapChainImageFormat = surfaceFormat.format;
-    swapChainExtent = extent;
+    SwapChain.swapChainImageFormat = surfaceFormat.format;
+    SwapChain.swapChainExtent = extent;
 
-    if (vkCreateSwapchainKHR(device, &createInfo, nullptr, &swapChain) != VK_SUCCESS) {
+    if (vkCreateSwapchainKHR(Device.device, &createInfo, nullptr, &SwapChain.swapChain) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create swapchain!");
     } else {
         std::cout << "Succesfully created Swapchain!" << std::endl;
     }
     
-    vkGetSwapchainImagesKHR(device, swapChain, &imageCount, nullptr);
-    swapChainImages.resize(imageCount);
-    vkGetSwapchainImagesKHR(device, swapChain, &imageCount, swapChainImages.data());
+    vkGetSwapchainImagesKHR(Device.device, SwapChain.swapChain, &imageCount, nullptr);
+    SwapChain.swapChainImages.resize(imageCount);
+    vkGetSwapchainImagesKHR(Device.device, SwapChain.swapChain, &imageCount, SwapChain.swapChainImages.data());
 }
 
 VkSurfaceFormatKHR chooseSwapSurfaceFormat(
@@ -167,7 +171,7 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
 
     cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain, graphicsPipeline, pipelineLayout);
 
-    createSwapChain(physicalDevice, surface, window, swapChain, device, swapChainImages, swapChainImageFormat, swapChainExtent);
+    createSwapChain();
     createImageViews(swapChainImageViews, swapChainImages, swapChainImageFormat, device);
     createDepthResources(swapChainExtent, depthImageView, depthImage, depthImageMemory, device, physicalDevice, commandPool, graphicsQueue);
     createRenderPass(swapChainImageFormat, renderPass, device, physicalDevice);

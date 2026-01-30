@@ -6,6 +6,7 @@
 void createSurface();
 
 struct surface {
+    public:
     VkSurfaceKHR surface;
 };
 

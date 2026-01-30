@@ -22,6 +22,7 @@ void DestroyDebugUtilsMessengerEXT(
 void cleanupInstance(VkInstance instance);
 
 struct instance {
+    public:
     VkInstance instance;
 };
 

@@ -3,10 +3,13 @@
 
 CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
@@ -3721,10 +3724,13 @@ CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-V
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
@@ -6783,15 +6789,15 @@ CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_win32.h
 
 
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2_precision.hpp:
+
 C:/Program\ Files/LLVM/lib/clang/21/include/movrs_avx10_2_512intrin.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_common.inl:
 
@@ -6811,6 +6817,12 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/oaidl.h:
 
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/stddef.h:
+
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/poppack.h:
@@ -6818,8 +6830,6 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/poppack.h:
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ctime:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlvbmi2intrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3_precision.hpp:
 
@@ -6829,7 +6839,21 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx2intrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/waitpkgintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/xsaveintrin.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/timeapi.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp:
 
@@ -6902,18 +6926,6 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_av1std_encode.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4_precision.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/cmpccxaddintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/waitpkgintrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/xsaveintrin.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/timeapi.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.hpp:
 
@@ -7025,19 +7037,19 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_dou
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlfp16intrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4.hpp:
-
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/dpapi.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4_precision.hpp:
 
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4_precision.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/cmpccxaddintrin.h:
+
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/stralign.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2_precision.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x2.hpp:
 
@@ -7415,9 +7427,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_term
 
 C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_av1std.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2satcvtintrin.h:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2satcvtintrin.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wconio.h:
 
@@ -7779,8 +7791,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/cldemoteintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/clflushoptintrin.h:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_typeinfo.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/clzerointrin.h:
@@ -7838,10 +7848,6 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 C:/Program\ Files/LLVM/lib/clang/21/include/shaintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/sm4intrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/stddef.h:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/eh.h:
 
@@ -7904,6 +7910,8 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/istream:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xiosbase:
 
@@ -8050,8 +8058,6 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp:
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/sync.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.cpp:
 
