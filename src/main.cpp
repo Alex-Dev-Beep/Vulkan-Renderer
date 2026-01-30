@@ -257,21 +257,29 @@ int main() {
         glfwPollEvents();
         drawFrame(Device.device, SwapChain.swapChain, renderPass, SwapChain.swapChainFramebuffers, SwapChain.swapChainExtent, graphicsPipeline, Queues.graphicsQueue, Queues.presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, Surface.surface, Window.window, Device.physicalDevice, commandPool, SwapChain.swapChainImageFormat, SwapChain.swapChainImages, SwapChain.swapChainImageViews, pipelineLayout, vertexBuffer, vertices, indexBuffer, descriptorSetLayout, uniformBuffersMapped, descriptorSets, depthImage, depthImageMemory, depthImageView, imagesInFlight);
     }
-    
-    // TODO: Fix cleanup
+
     vkDeviceWaitIdle(Device.device);   
     for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(Device.device, renderFinishedSemaphores[i], nullptr);
         vkDestroySemaphore(Device.device, imageAvailableSemaphores[i], nullptr);
         vkDestroyFence(Device.device, inFlightFences[i], nullptr);
     }
+    for (auto framebuffer : SwapChain.swapChainFramebuffers) {
+        vkDestroyFramebuffer(Device.device, framebuffer, nullptr);
+    }
+    SwapChain.swapChainFramebuffers.clear();
+    vkFreeCommandBuffers(
+        Device.device,
+        commandPool,
+        static_cast<uint32_t>(commandBuffers.size()),
+        commandBuffers.data()
+    );
+    commandBuffers.clear();
     vkDestroyCommandPool(Device.device, commandPool, nullptr);
     for (auto imageView : SwapChain.swapChainImageViews) {
         vkDestroyImageView(Device.device, imageView, nullptr);
     }
-    for (auto framebuffer : SwapChain.swapChainFramebuffers) {
-        vkDestroyFramebuffer(Device.device, framebuffer, nullptr);
-    }
+    SwapChain.swapChainImageViews.clear();
     cleanupSwapChain(Device.device, renderPass, SwapChain.swapChainFramebuffers, commandPool, commandBuffers, SwapChain.swapChainImageViews, SwapChain.swapChain, graphicsPipeline, pipelineLayout);
     vkDestroyImageView(Device.device, depthImageView, nullptr);
     vkDestroyImage(Device.device, depthImage, nullptr);

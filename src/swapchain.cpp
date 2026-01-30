@@ -201,25 +201,8 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
 }
 
 void cleanupSwapChain(VkDevice& device, VkRenderPass& renderPass, std::vector<VkFramebuffer>& swapChainFramebuffers, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, std::vector<VkImageView>& swapChainImageViews, VkSwapchainKHR& swapChain, VkPipeline graphicsPipeline, VkPipelineLayout pipelineLayout) {
-    for (VkFramebuffer framebuffer : swapChainFramebuffers) {
-        vkDestroyFramebuffer(device, framebuffer, nullptr);
-    }
-    swapChainFramebuffers.clear();
-
-    vkFreeCommandBuffers(
-        device,
-        commandPool,
-        static_cast<uint32_t>(commandBuffers.size()),
-        commandBuffers.data()
-    );
-    commandBuffers.clear();
 
     vkDestroyRenderPass(device, renderPass, nullptr);
-
-    for (VkImageView imageView : swapChainImageViews) {
-        vkDestroyImageView(device, imageView, nullptr);
-    }
-    swapChainImageViews.clear();
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
     vkDestroyPipeline(device, graphicsPipeline, nullptr);
     vkDestroySwapchainKHR(device, swapChain, nullptr);
