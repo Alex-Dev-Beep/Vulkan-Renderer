@@ -4,6 +4,7 @@
 #include "device.hpp"
 #include "pipeline.hpp"
 #include "swapchain.hpp"
+#include "renderer.hpp"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -12,6 +13,8 @@
 #include <iostream>
 
 depthResources DepthResources;
+uniformBuffers UniformBuffers;
+buffers Buffers;
 
 void createDescriptorSetLayout() {
     VkDescriptorSetLayoutBinding uboLayoutBinding{};
@@ -43,24 +46,18 @@ void createDescriptorSetLayout() {
     }
 }
 
-void createUniformBuffers(int MAX_FRAMES_IN_FLIGHT, 
-    VkDevice device, 
-    std::vector<VkBuffer>& uniformBuffers,
-    std::vector<VkDeviceMemory>& uniformBuffersMemory,
-    std::vector<void*>& uniformBuffersMapped,
-    VkPhysicalDevice physicalDevice
-) {
+void createUniformBuffers() {
     VkDeviceSize bufferSize = sizeof(UniformBufferObject);
 
-    uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
-    uniformBuffersMemory.resize(MAX_FRAMES_IN_FLIGHT);
-    uniformBuffersMapped.resize(MAX_FRAMES_IN_FLIGHT);
+    UniformBuffers.uniformBuffers.resize(Renderer.MAX_FRAMES_IN_FLIGHT);
+    UniformBuffers.uniformBuffersMemory.resize(Renderer.MAX_FRAMES_IN_FLIGHT);
+    UniformBuffers.uniformBuffersMapped.resize(Renderer.MAX_FRAMES_IN_FLIGHT);
 
-    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+    for (size_t i = 0; i < Renderer.MAX_FRAMES_IN_FLIGHT; i++) {
         // createBuffer(bufferSize, VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, uniformBuffers[i], uniformBuffersMemory[i]);
-        createBuffer(physicalDevice, device, bufferSize, VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, uniformBuffers[i], uniformBuffersMemory[i]);
+        createBuffer(Device.physicalDevice, Device.device, bufferSize, VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, UniformBuffers.uniformBuffers[i], UniformBuffers.uniformBuffersMemory[i]);
 
-        vkMapMemory(device, uniformBuffersMemory[i], 0, bufferSize, 0, &uniformBuffersMapped[i]);
+        vkMapMemory(Device.device, UniformBuffers.uniformBuffersMemory[i], 0, bufferSize, 0, &UniformBuffers.uniformBuffersMapped[i]);
     }
 }
 
@@ -79,73 +76,64 @@ void updateUniformBuffer(uint32_t currentImage,
     memcpy(uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
 }
 
-void createDescriptorPool(int MAX_FRAMES_IN_FLIGHT, VkDescriptorPool& descriptorPool, VkDevice device) {
+void createDescriptorPool() {
     std::array<VkDescriptorPoolSize, 2> poolSizes{};
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    poolSizes[0].descriptorCount = static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT);
+    poolSizes[0].descriptorCount = static_cast<uint32_t>(Renderer.MAX_FRAMES_IN_FLIGHT);
     poolSizes[1].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-    poolSizes[1].descriptorCount = static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT);
+    poolSizes[1].descriptorCount = static_cast<uint32_t>(Renderer.MAX_FRAMES_IN_FLIGHT);
 
     VkDescriptorPoolCreateInfo poolInfo{};
     poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
     poolInfo.poolSizeCount = static_cast<uint32_t>(poolSizes.size());
     poolInfo.pPoolSizes = poolSizes.data();
-    poolInfo.maxSets = static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT);
+    poolInfo.maxSets = static_cast<uint32_t>(Renderer.MAX_FRAMES_IN_FLIGHT);
 
-    poolInfo.maxSets = static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT);
+    poolInfo.maxSets = static_cast<uint32_t>(Renderer.MAX_FRAMES_IN_FLIGHT);
 
-    if (vkCreateDescriptorPool(device, &poolInfo, nullptr, &descriptorPool) != VK_SUCCESS) {
+    if (vkCreateDescriptorPool(Device.device, &poolInfo, nullptr, &Device.descriptorPool) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create descriptor pool!");
     }
 
     std::cout << "Succesfully created descriptor pool!" << std::endl;
 }
 
-void createDescriptorSets(
-    uint32_t MAX_FRAMES_IN_FLIGHT,
-    VkDescriptorPool descriptorPool,
-    VkDescriptorSetLayout descriptorSetLayout,
-    std::vector<VkDescriptorSet>& descriptorSets,
-    VkDevice device,
-    const std::vector<VkBuffer>& uniformBuffers,
-    VkSampler textureSampler,
-    VkImageView textureImageView
-) {
+void createDescriptorSets() {
 
-    std::vector<VkDescriptorSetLayout> layouts(MAX_FRAMES_IN_FLIGHT, descriptorSetLayout);
+    std::vector<VkDescriptorSetLayout> layouts(Renderer.MAX_FRAMES_IN_FLIGHT, Pipeline.descriptorSetLayout);
 
     VkDescriptorSetAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
-    allocInfo.descriptorPool = descriptorPool;
-    allocInfo.descriptorSetCount = MAX_FRAMES_IN_FLIGHT;
+    allocInfo.descriptorPool = Device.descriptorPool;
+    allocInfo.descriptorSetCount = Renderer.MAX_FRAMES_IN_FLIGHT;
     allocInfo.pSetLayouts = layouts.data();
 
-    descriptorSets.resize(MAX_FRAMES_IN_FLIGHT);
+    Device.descriptorSets.resize(Renderer.MAX_FRAMES_IN_FLIGHT);
 
-    if (vkAllocateDescriptorSets(device, &allocInfo, descriptorSets.data()) != VK_SUCCESS) {
+    if (vkAllocateDescriptorSets(Device.device, &allocInfo, Device.descriptorSets.data()) != VK_SUCCESS) {
         throw std::runtime_error("Failed to allocate descriptor sets!");
     }
 
     std::cout << "Successfully allocated descriptor sets!" << std::endl;
 
-    std::vector<VkDescriptorBufferInfo> bufferInfos(MAX_FRAMES_IN_FLIGHT);
-    std::vector<VkWriteDescriptorSet> descriptorWrites(MAX_FRAMES_IN_FLIGHT);
+    std::vector<VkDescriptorBufferInfo> bufferInfos(Renderer.MAX_FRAMES_IN_FLIGHT);
+    std::vector<VkWriteDescriptorSet> descriptorWrites(Renderer.MAX_FRAMES_IN_FLIGHT);
 
-    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+    for (size_t i = 0; i < Renderer.MAX_FRAMES_IN_FLIGHT; i++) {
         VkDescriptorBufferInfo bufferInfo{};
-        bufferInfo.buffer = uniformBuffers[i];
+        bufferInfo.buffer = UniformBuffers.uniformBuffers[i];
         bufferInfo.offset = 0;
         bufferInfo.range = sizeof(UniformBufferObject);
 
         VkDescriptorImageInfo imageInfo{};
         imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        imageInfo.imageView = textureImageView;
-        imageInfo.sampler = textureSampler;
+        imageInfo.imageView = Image.textureImageView;
+        imageInfo.sampler = Image.textureSampler;
 
     std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
 
     descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-    descriptorWrites[0].dstSet = descriptorSets[i];
+    descriptorWrites[0].dstSet = Device.descriptorSets[i];
     descriptorWrites[0].dstBinding = 0;
     descriptorWrites[0].dstArrayElement = 0;
     descriptorWrites[0].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
@@ -153,14 +141,14 @@ void createDescriptorSets(
     descriptorWrites[0].pBufferInfo = &bufferInfo;
 
     descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-    descriptorWrites[1].dstSet = descriptorSets[i];
+    descriptorWrites[1].dstSet = Device.descriptorSets[i];
     descriptorWrites[1].dstBinding = 1;
     descriptorWrites[1].dstArrayElement = 0;
     descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
     descriptorWrites[1].descriptorCount = 1;
     descriptorWrites[1].pImageInfo = &imageInfo;
 
-    vkUpdateDescriptorSets(device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
+    vkUpdateDescriptorSets(Device.device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
 }
 }
 

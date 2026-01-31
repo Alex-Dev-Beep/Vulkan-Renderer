@@ -176,25 +176,13 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
     createDepthResources();
     createRenderPass();
     createGraphicsPipeline();
-    createFramebuffers(swapChainFramebuffers, swapChainImageViews, renderPass, swapChainExtent, device, depthImageView);
-    createCommandBuffer(commandPool, device, MAX_FRAMES_IN_FLIGHT, commandBuffers);
+    createFramebuffers();
+    createCommandBuffer();
 
     commandBuffers.resize(swapChainFramebuffers.size());
 
     for (size_t i = 0; i < swapChainFramebuffers.size(); i++) {
-        recordCommandBuffer(
-            commandBuffers[i],
-            static_cast<uint32_t>(i),
-            renderPass,
-            swapChainFramebuffers,
-            swapChainExtent,
-            graphicsPipeline,
-            vertexBuffer,
-            indexBuffer,
-            indices,
-            pipelineLayout,
-            descriptorSets
-        );
+        recordCommandBuffer();
     }
 
 

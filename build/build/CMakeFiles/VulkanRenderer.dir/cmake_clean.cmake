@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/image.cpp.obj"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj.d"
+  "CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj"
+  "CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj"
   "CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj.d"
   "CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj"

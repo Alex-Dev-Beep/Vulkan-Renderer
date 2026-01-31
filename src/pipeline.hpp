@@ -12,13 +12,6 @@ struct pipeline {
 
 void createGraphicsPipeline();
 void createRenderPass();
-void createFramebuffers(
-    std::vector<VkFramebuffer>& swapChainFramebuffers,
-    const std::vector<VkImageView>& swapChainImageViews,
-    VkRenderPass renderPass,
-    VkExtent2D swapChainExtent,
-    VkDevice device,
-    VkImageView depthImageView
-);
+void createFramebuffers();
 
 extern pipeline Pipeline;

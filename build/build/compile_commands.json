@@ -1,6 +1,12 @@
 [
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\buffer.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\buffer.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/buffer.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\device.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\device.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj"
@@ -28,6 +34,12 @@
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\pipeline.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\pipeline.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\renderer.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\renderer.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/renderer.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj"
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",

@@ -21,37 +21,29 @@ struct depthResources {
     VkImageView depthImageView;
 };
 
+struct uniformBuffers {
+    public:
+    std::vector<VkBuffer> uniformBuffers;
+    std::vector<VkDeviceMemory> uniformBuffersMemory;
+    std::vector<void*> uniformBuffersMapped;
+};
+
+struct buffers {
+    public:
+    std::vector<VkCommandBuffer> commandBuffers;
+};
+
 void createDescriptorSetLayout();
 
-void createUniformBuffers(
-    int MAX_FRAMES_IN_FLIGHT, 
-    VkDevice device, 
-    std::vector<VkBuffer>& uniformBuffers,
-    std::vector<VkDeviceMemory>& uniformBuffersMemory,
-    std::vector<void*>& uniformBuffersMapped,
-    VkPhysicalDevice physicalDevice
-);
+void createUniformBuffers();
 void updateUniformBuffer(
     uint32_t currentImage, 
     std::vector<void*> uniformBuffersMapped, 
     VkExtent2D swapChainExtent
 );
-void createDescriptorPool(
-    int MAX_FRAMES_IN_FLIGHT, 
-    VkDescriptorPool& descriptorPool, 
-    VkDevice device
-);
+void createDescriptorPool();
 
-void createDescriptorSets(
-    uint32_t MAX_FRAMES_IN_FLIGHT,
-    VkDescriptorPool descriptorPool,
-    VkDescriptorSetLayout descriptorSetLayout,
-    std::vector<VkDescriptorSet>& descriptorSets,
-    VkDevice device,
-    const std::vector<VkBuffer>& uniformBuffers,
-    VkSampler textureSampler,
-    VkImageView textureImageView
-);
+void createDescriptorSets();
 
 void createDepthResources();
 
@@ -67,3 +59,5 @@ VkFormat findDepthFormat(VkPhysicalDevice physicalDevice);
 bool hasStencilComponent(VkFormat format);
 
 extern depthResources DepthResources;
+extern uniformBuffers UniformBuffers;
+extern buffers Buffers;

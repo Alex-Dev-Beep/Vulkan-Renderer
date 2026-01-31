@@ -4,6 +4,10 @@
 #include "vertex.hpp"
 #include "surface.hpp"
 #include "instance.hpp"
+#include "uniform.hpp"
+#include "renderer.hpp"
+#include "pipeline.hpp"
+#include "buffer.hpp"
 
 #include <stdexcept>
 #include <vector>
@@ -190,20 +194,20 @@ void createCommandPool() {
     std::cout << "Succesfully created command pool!" << std::endl;
 }
 
-void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRAMES_IN_FLIGHT, std::vector<VkCommandBuffer>& commandBuffers) {
-    commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+void createCommandBuffer() {
+    Buffers.commandBuffers.resize(Renderer.MAX_FRAMES_IN_FLIGHT);
 
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
-    allocInfo.commandPool = commandPool;
+    allocInfo.commandPool = Device.commandPool;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
     allocInfo.commandBufferCount =
-        static_cast<uint32_t>(commandBuffers.size());
+        static_cast<uint32_t>(Buffers.commandBuffers.size());
 
     if (vkAllocateCommandBuffers(
-            device,
+            Device.device,
             &allocInfo,
-            commandBuffers.data()
+            Buffers.commandBuffers.data()
         ) != VK_SUCCESS) {
         throw std::runtime_error("Failed to allocate command buffers!");
     }
@@ -211,104 +215,66 @@ void createCommandBuffer(VkCommandPool commandPool, VkDevice device, int MAX_FRA
     std::cout << "Succesfully allocated command buffers!" << std::endl;
 }
 
-void recordCommandBuffer(
-    VkCommandBuffer commandBuffer,
-    uint32_t imageIndex,
-    VkRenderPass renderPass,
-    const std::vector<VkFramebuffer>& swapChainFramebuffers,
-    VkExtent2D swapChainExtent,
-    VkPipeline graphicsPipeline,
-    VkBuffer vertexBuffer,
-    VkBuffer indexBuffer,
-    const std::vector<uint16_t>& indices,
-    VkPipelineLayout pipelineLayout,
-    const std::vector<VkDescriptorSet>& descriptorSets
-) {
+void recordCommandBuffer() {
+    VkCommandBuffer cmd = Buffers.commandBuffers[Renderer.imageIndex];
 
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 
-    if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) {
+    if (vkBeginCommandBuffer(cmd, &beginInfo) != VK_SUCCESS) {
         throw std::runtime_error("Failed to begin command buffer");
     }
 
     std::array<VkClearValue, 2> clearValues{};
-    clearValues[0].color = {{ 0.0f, 0.0f, 0.0f, 1.0f }};
-    clearValues[1].depthStencil = { 1.0f, 0 };
+    clearValues[0].color = {{0.0f, 0.0f, 0.0f, 1.0f}};
+    clearValues[1].depthStencil = {1.0f, 0};
 
     VkRenderPassBeginInfo renderPassInfo{};
     renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
-    renderPassInfo.renderPass = renderPass;
-    renderPassInfo.framebuffer = swapChainFramebuffers[imageIndex];
-    renderPassInfo.renderArea.offset = { 0, 0 };
-    renderPassInfo.renderArea.extent = swapChainExtent;
+    renderPassInfo.renderPass = Pipeline.renderPass;
+    renderPassInfo.framebuffer = SwapChain.swapChainFramebuffers[Renderer.imageIndex];
+    renderPassInfo.renderArea.offset = {0, 0};
+    renderPassInfo.renderArea.extent = SwapChain.swapChainExtent;
     renderPassInfo.clearValueCount = static_cast<uint32_t>(clearValues.size());
     renderPassInfo.pClearValues = clearValues.data();
 
-    vkCmdBeginRenderPass(
-        commandBuffer,
-        &renderPassInfo,
-        VK_SUBPASS_CONTENTS_INLINE
-    );
+    vkCmdBeginRenderPass(cmd, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-    vkCmdBindPipeline(
-        commandBuffer,
-        VK_PIPELINE_BIND_POINT_GRAPHICS,
-        graphicsPipeline
-    );
+    vkCmdBindPipeline(cmd, VK_PIPELINE_BIND_POINT_GRAPHICS, Pipeline.graphicsPipeline);
 
-    VkBuffer vertexBuffers[] = { vertexBuffer };
+    VkBuffer vertexBuffers[] = { VertexBuffer.vertexBuffer };
     VkDeviceSize offsets[] = { 0 };
-    vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
+    vkCmdBindVertexBuffers(cmd, 0, 1, vertexBuffers, offsets);
 
-    vkCmdBindIndexBuffer(
-        commandBuffer,
-        indexBuffer,
-        0,
-        VK_INDEX_TYPE_UINT16
-    );
+    vkCmdBindIndexBuffer(cmd, IndexBuffer.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
     VkViewport viewport{};
-    viewport.x = 0.0f;
-    viewport.y = 0.0f;
-    viewport.width  = static_cast<float>(swapChainExtent.width);
-    viewport.height = static_cast<float>(swapChainExtent.height);
+    viewport.width  = (float)SwapChain.swapChainExtent.width;
+    viewport.height = (float)SwapChain.swapChainExtent.height;
     viewport.minDepth = 0.0f;
     viewport.maxDepth = 1.0f;
-
-    vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+    vkCmdSetViewport(cmd, 0, 1, &viewport);
 
     VkRect2D scissor{};
-    scissor.offset = { 0, 0 };
-    scissor.extent = swapChainExtent;
-
-    vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+    scissor.extent = SwapChain.swapChainExtent;
+    vkCmdSetScissor(cmd, 0, 1, &scissor);
 
     vkCmdBindDescriptorSets(
-        commandBuffer,
+        cmd,
         VK_PIPELINE_BIND_POINT_GRAPHICS,
-        pipelineLayout,
+        Pipeline.pipelineLayout,
         0,
         1,
-        &descriptorSets[imageIndex],
+        &Device.descriptorSets[Renderer.imageIndex],
         0,
         nullptr
     );
 
-    vkCmdDrawIndexed(
-        commandBuffer,
-        static_cast<uint32_t>(indices.size()),
-        1,
-        0,
-        0,
-        0
-    );
+    vkCmdDrawIndexed(cmd, static_cast<uint32_t>(Renderer.indices.size()), 1, 0, 0, 0);
 
-    vkCmdEndRenderPass(commandBuffer);
+    vkCmdEndRenderPass(cmd);
 
-    if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
+    if (vkEndCommandBuffer(cmd) != VK_SUCCESS) {
         throw std::runtime_error("Failed to record command buffer");
     }
-
-    std::cout << "Successfully recorded command buffer!" << std::endl;
 }

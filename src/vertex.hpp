@@ -43,15 +43,7 @@ struct Vertex {
 };
 
 
-void createVertexBuffer(
-    VkPhysicalDevice physicalDevice,
-    VkDevice device,
-    VkCommandPool commandPool,
-    VkQueue graphicsQueue,
-    VkBuffer& vertexBuffer,
-    VkDeviceMemory& vertexBufferMemory,
-    const std::vector<Vertex>& vertices
-);
+void createVertexBuffer();
 
 void createBuffer(
     VkPhysicalDevice physicalDevice,
@@ -69,12 +61,4 @@ uint32_t findMemoryType(
     VkMemoryPropertyFlags properties
 );
 
-void createIndexBuffer(
-    VkPhysicalDevice physicalDevice,
-    VkDevice device,
-    VkCommandPool commandPool,
-    VkQueue graphicsQueue,
-    VkBuffer& indexBuffer,
-    VkDeviceMemory& indexBufferMemory,
-    const std::vector<uint16_t>& indices
-);
+void createIndexBuffer();

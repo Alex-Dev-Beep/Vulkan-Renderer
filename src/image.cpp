@@ -1,9 +1,12 @@
 #include "image.hpp"
 #include "vertex.hpp"
 #include "uniform.hpp"
+#include "device.hpp"
 
 #include <iostream>
 #include <stdexcept>
+
+image Image;
 
 void createImage(uint32_t width, uint32_t height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory, VkDevice device, VkPhysicalDevice physicalDevice) {
     VkImageCreateInfo imageInfo{};
@@ -42,7 +45,7 @@ void createImage(uint32_t width, uint32_t height, VkFormat format, VkImageTiling
     vkBindImageMemory(device, image, imageMemory, 0);
 }
 
-void createTextureImage(VkPhysicalDevice physicalDevice, VkDevice device, VkImage& textureImage, VkDeviceMemory& textureImageMemory, VkQueue graphicsQueue, VkCommandPool commandPool) {
+void createTextureImage() {
     int texWidth, texHeight, texChannels;
     stbi_uc* pixels = stbi_load("textures/texture.jpg", &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
     VkDeviceSize imageSize = texWidth * texHeight * 4;
@@ -55,24 +58,24 @@ void createTextureImage(VkPhysicalDevice physicalDevice, VkDevice device, VkImag
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    createBuffer(physicalDevice, device, imageSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    createBuffer(Device.physicalDevice, Device.device, imageSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
     void* data;
-    vkMapMemory(device, stagingBufferMemory, 0, imageSize, 0, &data);
+    vkMapMemory(Device.device, stagingBufferMemory, 0, imageSize, 0, &data);
         memcpy(data, pixels, static_cast<size_t>(imageSize));
-    vkUnmapMemory(device, stagingBufferMemory);
+    vkUnmapMemory(Device.device, stagingBufferMemory);
 
     stbi_image_free(pixels);
 
-    createImage(texWidth, texHeight, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, textureImage, textureImageMemory, device, physicalDevice);
+    createImage(texWidth, texHeight, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, Image.textureImage, Image.textureImageMemory, Device.device, Device.physicalDevice);
     
-    transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, device, commandPool, graphicsQueue);
-    copyBufferToImage(stagingBuffer, textureImage, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight), graphicsQueue, device, commandPool);
+    transitionImageLayout(Image.textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, Device.device, Device.commandPool, Queues.graphicsQueue);
+    copyBufferToImage(stagingBuffer, Image.textureImage, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight), Queues.graphicsQueue, Device.device, Device.commandPool);
 
-    transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, device, commandPool, graphicsQueue);
+    transitionImageLayout(Image.textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, Device.device, Device.commandPool, Queues.graphicsQueue);
     
-    vkDestroyBuffer(device, stagingBuffer, nullptr);
-    vkFreeMemory(device, stagingBufferMemory, nullptr);
+    vkDestroyBuffer(Device.device, stagingBuffer, nullptr);
+    vkFreeMemory(Device.device, stagingBufferMemory, nullptr);
 }
 
 VkCommandBuffer beginSingleTimeCommands(VkCommandPool commandPool, VkDevice device) {
@@ -216,8 +219,8 @@ void copyBufferToImage(VkBuffer buffer, VkImage image, uint32_t width, uint32_t 
     endSingleTimeCommands(commandBuffer, graphicsQueue, device, commandPool);
 }
 
-void createTextureImageView(VkDevice device, VkImage textureImage, VkImageView& textureImageView) {
-    textureImageView = createImageView(textureImage, VK_FORMAT_R8G8B8A8_SRGB, device, VK_IMAGE_ASPECT_COLOR_BIT);
+void createTextureImageView() {
+    Image.textureImageView = createImageView(Image.textureImage, VK_FORMAT_R8G8B8A8_SRGB, Device.device, VK_IMAGE_ASPECT_COLOR_BIT);
 }
 
 VkImageView createImageView(VkImage image, VkFormat format, VkDevice device, VkImageAspectFlags aspectFlags) {
@@ -242,10 +245,10 @@ VkImageView createImageView(VkImage image, VkFormat format, VkDevice device, VkI
     return imageView;
 }
 
-void createTextureSampler(VkPhysicalDevice physicalDevice, VkSampler& textureSampler, VkDevice device) {
+void createTextureSampler() {
     std::cout << "hey" << std::endl;
     VkPhysicalDeviceProperties properties{};
-    vkGetPhysicalDeviceProperties(physicalDevice, &properties);
+    vkGetPhysicalDeviceProperties(Device.physicalDevice, &properties);
 
     VkSamplerCreateInfo samplerInfo{};
     samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
@@ -270,7 +273,7 @@ void createTextureSampler(VkPhysicalDevice physicalDevice, VkSampler& textureSam
     samplerInfo.minLod = 0.0f;
     samplerInfo.maxLod = 0.0f;
 
-    if (vkCreateSampler(device, &samplerInfo, nullptr, &textureSampler) != VK_SUCCESS) {
+    if (vkCreateSampler(Device.device, &samplerInfo, nullptr, &Image.textureSampler) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create texture sampler!");
     } else {
     std::cout << "Succesfully created texture sampler!" << std::endl;

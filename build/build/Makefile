@@ -238,6 +238,30 @@ glm/fast:
 	$(MAKE) $(MAKESILENT) -f external\glm\glm\CMakeFiles\glm.dir\build.make external/glm/glm/CMakeFiles/glm.dir/build
 .PHONY : glm/fast
 
+src/buffer.obj: src/buffer.cpp.obj
+.PHONY : src/buffer.obj
+
+# target to build an object file
+src/buffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.obj
+.PHONY : src/buffer.cpp.obj
+
+src/buffer.i: src/buffer.cpp.i
+.PHONY : src/buffer.i
+
+# target to preprocess a source file
+src/buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.i
+.PHONY : src/buffer.cpp.i
+
+src/buffer.s: src/buffer.cpp.s
+.PHONY : src/buffer.s
+
+# target to generate assembly for a file
+src/buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/buffer.cpp.s
+.PHONY : src/buffer.cpp.s
+
 src/device.obj: src/device.cpp.obj
 .PHONY : src/device.obj
 
@@ -357,6 +381,30 @@ src/pipeline.s: src/pipeline.cpp.s
 src/pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.s
 .PHONY : src/pipeline.cpp.s
+
+src/renderer.obj: src/renderer.cpp.obj
+.PHONY : src/renderer.obj
+
+# target to build an object file
+src/renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj
+.PHONY : src/renderer.cpp.obj
+
+src/renderer.i: src/renderer.cpp.i
+.PHONY : src/renderer.i
+
+# target to preprocess a source file
+src/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.i
+.PHONY : src/renderer.cpp.i
+
+src/renderer.s: src/renderer.cpp.s
+.PHONY : src/renderer.s
+
+# target to generate assembly for a file
+src/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.s
+.PHONY : src/renderer.cpp.s
 
 src/stb_implementation.obj: src/stb_implementation.cpp.obj
 .PHONY : src/stb_implementation.obj
@@ -568,6 +616,9 @@ help:
 	@echo ... VulkanRenderer
 	@echo ... glfw
 	@echo ... glm
+	@echo ... src/buffer.obj
+	@echo ... src/buffer.i
+	@echo ... src/buffer.s
 	@echo ... src/device.obj
 	@echo ... src/device.i
 	@echo ... src/device.s
@@ -583,6 +634,9 @@ help:
 	@echo ... src/pipeline.obj
 	@echo ... src/pipeline.i
 	@echo ... src/pipeline.s
+	@echo ... src/renderer.obj
+	@echo ... src/renderer.i
+	@echo ... src/renderer.s
 	@echo ... src/stb_implementation.obj
 	@echo ... src/stb_implementation.i
 	@echo ... src/stb_implementation.s

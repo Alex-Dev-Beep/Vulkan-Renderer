@@ -16,22 +16,12 @@
 #include "vertex.hpp"
 #include "uniform.hpp"
 #include "image.hpp"
+#include "renderer.hpp"
+#include "buffer.hpp"
 
 // doccument everything
 
 bool framebufferResized = false;
-uint32_t currentFrame = 0;
-
-const std::vector<Vertex> vertices = {
-    {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
-    {{0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {1.0f, 0.0f}},
-    {{0.5f, 0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {1.0f, 1.0f}},
-    {{-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 1.0f}, {0.0f, 1.0f}}
-};
-
-const std::vector<uint16_t> indices = {
-    0, 1, 2, 2, 3, 0
-};
 
 void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
     framebufferResized = true;
@@ -70,20 +60,19 @@ void drawFrame(
     VkImageView depthImageView,
     std::vector<VkFence>& imagesInFlight
     ) {
-    vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
+    vkWaitForFences(device, 1, &inFlightFences[Renderer.currentFrame], VK_TRUE, UINT64_MAX);
     
-    uint32_t imageIndex;
     VkResult result = vkAcquireNextImageKHR(
         device,
         swapChain,
         UINT64_MAX,
-        imageAvailableSemaphores[currentFrame],
+        imageAvailableSemaphores[Renderer.currentFrame],
         VK_NULL_HANDLE,
-        &imageIndex
+        &Renderer.imageIndex
     );
 
     if (result == VK_ERROR_OUT_OF_DATE_KHR) {
-        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, indices, descriptorSetLayout, descriptorSets, currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
+        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, Renderer.indices, descriptorSetLayout, descriptorSets, Renderer.currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
         imagesInFlight.clear();
         imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
         return;
@@ -92,28 +81,36 @@ void drawFrame(
         throw std::runtime_error("Failed to acquire swap chain image!");
     }
 
-    if (imagesInFlight[imageIndex] != VK_NULL_HANDLE) {
+    if (imagesInFlight[Renderer.imageIndex] != VK_NULL_HANDLE) {
         vkWaitForFences(
             device,
             1,
-            &imagesInFlight[imageIndex],
+            &imagesInFlight[Renderer.imageIndex],
             VK_TRUE,
             UINT64_MAX
         );
     }
 
-    imagesInFlight[imageIndex] = inFlightFences[currentFrame];
+    vkResetCommandBuffer(
+        commandBuffers[Renderer.imageIndex],
+        0
+    );
 
-    updateUniformBuffer(currentFrame, uniformBuffersMapped, swapChainExtent);
+    recordCommandBuffer(); 
 
-    vkResetFences(device, 1, &inFlightFences[currentFrame]);
+
+    imagesInFlight[Renderer.imageIndex] = inFlightFences[Renderer.currentFrame];
+
+    updateUniformBuffer(Renderer.currentFrame, uniformBuffersMapped, swapChainExtent);
+
+    vkResetFences(device, 1, &inFlightFences[Renderer.currentFrame]);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
     submitInfo.pNext = nullptr;
 
 
-    VkSemaphore waitSemaphores[] = { imageAvailableSemaphores[currentFrame] };
+    VkSemaphore waitSemaphores[] = { imageAvailableSemaphores[Renderer.currentFrame] };
     VkPipelineStageFlags waitStages[] = {
         VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT
     };
@@ -123,10 +120,10 @@ void drawFrame(
     submitInfo.pWaitDstStageMask = waitStages;
 
     submitInfo.commandBufferCount = 1;
-    submitInfo.pCommandBuffers = &commandBuffers[imageIndex];
+    submitInfo.pCommandBuffers = &commandBuffers[Renderer.imageIndex];
 
 
-    VkSemaphore signalSemaphores[] = { renderFinishedSemaphores[currentFrame] };
+    VkSemaphore signalSemaphores[] = { renderFinishedSemaphores[Renderer.currentFrame] };
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphores;
 
@@ -134,7 +131,7 @@ void drawFrame(
         graphicsQueue,
         1,
         &submitInfo,
-        inFlightFences[currentFrame]
+        inFlightFences[Renderer.currentFrame]
     ) != VK_SUCCESS) {
         throw std::runtime_error("Failed to submit draw command buffer!");
     }
@@ -146,7 +143,7 @@ void drawFrame(
 
     presentInfo.swapchainCount = 1;
     presentInfo.pSwapchains = &swapChain;
-    presentInfo.pImageIndices = &imageIndex;
+    presentInfo.pImageIndices = &Renderer.imageIndex;
 
     result = vkQueuePresentKHR(presentQueue, &presentInfo);
 
@@ -155,13 +152,13 @@ void drawFrame(
         framebufferResized) {
 
         framebufferResized = false;
-        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, indices, descriptorSetLayout, descriptorSets, currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
+        recreateSwapChain(window, device, physicalDevice, surface, swapChain, MAX_FRAMES_IN_FLIGHT, renderPass, commandPool, commandBuffers, swapChainExtent, swapChainImages, swapChainImageFormat, swapChainImageViews, swapChainFramebuffers, graphicsPipeline, pipelineLayout, vertexBuffer, vertices, indexBuffer, Renderer.indices, descriptorSetLayout, descriptorSets, Renderer.currentFrame, graphicsQueue, depthImageView, depthImageMemory, depthImage);
         imagesInFlight.clear();
         imagesInFlight.resize(swapChainImages.size(), VK_NULL_HANDLE);
         return;
     }
 
-    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
+    Renderer.currentFrame = (Renderer.currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 }
 
 int main() {
@@ -171,28 +168,11 @@ int main() {
         std::cout << "Initialized GLFW correctly!" << std::endl;
     }
 
-    std::vector<VkCommandBuffer> commandBuffers;
     std::vector<VkSemaphore> imageAvailableSemaphores;
     std::vector<VkSemaphore> renderFinishedSemaphores;
     std::vector<VkFence> inFlightFences;
-    std::vector<VkBuffer> uniformBuffers;
-    std::vector<VkDeviceMemory> uniformBuffersMemory;
-    std::vector<void*> uniformBuffersMapped;
-    std::vector<VkDescriptorSet> descriptorSets;
     std::vector<VkFence> imagesInFlight;
 
-    const int MAX_FRAMES_IN_FLIGHT = 2; 
-
-    VkBuffer vertexBuffer;
-    VkDeviceMemory vertexBufferMemory;
-    VkBuffer indexBuffer;
-    VkDeviceMemory indexBufferMemory;
-    VkDescriptorPool descriptorPool;    
-    VkImage textureImage;
-    VkDeviceMemory textureImageMemory;
-    VkImageView textureImageView;
-    VkSampler textureSampler;
-    
     createWindow();
     glfwSetFramebufferSizeCallback(Window.window, framebufferResizeCallback);
     createInstance();
@@ -209,50 +189,31 @@ int main() {
     createGraphicsPipeline();
     createCommandPool();
     createDepthResources();
-    createFramebuffers(SwapChain.swapChainFramebuffers, SwapChain.swapChainImageViews, Pipeline.renderPass, SwapChain.swapChainExtent, Device.device, DepthResources.depthImageView);
-    createTextureImage(Device.physicalDevice, Device.device, textureImage, textureImageMemory, Queues.graphicsQueue, Device.commandPool);
-    createTextureImageView(Device.device, textureImage, textureImageView);
-    createTextureSampler(Device.physicalDevice, textureSampler, Device.device);
-    createVertexBuffer(
-        Device.physicalDevice,
-        Device.device,
-        Device.commandPool,
-        Queues.graphicsQueue,
-        vertexBuffer,
-        vertexBufferMemory,
-        vertices
-    );
-    createUniformBuffers(MAX_FRAMES_IN_FLIGHT, Device.device, uniformBuffers, uniformBuffersMemory, uniformBuffersMapped, Device.physicalDevice);
-    createDescriptorPool(MAX_FRAMES_IN_FLIGHT, descriptorPool, Device.device);
-    createDescriptorSets(MAX_FRAMES_IN_FLIGHT, descriptorPool, Pipeline.descriptorSetLayout, descriptorSets, Device.device, uniformBuffers, textureSampler, textureImageView);
-    createIndexBuffer(Device.physicalDevice, Device.device, Device.commandPool, Queues.graphicsQueue, indexBuffer, indexBufferMemory, indices);
-    createCommandBuffer(Device.commandPool, Device.device, SwapChain.swapChainImages.size(), commandBuffers);   
-    for (size_t i = 0; i < commandBuffers.size(); i++) {
-        recordCommandBuffer(
-            commandBuffers[i],
-            static_cast<uint32_t>(i),
-            Pipeline.renderPass,
-            SwapChain.swapChainFramebuffers,
-            SwapChain.swapChainExtent,
-            Pipeline.graphicsPipeline,
-            vertexBuffer,
-            indexBuffer,
-            indices,
-            Pipeline.pipelineLayout,
-            descriptorSets
-        );
+    createFramebuffers();
+    createTextureImage();
+    createTextureImageView();
+    createTextureSampler();
+    createVertexBuffer();
+    createUniformBuffers();
+    createDescriptorPool();
+    createDescriptorSets();
+    createIndexBuffer();
+    createCommandBuffer();   
+    for (size_t i = 0; i < Buffers.commandBuffers.size(); i++) {
+        recordCommandBuffer();
     }
-    createSyncObjects(Device.device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, MAX_FRAMES_IN_FLIGHT);  
+    createSyncObjects(Device.device, imageAvailableSemaphores, renderFinishedSemaphores, inFlightFences, Renderer.MAX_FRAMES_IN_FLIGHT);  
 
     // Main Loop
     while (!glfwWindowShouldClose(Window.window)) {
         glfwPollEvents();
-        drawFrame(Device.device, SwapChain.swapChain, Pipeline.renderPass, SwapChain.swapChainFramebuffers, SwapChain.swapChainExtent, Pipeline.graphicsPipeline, Queues.graphicsQueue, Queues.presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, commandBuffers, MAX_FRAMES_IN_FLIGHT, Surface.surface, Window.window, Device.physicalDevice, Device.commandPool, SwapChain.swapChainImageFormat, SwapChain.swapChainImages, SwapChain.swapChainImageViews, Pipeline.pipelineLayout, vertexBuffer, vertices, indexBuffer, Pipeline.descriptorSetLayout, uniformBuffersMapped, descriptorSets, DepthResources.depthImage, DepthResources.depthImageMemory, DepthResources.depthImageView, imagesInFlight);
+        drawFrame(Device.device, SwapChain.swapChain, Pipeline.renderPass, SwapChain.swapChainFramebuffers, SwapChain.swapChainExtent, Pipeline.graphicsPipeline, Queues.graphicsQueue, Queues.presentQueue, inFlightFences, renderFinishedSemaphores, imageAvailableSemaphores, Buffers.commandBuffers, Renderer.MAX_FRAMES_IN_FLIGHT, Surface.surface, Window.window, Device.physicalDevice, Device.commandPool, SwapChain.swapChainImageFormat, SwapChain.swapChainImages, SwapChain.swapChainImageViews, Pipeline.pipelineLayout, VertexBuffer.vertexBuffer, Renderer.vertices, IndexBuffer.indexBuffer, Pipeline.descriptorSetLayout, UniformBuffers.uniformBuffersMapped, Device.descriptorSets, DepthResources.depthImage, DepthResources.depthImageMemory, DepthResources.depthImageView, imagesInFlight);
     }
 
     // Cleanup
+    // TODO: When closing the app after resizing/changing size of the window, validation layers scream
     vkDeviceWaitIdle(Device.device);   
-    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+    for (size_t i = 0; i < Renderer.MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(Device.device, renderFinishedSemaphores[i], nullptr);
         vkDestroySemaphore(Device.device, imageAvailableSemaphores[i], nullptr);
         vkDestroyFence(Device.device, inFlightFences[i], nullptr);
@@ -264,33 +225,33 @@ int main() {
     vkFreeCommandBuffers(
         Device.device,
         Device.commandPool,
-        static_cast<uint32_t>(commandBuffers.size()),
-        commandBuffers.data()
+        static_cast<uint32_t>(Buffers.commandBuffers.size()),
+        Buffers.commandBuffers.data()
     );
-    commandBuffers.clear();
+    Buffers.commandBuffers.clear();
     vkDestroyCommandPool(Device.device, Device.commandPool, nullptr);
     for (auto imageView : SwapChain.swapChainImageViews) {
         vkDestroyImageView(Device.device, imageView, nullptr);
     }
     SwapChain.swapChainImageViews.clear();
-    cleanupSwapChain(Device.device, Pipeline.renderPass, SwapChain.swapChainFramebuffers, Device.commandPool, commandBuffers, SwapChain.swapChainImageViews, SwapChain.swapChain, Pipeline.graphicsPipeline, Pipeline.pipelineLayout);
+    cleanupSwapChain(Device.device, Pipeline.renderPass, SwapChain.swapChainFramebuffers, Device.commandPool, Buffers.commandBuffers, SwapChain.swapChainImageViews, SwapChain.swapChain, Pipeline.graphicsPipeline, Pipeline.pipelineLayout);
     vkDestroyImageView(Device.device, DepthResources.depthImageView, nullptr);
     vkDestroyImage(Device.device, DepthResources.depthImage, nullptr);
     vkFreeMemory(Device.device, DepthResources.depthImageMemory, nullptr);
-    vkDestroySampler(Device.device, textureSampler, nullptr);
-    vkDestroyImageView(Device.device, textureImageView, nullptr);
-    vkDestroyImage(Device.device, textureImage, nullptr);
-    vkFreeMemory(Device.device, textureImageMemory, nullptr);         
-    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-        vkDestroyBuffer(Device.device, uniformBuffers[i], nullptr);
-        vkFreeMemory(Device.device, uniformBuffersMemory[i], nullptr);
+    vkDestroySampler(Device.device, Image.textureSampler, nullptr);
+    vkDestroyImageView(Device.device, Image.textureImageView, nullptr);
+    vkDestroyImage(Device.device, Image.textureImage, nullptr);
+    vkFreeMemory(Device.device, Image.textureImageMemory, nullptr);         
+    for (size_t i = 0; i < Renderer.MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroyBuffer(Device.device, UniformBuffers.uniformBuffers[i], nullptr);
+        vkFreeMemory(Device.device, UniformBuffers.uniformBuffersMemory[i], nullptr);
     }
-    vkDestroyDescriptorPool(Device.device, descriptorPool, nullptr);
+    vkDestroyDescriptorPool(Device.device, Device.descriptorPool, nullptr);
     vkDestroyDescriptorSetLayout(Device.device, Pipeline.descriptorSetLayout, nullptr);
-    vkDestroyBuffer(Device.device, vertexBuffer, nullptr);
-    vkFreeMemory(Device.device, vertexBufferMemory, nullptr);
-    vkDestroyBuffer(Device.device, indexBuffer, nullptr);
-    vkFreeMemory(Device.device, indexBufferMemory, nullptr);
+    vkDestroyBuffer(Device.device, VertexBuffer.vertexBuffer, nullptr);
+    vkFreeMemory(Device.device, VertexBuffer.vertexBufferMemory, nullptr);
+    vkDestroyBuffer(Device.device, IndexBuffer.indexBuffer, nullptr);
+    vkFreeMemory(Device.device, IndexBuffer.indexBufferMemory, nullptr);
     vkDestroyDevice(Device.device, nullptr);
     vkDestroySurfaceKHR(Instance.instance, Surface.surface, nullptr);
     cleanupInstance(Instance.instance);
