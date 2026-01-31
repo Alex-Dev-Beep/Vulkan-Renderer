@@ -158,18 +158,18 @@ void createImageViews() {
     }
 }
 
-void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface, VkSwapchainKHR& swapChain, int MAX_FRAMES_IN_FLIGHT, VkRenderPass& renderPass, VkCommandPool& commandPool, std::vector<VkCommandBuffer>& commandBuffers, VkExtent2D& swapChainExtent, std::vector<VkImage>& swapChainImages, VkFormat& swapChainImageFormat, std::vector<VkImageView>& swapChainImageViews, std::vector<VkFramebuffer>& swapChainFramebuffers, VkPipeline& graphicsPipeline, VkPipelineLayout& pipelineLayout, VkBuffer vertexBuffer, const std::vector<Vertex>& vertices, VkBuffer indexBuffer, const std::vector<uint16_t> indices, VkDescriptorSetLayout descriptorSetLayout, std::vector<VkDescriptorSet> descriptorSets, uint32_t currentFrame, VkQueue graphicsQueue, VkImageView depthImageView, VkDeviceMemory depthImageMemory, VkImage depthImage) {
+void recreateSwapChain() {
     int width = 0, height = 0;
-    glfwGetFramebufferSize(window, &width, &height);
+    glfwGetFramebufferSize(Window.window, &width, &height);
 
     while (width == 0 || height == 0) {
-        glfwGetFramebufferSize(window, &width, &height);
+        glfwGetFramebufferSize(Window.window, &width, &height);
         glfwWaitEvents();
     }
 
-    vkDeviceWaitIdle(device);
+    vkDeviceWaitIdle(Device.device);
 
-    cleanupSwapChain(device, renderPass, swapChainFramebuffers, commandPool, commandBuffers, swapChainImageViews, swapChain, graphicsPipeline, pipelineLayout);
+    cleanupSwapChain(Device.device, Pipeline.renderPass, SwapChain.swapChainFramebuffers, Device.commandPool, Buffers.commandBuffers, SwapChain.swapChainImageViews, SwapChain.swapChain, Pipeline.graphicsPipeline, Pipeline.pipelineLayout);
 
     createSwapChain();
     createImageViews();
@@ -179,9 +179,9 @@ void recreateSwapChain(GLFWwindow* window, VkDevice& device, VkPhysicalDevice& p
     createFramebuffers();
     createCommandBuffer();
 
-    commandBuffers.resize(swapChainFramebuffers.size());
+    Buffers.commandBuffers.resize(SwapChain.swapChainFramebuffers.size());
 
-    for (size_t i = 0; i < swapChainFramebuffers.size(); i++) {
+    for (size_t i = 0; i < SwapChain.swapChainFramebuffers.size(); i++) {
         recordCommandBuffer();
     }
 

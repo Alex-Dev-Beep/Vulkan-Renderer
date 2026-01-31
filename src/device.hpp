@@ -1,3 +1,5 @@
+#pragma once
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -30,6 +32,18 @@ struct queues {
     VkQueue presentQueue;
 };
 
+struct semaphores {
+    public:
+    std::vector<VkSemaphore> imageAvailableSemaphores;
+    std::vector<VkSemaphore> renderFinishedSemaphores;
+};
+
+struct fences {
+    public:
+    std::vector<VkFence> inFlightFences;
+    std::vector<VkFence> imagesInFlight;
+};
+
 QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface);
 
 void pickPhysicalDevice();
@@ -41,3 +55,5 @@ void recordCommandBuffer();
 
 extern device Device;
 extern queues Queues;
+extern fences Fences;
+extern semaphores Semaphores;

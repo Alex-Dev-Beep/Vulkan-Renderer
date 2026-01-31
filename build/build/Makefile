@@ -238,6 +238,30 @@ glm/fast:
 	$(MAKE) $(MAKESILENT) -f external\glm\glm\CMakeFiles\glm.dir\build.make external/glm/glm/CMakeFiles/glm.dir/build
 .PHONY : glm/fast
 
+src/app.obj: src/app.cpp.obj
+.PHONY : src/app.obj
+
+# target to build an object file
+src/app.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj
+.PHONY : src/app.cpp.obj
+
+src/app.i: src/app.cpp.i
+.PHONY : src/app.i
+
+# target to preprocess a source file
+src/app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/app.cpp.i
+.PHONY : src/app.cpp.i
+
+src/app.s: src/app.cpp.s
+.PHONY : src/app.s
+
+# target to generate assembly for a file
+src/app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/app.cpp.s
+.PHONY : src/app.cpp.s
+
 src/buffer.obj: src/buffer.cpp.obj
 .PHONY : src/buffer.obj
 
@@ -616,6 +640,9 @@ help:
 	@echo ... VulkanRenderer
 	@echo ... glfw
 	@echo ... glm
+	@echo ... src/app.obj
+	@echo ... src/app.i
+	@echo ... src/app.s
 	@echo ... src/buffer.obj
 	@echo ... src/buffer.i
 	@echo ... src/buffer.s

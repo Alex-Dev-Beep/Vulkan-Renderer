@@ -1,3 +1,5 @@
+#pragma once
+
 #include <stb_image.h>
 
 #define GLFW_INCLUDE_VULKAN
