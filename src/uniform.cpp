@@ -155,10 +155,10 @@ void createDescriptorSets() {
 void createDepthResources() {
     VkFormat depthFormat = findDepthFormat(Device.physicalDevice);
 
-    createImage(SwapChain.swapChainExtent.width, SwapChain.swapChainExtent.height, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, DepthResources.depthImage, DepthResources.depthImageMemory, Device.device, Device.physicalDevice);
-    DepthResources.depthImageView = createImageView(DepthResources.depthImage, depthFormat, Device.device, VK_IMAGE_ASPECT_DEPTH_BIT);
+    createImage(SwapChain.swapChainExtent.width, SwapChain.swapChainExtent.height, 1, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, DepthResources.depthImage, DepthResources.depthImageMemory, Device.device, Device.physicalDevice);
+    DepthResources.depthImageView = createImageView(DepthResources.depthImage, depthFormat, Device.device, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
 
-    transitionImageLayout(DepthResources.depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, Device.device, Device.commandPool, Queues.graphicsQueue);
+    transitionImageLayout(DepthResources.depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, Device.device, Device.commandPool, Queues.graphicsQueue, 1);
 }
 
 VkFormat findSupportedFormat(

@@ -154,9 +154,16 @@ void createImageViews() {
     SwapChain.swapChainImageViews.resize(SwapChain.swapChainImages.size());
 
     for (uint32_t i = 0; i < SwapChain.swapChainImages.size(); i++) {
-        SwapChain.swapChainImageViews[i] = createImageView(SwapChain.swapChainImages[i], SwapChain.swapChainImageFormat, Device.device, VK_IMAGE_ASPECT_COLOR_BIT);
+        SwapChain.swapChainImageViews[i] = createImageView(
+            SwapChain.swapChainImages[i],
+            SwapChain.swapChainImageFormat,
+            Device.device,
+            VK_IMAGE_ASPECT_COLOR_BIT,
+            1
+        );
     }
 }
+
 
 void recreateSwapChain() {
     int width = 0, height = 0;

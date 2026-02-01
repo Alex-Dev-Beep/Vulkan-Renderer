@@ -18,104 +18,9 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_exponential.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_vector_relational.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_relational.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_common.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_common.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_geometric.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x2_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x2_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x2_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x3_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_matrix.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/simd/platform.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_relational.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
@@ -123,8 +28,6 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_relational.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
@@ -140,10 +43,6 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2_precision.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2_precision.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2_precision.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool3.hpp \
@@ -175,28 +74,186 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4_sized.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/simd/platform.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_float.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_int_sized.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_uint_sized.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1_sized.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1_sized.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_vector_relational.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_integer.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_packing.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_common.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float3x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x2_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x3_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_exponential.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_geometric.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_matrix.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4_precision.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_trigonometric.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.inl \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.hpp \
@@ -205,6 +262,8 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp \
@@ -212,8 +271,36 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/vec1.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_integer.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_packing.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/integer.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
@@ -231,6 +318,22 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.inl \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apisetcconv.h \
@@ -10581,19 +10684,7 @@ CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_win32.h
 
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/excpt.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/threadpoollegacyapiset.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/windows.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmon:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.inl:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mciapi.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float2_precision.hpp:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstdio:
 
@@ -10601,21 +10692,31 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/app.cpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4_precision.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/app.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.inl:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/stddef.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/limits.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec1.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/app.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_uint_sized.hpp:
 
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.hpp:
+
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint3_sized.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/geometric.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/datetimeapi.h:
 
@@ -10623,7 +10724,7 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/oaidl.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_common.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool3.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/buffer.hpp:
 
@@ -10645,6 +10746,8 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/stddef.h:
 
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint3.hpp:
+
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_common.inl:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/profileapi.h:
@@ -10653,25 +10756,17 @@ C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlintrin.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.inl:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool4.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/sync.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3_precision.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_iter_core.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_format_ucd_tables.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float4_precision.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx2intrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winuser.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winperf.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float3.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/setup.hpp:
 
@@ -10681,51 +10776,45 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2_precision.hpp:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/waitpkgintrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/xsaveintrin.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/timeapi.h:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/prsht.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2_sized.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/errno.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/libloaderapi.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp:
+C:/Program\ Files/LLVM/lib/clang/21/include/tsxldtrkintrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.cpp:
+C:/Program\ Files/LLVM/lib/clang/21/include/xmmintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/x86intrin.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float4.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/rpcasync.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.hpp:
+C:/Program\ Files/LLVM/lib/clang/21/include/sm4evexintrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_exponential.inl:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/stdarg.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double2_precision.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.inl:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wio.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_vector_relational.inl:
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_exception.h:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/utility:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/verrsrc.h:
+C:/Program\ Files/LLVM/lib/clang/21/include/lwpintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_size_t.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int2.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/simd/platform.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x2_precision.hpp:
 
@@ -10735,7 +10824,149 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_ma
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_relational.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_geometric.inl:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/qualifier.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_vectorize.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float3_precision.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/lzexpand.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cmath:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/amxbf16transposeintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float2.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_heap_algorithms.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/wincrypt.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_decl.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/verrsrc.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_size_t.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.inl:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2copyintrin.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfacet:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/exception:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int3_sized.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_int_sized.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_filebuf.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int3.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int4.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool3_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/popcntintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double3.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool4_precision.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/minwinbase.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double2.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double3_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double4.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double4_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winsock.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int2_sized.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/__stdarg___va_copy.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx512vbmiintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx512vbmivlintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/main.cpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int4_sized.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/amxfp16intrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4_sized.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/tinyobjloader/tiny_obj_loader.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.inl:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/tbmintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/utility:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/exponential.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/functional:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_float.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mmiscapi2.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x4.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_max_align_t.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/locale.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/ncrypt.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.inl:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iosfwd:
 
@@ -10743,23 +10974,125 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_ve
 
 C:/Program\ Files/LLVM/lib/clang/21/include/amxmovrsintrin.h:
 
+C:/Program\ Files/LLVM/lib/clang/21/include/wbnoinvdintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wstdlib.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/intrin0.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/emmintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/renderer.cpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/ammintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winbase.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.hpp:
+
+C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codecs_common.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1_precision.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winefs.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2_512satcvtdsintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.inl:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/ole2.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/crtdefs.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1_sized.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/sm4intrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1_sized.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/specstrings_undef.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/securitybaseapi.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/objidlbase.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_vector_relational.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/_fixes.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_common.hpp:
+
 C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_av1std_encode.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/matrix.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/timeapi.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/xsaveintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/waitpkgintrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/movrs_avx10_2_512intrin.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.inl:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/rpc.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3.hpp:
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xlocmon:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/avx512vp2intersectintrin.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x3.inl:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_print.hpp:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mciapi.h:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/format:
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/excpt.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mcx.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/threadpoollegacyapiset.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/windows.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x4.inl:
 
@@ -10775,9 +11108,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winspool.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x2.inl:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4.hpp:
-
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x3.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double3x4.hpp:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_null.h:
 
@@ -10787,18 +11120,6 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/wtypesbase
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/tinyobjloader/tiny_obj_loader.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.inl:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/tbmintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat3x4.inl:
-
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x2.inl:
@@ -10807,9 +11128,39 @@ C:/Program\ Files/LLVM/lib/clang/21/include/amxcomplexintrin.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_exponential.inl:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4_precision.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/stdarg.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x3.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2_precision.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_print.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3.hpp:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx512vp2intersectintrin.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/format:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mcx.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_iter_core.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x3_precision.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x4.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winuser.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winperf.h:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vadefs.h:
 
@@ -10849,11 +11200,13 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_dou
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avxneconvertintrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2.hpp:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/dpapi.h:
+C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2minmaxintrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4_precision.hpp:
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_xlocinfo_types.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2_precision.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x3.hpp:
 
@@ -10881,7 +11234,7 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_flo
 
 C:/Program\ Files/LLVM/lib/clang/21/include/__stdarg_header_macro.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_geometric.inl:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/unknwn.h:
 
@@ -10897,21 +11250,11 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x3.hpp:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/bcrypt.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat2x4.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_max_align_t.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/locale.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/ncrypt.h:
-
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x2.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x3.hpp:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x3.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat3x4.hpp:
 
@@ -10925,193 +11268,17 @@ C:/Program\ Files/LLVM/lib/clang/21/include/smmintrin.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/mat4x4.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec2.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat4x4.inl:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double4_precision.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4.hpp:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winsock.h:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/dpapi.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double4.hpp:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double4x4_precision.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool3_precision.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/popcntintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double3.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_heap_algorithms.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/wincrypt.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/compute_vector_decl.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/movrs_avx10_2_512intrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.cpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_mat2x2.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec2.inl:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/stddef.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/limits.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec3.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_vec4.inl:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2copyintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_int_sized.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/simd/platform.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_filebuf.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int3.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double2_precision.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wio.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_exception.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint3.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_double2x2_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float2x2_precision.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_xlocinfo_types.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2minmaxintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool2_precision.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/prsht.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool3.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool4.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool4_precision.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/minwinbase.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double2.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double3_precision.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cmath:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/amxbf16transposeintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float2.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/usermsrintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float2_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float3.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float3_precision.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/lzexpand.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float4.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/rpcasync.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/sm4evexintrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/xmmintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float4_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int2_sized.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/__stdarg___va_copy.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/avx512vbmiintrin.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xfacet:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/exception:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int3_sized.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/avx512vbmivlintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/main.cpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int4_sized.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/amxfp16intrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint2_sized.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/errno.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/libloaderapi.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/tsxldtrkintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint3_sized.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint4_sized.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_integer.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_packing.inl:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_float4x4.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_trigonometric.inl:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_memory.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wstdlib.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/constants.inl:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/functional:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/trigonometric.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_clip_space.hpp:
 
@@ -11123,11 +11290,11 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_pro
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/algorithm:
 
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_threads_core.hpp:
+
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winnt.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlcdintrin.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_threads_core.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_projection.inl:
 
@@ -11137,17 +11304,43 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_tra
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/matrix_transform.inl:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/lwpintrin.h:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/scalar_constants.inl:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.inl:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cerrno:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.inl:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/atomic:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/vec1.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_integer.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/func_packing.inl:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_memory.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_half.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/fwd.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/integer.hpp:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/packing.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.inl:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.hpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.inl:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h:
 
@@ -11163,9 +11356,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/guiddef.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/basetsd.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/cderr.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/wmmintrin.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/cderr.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/oleauto.h:
 
@@ -11177,11 +11370,11 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/inaddr.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/kernelspecs.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/ktmtypes.h:
+C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlvnniintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/xtestintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlvnniintrin.h:
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/ktmtypes.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/minwindef.h:
 
@@ -11235,14 +11428,6 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/specstring
 
 C:/Program\ Files/LLVM/lib/clang/21/include/sha512intrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1_sized.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/specstrings_undef.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/securitybaseapi.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/objidlbase.h:
-
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/tvout.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/ptwriteintrin.h:
@@ -11253,9 +11438,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/windef.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/winerror.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/winpackagefamily.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/x86gprintrin.h:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/winpackagefamily.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/processenv.h:
 
@@ -11295,8 +11480,6 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_shar
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_stdio_config.h:
 
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ostream.hpp:
-
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_terminate.h:
 
 C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_av1std.h:
@@ -11309,9 +11492,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wcon
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wctype.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/debugapi.h:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cctype:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/debugapi.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/corecrt_wprocess.h:
 
@@ -11351,9 +11534,9 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/stdlib.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlbwintrin.h:
 
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/string.h:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_tzdb.hpp:
+
+C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/string.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/sys/stat.h:
 
@@ -11437,10 +11620,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/crc32intrin.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mmeapi.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_float.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mmiscapi2.h:
-
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/mmsyscom.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/msxml.h:
@@ -11452,8 +11631,6 @@ C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/namespaceapi.h
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/objbase.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/objidl.h:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/ole2.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/playsoundapi.h:
 
@@ -11501,25 +11678,9 @@ C:/Program\ Files/LLVM/lib/clang/21/include/serializeintrin.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/utilapiset.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/renderer.cpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.hpp:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/ammintrin.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winbase.h:
-
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/wincon.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/wincontypes.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1_precision.hpp:
-
-C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/winefs.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2_512satcvtdsintrin.h:
 
 C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/um/wingdi.h:
 
@@ -11552,10 +11713,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/__stdarg_va_list.h:
 C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_header_macro.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx10_2satcvtdsintrin.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xerrc.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/vaesintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/__stddef_nullptr_t.h:
 
@@ -11611,9 +11768,9 @@ C:/Program\ Files/LLVM/lib/clang/21/include/avx512fintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512fp16intrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/avx512ifmaintrin.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/xsaveoptintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/avx512ifmaintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512ifmavlintrin.h:
 
@@ -11624,8 +11781,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlbf16intrin.h:
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vldqintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vlvp2intersectintrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/xsavecintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/avx512vnniintrin.h:
 
@@ -11643,9 +11798,9 @@ C:/Program\ Files/LLVM/lib/clang/21/include/bmiintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/cetintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/keylockerintrin.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/vadefs.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/keylockerintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/cldemoteintrin.h:
 
@@ -11654,8 +11809,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/clflushoptintrin.h:
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_typeinfo.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/clzerointrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/emmintrin.h:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/unordered_map:
 
@@ -11666,8 +11819,6 @@ C:/Program\ Files/LLVM/lib/clang/21/include/f16cintrin.h:
 C:/Program\ Files/LLVM/lib/clang/21/include/fxsrintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/ia32intrin.h:
-
-C:/Program\ Files/LLVM/lib/clang/21/include/intrin0.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/lzcntintrin.h:
 
@@ -11681,9 +11832,9 @@ C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.cpp:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/mmintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/pconfigintrin.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/uintrintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/pconfigintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/pkuintrin.h:
 
@@ -11699,17 +11850,23 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 
 C:/Program\ Files/LLVM/lib/clang/21/include/shaintrin.h:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/sm4intrin.h:
-
 C:/Program\ Files/LLVM/lib/clang/21/include/tmmintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/usermsrintrin.h:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xerrc.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/vaesintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/vpclmulqdqintrin.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.inl:
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/validation_layers.cpp:
 
-C:/Program\ Files/LLVM/lib/clang/21/include/wbnoinvdintrin.h:
+C:/Program\ Files/LLVM/lib/clang/21/include/x86intrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/xopintrin.h:
+
+C:/Program\ Files/LLVM/lib/clang/21/include/xsavecintrin.h:
 
 C:/Program\ Files/LLVM/lib/clang/21/include/xsavesintrin.h:
 
@@ -11719,7 +11876,11 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_chrono.hpp:
 
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_format_ucd_tables.hpp:
+
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_formatter.hpp:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ostream.hpp:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_ranges_tuple_formatter.hpp:
 
@@ -11731,15 +11892,11 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_system_error_abi.hpp:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/quaternion.inl:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/atomic:
-
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/bit:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cassert:
+
+C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cerrno:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cfloat:
 
@@ -11764,10 +11921,6 @@ C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.357
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/concepts:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/concurrencysal.h:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_float1_precision.hpp:
-
-C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/crtdefs.h:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstdlib:
 
@@ -11877,61 +12030,11 @@ C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_h265std_encode.h:
 
 C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codec_vp9std_decode.h:
 
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.hpp:
-
-C:/VulkanSDK/1.4.328.1/include/vk_video/vulkan_video_codecs_common.h:
-
 C:/VulkanSDK/1.4.328.1/include/vulkan/vk_platform.h:
 
 C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_core.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/buffer.cpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_geometric.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_relational.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/detail/type_quat.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_uint1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_common.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_double_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_float_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_transform.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/quaternion_trigonometric.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_bool1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_double1_precision.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_int1_sized.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/ext/vector_relational.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/epsilon.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/vec1.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/dual_quaternion.inl:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.hpp:
-
-C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.inl:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtree:
 
