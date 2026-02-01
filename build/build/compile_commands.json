@@ -25,6 +25,12 @@
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\implementations.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\implementations.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/implementations.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/implementations.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\instance.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\instance.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/instance.cpp.obj"
@@ -37,6 +43,12 @@
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\model.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\model.cpp\"",
+  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/model.cpp",
+  "output": "CMakeFiles/VulkanRenderer.dir/src/model.cpp.obj"
+},
+{
+  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\pipeline.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\pipeline.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/pipeline.cpp.obj"
@@ -46,12 +58,6 @@
   "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\renderer.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\renderer.cpp\"",
   "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/renderer.cpp",
   "output": "CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj"
-},
-{
-  "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DVK_USE_PLATFORM_WIN32_KHR @CMakeFiles/VulkanRenderer.dir/includes_CXX.rsp -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\VulkanRenderer.dir\\src\\stb_implementation.cpp.obj -c \"C:\\C++ Projects\\Learning-Vulkan\\Vulkan-Renderer\\src\\stb_implementation.cpp\"",
-  "file": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/src/stb_implementation.cpp",
-  "output": "CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj"
 },
 {
   "directory": "C:/C++ Projects/Learning-Vulkan/Vulkan-Renderer/build/build",

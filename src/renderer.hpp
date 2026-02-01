@@ -25,20 +25,13 @@
 struct renderer {
     public:
     bool framebufferResized = false;
-    const std::vector<Vertex> vertices = {
-        {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
-        {{0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f}, {1.0f, 0.0f}},
-        {{0.5f, 0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}, {1.0f, 1.0f}},
-        {{-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 1.0f}, {0.0f, 1.0f}}
+    std::vector<Vertex> vertices;
+    std::vector<uint32_t> indices;
+        const int MAX_FRAMES_IN_FLIGHT = 2;
+        uint32_t imageIndex;
+        uint32_t currentFrame = 0;
+        void drawFrame();
     };
-    const std::vector<uint16_t> indices = {
-        0, 1, 2, 2, 3, 0
-    };
-    const int MAX_FRAMES_IN_FLIGHT = 2;
-    uint32_t imageIndex;
-    uint32_t currentFrame = 0;
-    void drawFrame();
-};
 
 void frameBufferResizeCallback(GLFWwindow* window, int width, int height);
 

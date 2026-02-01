@@ -248,7 +248,7 @@ void recordCommandBuffer() {
     VkDeviceSize offsets[] = { 0 };
     vkCmdBindVertexBuffers(cmd, 0, 1, vertexBuffers, offsets);
 
-    vkCmdBindIndexBuffer(cmd, IndexBuffer.indexBuffer, 0, VK_INDEX_TYPE_UINT16);
+    vkCmdBindIndexBuffer(cmd, IndexBuffer.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
 
     VkViewport viewport{};
     viewport.width  = (float)SwapChain.swapChainExtent.width;

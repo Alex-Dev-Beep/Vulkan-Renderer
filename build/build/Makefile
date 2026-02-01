@@ -334,6 +334,30 @@ src/image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/image.cpp.s
 .PHONY : src/image.cpp.s
 
+src/implementations.obj: src/implementations.cpp.obj
+.PHONY : src/implementations.obj
+
+# target to build an object file
+src/implementations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/implementations.cpp.obj
+.PHONY : src/implementations.cpp.obj
+
+src/implementations.i: src/implementations.cpp.i
+.PHONY : src/implementations.i
+
+# target to preprocess a source file
+src/implementations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/implementations.cpp.i
+.PHONY : src/implementations.cpp.i
+
+src/implementations.s: src/implementations.cpp.s
+.PHONY : src/implementations.s
+
+# target to generate assembly for a file
+src/implementations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/implementations.cpp.s
+.PHONY : src/implementations.cpp.s
+
 src/instance.obj: src/instance.cpp.obj
 .PHONY : src/instance.obj
 
@@ -382,6 +406,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/model.obj: src/model.cpp.obj
+.PHONY : src/model.obj
+
+# target to build an object file
+src/model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/model.cpp.obj
+.PHONY : src/model.cpp.obj
+
+src/model.i: src/model.cpp.i
+.PHONY : src/model.i
+
+# target to preprocess a source file
+src/model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/model.cpp.i
+.PHONY : src/model.cpp.i
+
+src/model.s: src/model.cpp.s
+.PHONY : src/model.s
+
+# target to generate assembly for a file
+src/model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/model.cpp.s
+.PHONY : src/model.cpp.s
+
 src/pipeline.obj: src/pipeline.cpp.obj
 .PHONY : src/pipeline.obj
 
@@ -429,30 +477,6 @@ src/renderer.s: src/renderer.cpp.s
 src/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
-
-src/stb_implementation.obj: src/stb_implementation.cpp.obj
-.PHONY : src/stb_implementation.obj
-
-# target to build an object file
-src/stb_implementation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.obj
-.PHONY : src/stb_implementation.cpp.obj
-
-src/stb_implementation.i: src/stb_implementation.cpp.i
-.PHONY : src/stb_implementation.i
-
-# target to preprocess a source file
-src/stb_implementation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.i
-.PHONY : src/stb_implementation.cpp.i
-
-src/stb_implementation.s: src/stb_implementation.cpp.s
-.PHONY : src/stb_implementation.s
-
-# target to generate assembly for a file
-src/stb_implementation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VulkanRenderer.dir\build.make CMakeFiles/VulkanRenderer.dir/src/stb_implementation.cpp.s
-.PHONY : src/stb_implementation.cpp.s
 
 src/surface.obj: src/surface.cpp.obj
 .PHONY : src/surface.obj
@@ -652,21 +676,24 @@ help:
 	@echo ... src/image.obj
 	@echo ... src/image.i
 	@echo ... src/image.s
+	@echo ... src/implementations.obj
+	@echo ... src/implementations.i
+	@echo ... src/implementations.s
 	@echo ... src/instance.obj
 	@echo ... src/instance.i
 	@echo ... src/instance.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/model.obj
+	@echo ... src/model.i
+	@echo ... src/model.s
 	@echo ... src/pipeline.obj
 	@echo ... src/pipeline.i
 	@echo ... src/pipeline.s
 	@echo ... src/renderer.obj
 	@echo ... src/renderer.i
 	@echo ... src/renderer.s
-	@echo ... src/stb_implementation.obj
-	@echo ... src/stb_implementation.i
-	@echo ... src/stb_implementation.s
 	@echo ... src/surface.obj
 	@echo ... src/surface.i
 	@echo ... src/surface.s

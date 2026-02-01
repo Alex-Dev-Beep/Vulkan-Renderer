@@ -2,6 +2,7 @@
 #include "vertex.hpp"
 #include "uniform.hpp"
 #include "device.hpp"
+#include "model.hpp"
 
 #include <iostream>
 #include <stdexcept>
@@ -47,7 +48,7 @@ void createImage(uint32_t width, uint32_t height, VkFormat format, VkImageTiling
 
 void createTextureImage() {
     int texWidth, texHeight, texChannels;
-    stbi_uc* pixels = stbi_load("textures/texture.jpg", &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+    stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
     VkDeviceSize imageSize = texWidth * texHeight * 4;
 
     if (!pixels) {

@@ -19,8 +19,9 @@
 #include "renderer.hpp"
 #include "buffer.hpp"
 #include "app.hpp"
+#include "model.hpp"
 
-// doccument everything
+// Document everything
 
 int main() {
     if (!glfwInit()) {
@@ -49,6 +50,9 @@ int main() {
     createTextureImage();
     createTextureImageView();
     createTextureSampler();
+    Model.loadModel();
+    std::cout << "Vertices count: " << Renderer.vertices.size() << std::endl;
+    std::cout << "Indices count: " << Renderer.indices.size() << std::endl;
     createVertexBuffer();
     createUniformBuffers();
     createDescriptorPool();
