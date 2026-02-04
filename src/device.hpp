@@ -51,7 +51,7 @@ bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
 void createLogicalDevice();
 void createCommandPool();
 void createCommandBuffer();
-void recordCommandBuffer();
+void recordCommandBuffer(uint32_t imageIndex);
 
 extern device Device;
 extern queues Queues;

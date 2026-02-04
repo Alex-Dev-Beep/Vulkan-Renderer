@@ -8,6 +8,7 @@
 #include "uniform.hpp"
 #include "surface.hpp"
 #include "window.hpp"
+#include "renderer.hpp"
 
 #include <algorithm>
 #include <limits>
@@ -189,7 +190,7 @@ void recreateSwapChain() {
     Buffers.commandBuffers.resize(SwapChain.swapChainFramebuffers.size());
 
     for (size_t i = 0; i < SwapChain.swapChainFramebuffers.size(); i++) {
-        recordCommandBuffer();
+        recordCommandBuffer(Renderer.imageIndex);
     }
 
 

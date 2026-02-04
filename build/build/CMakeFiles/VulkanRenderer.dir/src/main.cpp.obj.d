@@ -587,6 +587,10 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\vector_relational.hpp \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\integer.hpp \
   C:\C__PRO~1\LEARNI~1\VULKAN~1\external\glm\glm\detail\func_integer.inl \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\imgui\imgui.h \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\imgui\imconfig.h \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\imgui\backends\imgui_impl_glfw.h \
+  C:\C__PRO~1\LEARNI~1\VULKAN~1\external\imgui\backends\imgui_impl_vulkan.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdexcept \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xstring \
   C:\Program\ Files\Microsoft\ Visual\ Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp \

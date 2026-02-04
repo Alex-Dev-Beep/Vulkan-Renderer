@@ -16,7 +16,6 @@ CMakeFiles/VulkanRenderer.dir/src/app.cpp.obj: C:/C++\ Projects/Learning-Vulkan/
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
@@ -1010,7 +1009,6 @@ CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
@@ -1328,6 +1326,10 @@ CMakeFiles/VulkanRenderer.dir/src/device.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtx/hash.inl \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_glfw.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_vulkan.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imconfig.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imgui.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apisetcconv.h \
@@ -3299,7 +3301,6 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/tinyobjloader/tiny_obj_loader.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
@@ -3613,6 +3614,10 @@ CMakeFiles/VulkanRenderer.dir/src/main.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_glfw.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_vulkan.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imconfig.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imgui.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apisetcconv.h \
@@ -4090,7 +4095,6 @@ CMakeFiles/VulkanRenderer.dir/src/model.cpp.obj: C:/C++\ Projects/Learning-Vulka
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/tinyobjloader/tiny_obj_loader.h \
@@ -5667,7 +5671,6 @@ CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
@@ -5980,6 +5983,10 @@ CMakeFiles/VulkanRenderer.dir/src/renderer.cpp.obj: C:/C++\ Projects/Learning-Vu
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec3.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vec4.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/vector_relational.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_glfw.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_vulkan.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imconfig.h \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imgui.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/stb/stb_image.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apiset.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/shared/apisetcconv.h \
@@ -6870,11 +6877,15 @@ CMakeFiles/VulkanRenderer.dir/src/surface.cpp.obj: C:/C++\ Projects/Learning-Vul
   C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_win32.h
 
 CMakeFiles/VulkanRenderer.dir/src/swapchain.cpp.obj: C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.cpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/buffer.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/device.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/image.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/instance.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/pipeline.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/renderer.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/surface.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/swapchain.hpp \
+  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/sync.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
@@ -7674,7 +7685,6 @@ CMakeFiles/VulkanRenderer.dir/src/sync.cpp.obj: C:/C++\ Projects/Learning-Vulkan
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/gtc/matrix_transform.hpp \
@@ -8466,7 +8476,6 @@ CMakeFiles/VulkanRenderer.dir/src/uniform.cpp.obj: C:/C++\ Projects/Learning-Vul
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/common.hpp \
@@ -9478,7 +9487,6 @@ CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj: C:/C++\ Projects/Learning-Vulk
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/uniform.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/vertex.hpp \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/window.hpp \
-  C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/GLFW/include/GLFW/glfw3native.h \
   C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/glm/glm/glm.hpp \
@@ -12035,6 +12043,14 @@ C:/VulkanSDK/1.4.328.1/include/vulkan/vk_platform.h:
 C:/VulkanSDK/1.4.328.1/include/vulkan/vulkan_core.h:
 
 C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/src/buffer.cpp:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_glfw.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/backends/imgui_impl_vulkan.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imconfig.h:
+
+C:/C++\ Projects/Learning-Vulkan/Vulkan-Renderer/external/imgui/imgui.h:
 
 C:/Program\ Files/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtree:
 

@@ -7,6 +7,7 @@
                 "${workspaceFolder}/external/GLFW/include",
                 "${workspaceFolder}/external/glm",
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/external/imgui",
                 "C:/VulkanSDK/1.4.328.1/Include/"
             ],
             "defines": [

@@ -367,6 +367,7 @@ VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/validation_layers.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/vertex.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/src/window.cpp.obj
 VulkanRenderer.exe: CMakeFiles/VulkanRenderer.dir/build.make
+VulkanRenderer.exe: imgui.lib
 VulkanRenderer.exe: external/GLFW/src/glfw3.lib
 VulkanRenderer.exe: C:/VulkanSDK/1.4.328.1/Lib/vulkan-1.lib
 VulkanRenderer.exe: external/glm/glm/glm.lib

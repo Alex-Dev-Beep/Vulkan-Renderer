@@ -88,6 +88,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/imgui.dir/DependInfo.cmake"
   "CMakeFiles/VulkanRenderer.dir/DependInfo.cmake"
   "CMakeFiles/Shaders.dir/DependInfo.cmake"
   "external/GLFW/CMakeFiles/uninstall.dir/DependInfo.cmake"

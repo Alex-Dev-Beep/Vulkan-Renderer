@@ -9,6 +9,10 @@
 #include "pipeline.hpp"
 #include "buffer.hpp"
 
+#include <imgui.h>
+#include <backends/imgui_impl_glfw.h>
+#include <backends/imgui_impl_vulkan.h>
+
 #include <stdexcept>
 #include <vector>
 #include <iostream>
@@ -216,16 +220,15 @@ void createCommandBuffer() {
 
     std::cout << "Succesfully allocated command buffers!" << std::endl;
 }
-
-void recordCommandBuffer() {
-    VkCommandBuffer cmd = Buffers.commandBuffers[Renderer.imageIndex];
+void recordCommandBuffer(uint32_t imageIndex) {
+    VkCommandBuffer cmd = Buffers.commandBuffers[imageIndex];
 
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+    beginInfo.flags = 0;
+    beginInfo.pInheritanceInfo = nullptr;
 
-    if (vkBeginCommandBuffer(cmd, &beginInfo) != VK_SUCCESS) {
-        throw std::runtime_error("Failed to begin command buffer");
-    }
+    vkBeginCommandBuffer(cmd, &beginInfo);
 
     std::array<VkClearValue, 2> clearValues{};
     clearValues[0].color = {{0.0f, 0.0f, 0.0f, 1.0f}};
@@ -234,7 +237,7 @@ void recordCommandBuffer() {
     VkRenderPassBeginInfo renderPassInfo{};
     renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
     renderPassInfo.renderPass = Pipeline.renderPass;
-    renderPassInfo.framebuffer = SwapChain.swapChainFramebuffers[Renderer.imageIndex];
+    renderPassInfo.framebuffer = SwapChain.swapChainFramebuffers[imageIndex];
     renderPassInfo.renderArea.offset = {0, 0};
     renderPassInfo.renderArea.extent = SwapChain.swapChainExtent;
     renderPassInfo.clearValueCount = static_cast<uint32_t>(clearValues.size());
@@ -242,15 +245,27 @@ void recordCommandBuffer() {
 
     vkCmdBeginRenderPass(cmd, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-    vkCmdBindPipeline(cmd, VK_PIPELINE_BIND_POINT_GRAPHICS, Pipeline.graphicsPipeline);
+    // ---------- 3D PIPELINE ----------
+    vkCmdBindPipeline(
+        cmd,
+        VK_PIPELINE_BIND_POINT_GRAPHICS,
+        Pipeline.graphicsPipeline
+    );
 
     VkBuffer vertexBuffers[] = { VertexBuffer.vertexBuffer };
     VkDeviceSize offsets[] = { 0 };
     vkCmdBindVertexBuffers(cmd, 0, 1, vertexBuffers, offsets);
 
-    vkCmdBindIndexBuffer(cmd, IndexBuffer.indexBuffer, 0, VK_INDEX_TYPE_UINT32);
+    vkCmdBindIndexBuffer(
+        cmd,
+        IndexBuffer.indexBuffer,
+        0,
+        VK_INDEX_TYPE_UINT32
+    );
 
     VkViewport viewport{};
+    viewport.x = 0.0f;
+    viewport.y = 0.0f;
     viewport.width  = (float)SwapChain.swapChainExtent.width;
     viewport.height = (float)SwapChain.swapChainExtent.height;
     viewport.minDepth = 0.0f;
@@ -258,6 +273,7 @@ void recordCommandBuffer() {
     vkCmdSetViewport(cmd, 0, 1, &viewport);
 
     VkRect2D scissor{};
+    scissor.offset = {0, 0};
     scissor.extent = SwapChain.swapChainExtent;
     vkCmdSetScissor(cmd, 0, 1, &scissor);
 
@@ -267,16 +283,28 @@ void recordCommandBuffer() {
         Pipeline.pipelineLayout,
         0,
         1,
-        &Device.descriptorSets[Renderer.imageIndex],
+        &Device.descriptorSets[imageIndex],
         0,
         nullptr
     );
 
-    vkCmdDrawIndexed(cmd, static_cast<uint32_t>(Renderer.indices.size()), 1, 0, 0, 0);
+    vkCmdDrawIndexed(
+        cmd,
+        static_cast<uint32_t>(Renderer.indices.size()),
+        1,
+        0,
+        0,
+        0
+    );
+
+    ImGui_ImplVulkan_RenderDrawData(
+        ImGui::GetDrawData(),
+        cmd
+    );
 
     vkCmdEndRenderPass(cmd);
 
     if (vkEndCommandBuffer(cmd) != VK_SUCCESS) {
-        throw std::runtime_error("Failed to record command buffer");
+        throw std::runtime_error("Failed to record command buffer!");
     }
 }
